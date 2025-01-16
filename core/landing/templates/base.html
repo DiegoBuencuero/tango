@@ -60,13 +60,34 @@
     
       color: #ffffff; /* Asegura que el texto siga siendo blanco */
     }
+
+    .logo-img{
+      width: 70%; /* Hace que el logo ocupe todo el ancho del contenedor */
+      height: auto; /* Mantiene la proporción del logo */
+    }
+    .logo-img-footer{
+      width: 130%; /* Hace que el logo ocupe todo el ancho del contenedor */
+      height: auto; /* Mantiene la proporción del logo */
+    }
+    @media (max-width: 768px) {
+      .logo-img {
+        width: 150%; /* Hace que el logo ocupe todo el ancho del contenedor */
+        height: auto; /* Mantiene la proporción del logo */
+      }
+    
+      .navbar-brand {
+        display: block; /* Asegura que el contenedor del logo sea un bloque completo */
+        text-align: center; /* Centra el logo */
+        padding: 0; /* Elimina relleno adicional si es necesario */
+      }
+    }
   </style>
   <body>
-    <nav class="navbar barra-scroll navbar-expand-lg navbar-dark  ftco-navbar-light" id="ftco-navbar"style="position: fixed; top: 0; width: 100%; z-index: 10;">       
-      <div class="container-fluid d-flex align-items-center">
-        <a href="{% url 'index' %}" class="navbar-brand d-flex align-items-center p-4">
-          <img src="{% static 'images/logo-nav1.png' %}" alt="Logo" class="logo-img" style="height: clamp(45px, 3.5vw, 60px);">
-        </a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar"> 
+      <a href="{% url 'index' %}" class="navbar-brand d-flex align-items-center p-4">
+        <img src="{% static 'images/logo-nav1.png' %}" alt="Logo" class="logo-img">
+      </a>
+      <div class="container d-flex align-items-center">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="oi oi-menu"></span> Menu
         </button>
@@ -114,7 +135,8 @@
           <a href="#" class="btn ms-3 btn ms-3 boton-nav d-none d-md-block boton-nav" >{% translate "Get Started" %}</a>
         </div>
       </div>
-    </nav>    
+    </nav>
+    
     {% block content%}
     {% endblock %}
     <div id="whatsapp-button" class="btn-lg animate__animated animate__heartBeat">
@@ -129,7 +151,7 @@
       <div class="col-md-3">
         <div class="ftco-footer-widget mb-4">
           <a href="{% url 'index' %}" class="navbar-brand d-flex align-items-center ">
-            <img src="{% static 'images/logo-nav1.png' %}" alt="Logo" class="logo-img" style="height: clamp(45px, 3.5vw, 60px);">
+            <img src="{% static 'images/logo-nav1.png' %}" alt="Logo" class="logo-img-footer">
           </a>
           <p  class="mt-5">Protegiendo tu negocio con soluciones de ciberseguridad avanzadas. Confianza y seguridad para tus datos.</p>
         </div>
@@ -213,25 +235,7 @@
       document.addEventListener("DOMContentLoaded", function () {
         const navbar = document.getElementById("ftco-navbar");
     
-        if (!navbar) {
-          console.error("El elemento con ID 'ftco-navbar' no fue encontrado.");
-          return;
-        }
-    
-        console.log("Navbar inicializada correctamente:", navbar);
-    
-        window.addEventListener("scroll", function () {
-          console.log(`ScrollY: ${window.scrollY}`);
-          if (window.scrollY > 50) {
-            console.log("Cambiando clase a 'barra-nav'");
-            navbar.classList.remove("barra-scroll");
-            navbar.classList.add("barra-nav");
-          } else {
-            console.log("Cambiando clase a 'barra-scroll'");
-            navbar.classList.remove("barra-nav");
-            navbar.classList.add("barra-scroll");
-          }
-        });
+
       });
     </script>
   {% block scrips %}

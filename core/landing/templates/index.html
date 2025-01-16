@@ -3,27 +3,6 @@
 {% load i18n %}
 {% block content %}
 <style>
-  .video-container {
-    position: relative;
-    width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
-    overflow: hidden; /* Recorta cualquier parte del video fuera del contenedor */
-    height: 50vh; /* Altura al 50% del viewport */
-  }
-  
-  .video-container video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%; /* El video ocupa todo el ancho */
-    height: auto; /* Mantiene el aspecto proporcional */
-    transform: translate(-50%, -50%); /* Centra el video dentro del contenedor */
-    object-fit: cover; /* Asegura que el video se adapte al contenedor sin distorsión */
-  }
-  #section-home-video{
-    padding-right:0px !important;
-    padding-left:0px !important;
-  }
-
 .boton-home {
   background: linear-gradient(150deg, rgba(61, 89, 233, 0.9), rgba(11, 28, 58, 0.9)); /* Ajusta el degradado */ 
   border: 2px solid var(--framework-blue); 
@@ -58,43 +37,18 @@
   </div>
 </div>
 </section>
-<section id="section-home-video" class="ftco-section ftco-no-pt ftco-no-pb" style="padding-right: 0px !important; padding-left: 0px !important;">
-  <div class="container-fluid ">
-    <div class="video-container">
-      <video 
-        autoplay 
-        loop 
-        muted 
-        playsinline 
-        style="background-image: url('https://cdn.prod.website-files.com/629fd7fea86dd7891a8e1d0b/62deecccdf68cec9fd0c9c6e_ecellence in serve-fade-poster-00001.jpg');" 
-        data-object-fit="cover">
-        <!-- Video en formato MP4 -->
-        <source 
-          src="https://cdn.prod.website-files.com/629fd7fea86dd7891a8e1d0b/62deecccdf68cec9fd0c9c6e_ecellence%20in%20serve-fade-transcode.mp4" 
-          type="video/mp4">
-        <!-- Video en formato WebM -->
-        <source 
-          src="https://cdn.prod.website-files.com/629fd7fea86dd7891a8e1d0b/62deecccdf68cec9fd0c9c6e_ecellence%20in%20serve-fade-transcode.webm" 
-          type="video/webm">
-        <!-- Texto alternativo -->
-        Your browser does not support the video tag.
-      </video>
-    </div>
-  </div>
-</div>
 </section>
 <section id="section-home2" class="ftco-section ftco-no-pt ftco-no-pb">
   <div class="container mt-5 position-relative">
     <div class="row align-items-center mt-5 mb-5 pb-2">
       <!-- Primera columna -->
-      <div class="col-md-6 text-center ftco-animate position-relative">
+      <div class="col-md-6 text-center ftco-animate position-relative d-none d-md-block">
         <div class="figure-block-c">
           <div class="figure-c1" data-z="-4"></div>
           <div class="figure-c2" data-z="15"></div>
           <div class="figure-c3" data-z="8"></div>
         </div>
-      </div> <!-- Cierre correcto de la primera columna -->
-      
+      </div>  
       <!-- Segunda columna -->
       <div class="col-md-6 text-center ftco-animate">
         <h1 class="mb-4" style="font-weight:bold">{% translate "Comprehensive Cybersecurity Management" %}</h1>

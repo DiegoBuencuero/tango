@@ -169,6 +169,40 @@
     </div>
   </div>
 </section>
+<section id="section-home3" class="ftco-section contact-section ">
+  <div class="container fondo-formulario mt-5 mb-5">
+    <div class="container mt-5 ">
+      <div class="row justify-content-center mt-5 pb-2">
+        <div class="col-md-8 mt-5 text-center align-items-center  ftco-animate">
+          <h1 class="mb-4" style="font-weight:bold">{% translate "Let's Work Together" %}</h1>
+          <h4 class="mb-4">{% translate "Tell us about yourself and we’ll figure out the best solution for you and your organization's needs." %}</h4>
+        </div>
+      </div>
+    </div>
+    <div class="row d-flex align-items-stretch no-gutters">
+      <div class="col-md-10  p-md-5 mx-auto ">
+        <form action="{% url 'contact' %}" method='post' class="">
+          {% csrf_token %}
+          <div class="form-group">
+              <input type="text" class="form-control" name='nombre' placeholder="Nome">
+          </div>
+          <div class="form-group">
+              <input type="text" class="form-control" name='correo' placeholder="Email">
+          </div>
+          <div class="form-group">
+              <input type="text" class="form-control" name='asunto' placeholder="Assunto">
+          </div>
+          <div class="form-group">
+              <textarea name="mensaje" cols="30" rows="7" class="form-control" placeholder="Mensagem"></textarea>
+          </div>
+          <div class="p-4 d-flex justify-content-start">
+            <input type="submit" value="Enviar" class="btn ms-3 pe-5 ps-5 boton-home">
+          </div>
+      </form>         
+      </div>
+    </div>
+  </div>
+</section>
 
 {% endblock %}
 {% block scrips%}
