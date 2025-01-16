@@ -5,23 +5,6 @@
   font-style: normal;
 }
 /*---------------------------------------NAV -FOOTER -------------------------------------------*/
-.barra-scroll{
-    transition: background-color 0.5s ease; 
-    background-color: transparent; 
-    position: fixed; 
-    top: 0;
-    width: 100%;
-    z-index: 1000; 
-  }
-
-  .barra-nav {
-    position: relative; /* Por si usás pseudo-elementos */
-    background-image: 
-      linear-gradient(to bottom, #0B1C3A 65%, #3D59E9 90%); /* Degradado sólido */
-    transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    z-index: 1; /* Por si hay algún contenido superpuesto */
-
-  }
   
   
   .navbar-toggler {
@@ -152,13 +135,12 @@
     font-size: 4vw; /* Ajusta el tamaño si es necesario */
     font-weight: 600; /* Peso de la fuente */
 }
-#section-home h4 {
-  font-family: 'Helvetica Neue LT Std', sans-serif; /* Usa la fuente cargada */
-  font-size: 1.2vw !important;
-  font-weight: 400 !important;
-  color:#ffffff;  
+  #section-home h4 {
+    font-family: 'Helvetica Neue LT Std', sans-serif; /* Usa la fuente cargada */
+    font-weight: 400 !important;
+    color:#ffffff;  
 
-}
+  }
   /*----------------------------------------------SECCION2 HOME---------------------------------*/
   #section-home2 {
     height: 90vh;
@@ -181,12 +163,12 @@
   }
   #section-home2 h4 {
     font-family: 'Helvetica Neue LT Std', sans-serif; 
-    font-size: 1.2vw !important;
+
     font-weight: 400 !important;
     color:#ffffff;  
     text-align:left;
   }
-  
+
   .figure-block-c {
     will-change: transform;
     transform: translate3d(0%, 0px, 0px) scale3d(1, 1, 1) 
@@ -235,7 +217,8 @@
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.6);
     z-index: 1;
   }
-   
+  
+
 
   /*----------------------------------------------SECCION3 HOME---------------------------------*/
 
@@ -360,4 +343,71 @@
   }
 
    /*----------------------------------------------SECCION MANAGED---------------------------------*/
-   
+   @media (max-width: 768px) {
+    
+    .titulos-footer {
+      font-family: 'Helvetica Neue LT Std', sans-serif !important;
+      font-size: 6vw !important;
+      font-weight: 600 !important;
+      color:#ffffff;
+    }
+    
+    .footer-fondo{
+      font-size: 3.5vw !important;
+      font-weight: 400 !important;
+      
+    }
+    
+    #section-home {
+      height: auto; /* Permite que la altura dependa del contenido */
+      padding: 2rem 1rem; /* Espacio interno para un diseño cómodo */
+    }
+  
+    #section-home h1 {
+      font-size: 6vw; /* Texto principal más pequeño en móviles */
+      font-weight: bold;
+      color: white;
+    }
+  
+    #section-home h4 {
+      font-size: 4vw; /* Subtítulo más pequeño en móviles */
+      font-weight: 400;
+      color: white;
+    }
+  
+    #section-home2 {
+      height: auto; /* Altura adaptativa */
+      padding: 2rem 1rem;
+    }
+  
+    #section-home2 h1 {
+      font-size: 7vw !important; /* Ajuste del texto principal */
+      font-weight: bold;
+      color: white;
+      text-align: center; /* Alineado a la izquierda para consistencia */
+    }
+  
+    #section-home2 h4 {
+      font-size: 4.5vw; /* Subtítulo más pequeño */
+      font-weight: 400;
+      color: white;
+      text-align: center; 
+    }
+  
+    #section-home3 {
+      height: auto;
+      padding: 1rem 1rem;
+    }
+  
+    #section-home3 h1 {
+      font-size: 6vw; /* Texto principal */
+      font-weight: bold;
+      color: white;
+    }
+  
+    #section-home3 h4 {
+      font-size: 4vw; /* Subtítulo */
+      font-weight: 400;
+      color: white;
+    }
+  }
