@@ -1,0 +1,170 @@
+{% extends "base.html"%}
+{% load static %}
+{% load i18n %}
+{% block content %}
+<style>
+  .video-container {
+    position: relative;
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
+    overflow: hidden; /* Recorta cualquier parte del video fuera del contenedor */
+    height: 50vh; /* Altura al 50% del viewport */
+  }
+  
+  .video-container video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%; /* El video ocupa todo el ancho */
+    height: auto; /* Mantiene el aspecto proporcional */
+    transform: translate(-50%, -50%); /* Centra el video dentro del contenedor */
+    object-fit: cover; /* Asegura que el video se adapte al contenedor sin distorsión */
+  }
+  #section-home-video{
+    padding-right:0px !important;
+    padding-left:0px !important;
+  }
+
+.boton-home {
+  background: linear-gradient(150deg, rgba(61, 89, 233, 0.9), rgba(11, 28, 58, 0.9)); /* Ajusta el degradado */ 
+  border: 2px solid var(--framework-blue); 
+  color: var(--heading); 
+  text-align: center; 
+  border-radius: 15px; 
+  padding: 15px 25px; 
+  font-size: 18px; 
+  font-weight: 400; 
+  line-height: 140%;
+  transition: background-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+              transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
+}
+
+.boton-home:hover {
+  transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+  background: linear-gradient(150deg, rgba(61, 89, 233, 0.9), rgba(11, 28, 58, 0.9)); /* Ajusta el degradado */
+  color: #ffffff; /* Asegura que el texto siga siendo blanco */
+}
+</style>
+<section id="section-home" class="ftco-section ftco-no-pt ftco-no-pb">
+  <div class="container mt-5">
+    <div class="row justify-content-center mt-5  mb-5 pb-2">
+      <div class="col-md-10 mt-5 text-center align-items-center  ftco-animate">
+        <h1 class="mb-4" style="font-weight:bold">{% translate "Protect Your Company From Cyber Attacks" %}</h1>
+        <h4 class="mb-4">{% translate "The leader in both compliance and penetration testing automation powered by AI" %}</h4>
+        <div class="p-4">
+          <a href="#" class="btn ms-3 boton-home">{% translate "Get Started" %}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<section id="section-home-video" class="ftco-section ftco-no-pt ftco-no-pb" style="padding-right: 0px !important; padding-left: 0px !important;">
+  <div class="container-fluid ">
+    <div class="video-container">
+      <video 
+        autoplay 
+        loop 
+        muted 
+        playsinline 
+        style="background-image: url('https://cdn.prod.website-files.com/629fd7fea86dd7891a8e1d0b/62deecccdf68cec9fd0c9c6e_ecellence in serve-fade-poster-00001.jpg');" 
+        data-object-fit="cover">
+        <!-- Video en formato MP4 -->
+        <source 
+          src="https://cdn.prod.website-files.com/629fd7fea86dd7891a8e1d0b/62deecccdf68cec9fd0c9c6e_ecellence%20in%20serve-fade-transcode.mp4" 
+          type="video/mp4">
+        <!-- Video en formato WebM -->
+        <source 
+          src="https://cdn.prod.website-files.com/629fd7fea86dd7891a8e1d0b/62deecccdf68cec9fd0c9c6e_ecellence%20in%20serve-fade-transcode.webm" 
+          type="video/webm">
+        <!-- Texto alternativo -->
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+</div>
+</section>
+<section id="section-home2" class="ftco-section ftco-no-pt ftco-no-pb">
+  <div class="container mt-5 position-relative">
+    <div class="row align-items-center mt-5 mb-5 pb-2">
+      <!-- Primera columna -->
+      <div class="col-md-6 text-center ftco-animate position-relative">
+        <div class="figure-block-c">
+          <div class="figure-c1" data-z="-4"></div>
+          <div class="figure-c2" data-z="15"></div>
+          <div class="figure-c3" data-z="8"></div>
+        </div>
+      </div> <!-- Cierre correcto de la primera columna -->
+      
+      <!-- Segunda columna -->
+      <div class="col-md-6 text-center ftco-animate">
+        <h1 class="mb-4" style="font-weight:bold">{% translate "Comprehensive Cybersecurity Management" %}</h1>
+        <h4 class="mb-4">{% translate "The leader in both compliance and penetration testing automation powered by AI" %}</h4>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="section-home3" class="ftco-section contact-section ">
+  <div class="container fondo-formulario mt-5 mb-5">
+    <div class="container mt-5 ">
+      <div class="row justify-content-center mt-5 pb-2">
+        <div class="col-md-8 mt-5 text-center align-items-center  ftco-animate">
+          <h1 class="mb-4" style="font-weight:bold">{% translate "Let's Work Together" %}</h1>
+          <h4 class="mb-4">{% translate "Tell us about yourself and we’ll figure out the best solution for you and your organization's needs." %}</h4>
+        </div>
+      </div>
+    </div>
+    <div class="row d-flex align-items-stretch no-gutters">
+      <div class="col-md-10  p-md-5 mx-auto ">
+        <form action="{% url 'contact' %}" method='post' class="">
+          {% csrf_token %}
+          <div class="form-group">
+              <input type="text" class="form-control" name='nombre' placeholder="Nome">
+          </div>
+          <div class="form-group">
+              <input type="text" class="form-control" name='correo' placeholder="Email">
+          </div>
+          <div class="form-group">
+              <input type="text" class="form-control" name='asunto' placeholder="Assunto">
+          </div>
+          <div class="form-group">
+              <textarea name="mensaje" cols="30" rows="7" class="form-control" placeholder="Mensagem"></textarea>
+          </div>
+          <div class="p-4 d-flex justify-content-start">
+            <input type="submit" value="Enviar" class="btn ms-3 pe-5 ps-5 boton-home">
+          </div>
+      </form>         
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+{% block scrips%}
+
+<script>
+  document.addEventListener("DOMContentLoaded",function(){
+    $('.nav-link').removeClass('active');
+    $('#index-navlink').addClass('active');
+
+    cconst container = document.querySelector('.figure-block-c');
+
+    container.addEventListener('mousemove', (e) => {
+      const { width, height, left, top } = container.getBoundingClientRect();
+      const x = e.clientX - left - width / 2;
+      const y = e.clientY - top - height / 2;
+    
+      const rotateX = (y / height) * 10; // Movimiento más suave
+      const rotateY = -(x / width) * 10;
+    
+      // Aplicar la rotación al contenedor completo
+      container.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      // Resetear la rotación del bloque completo
+      container.style.transform = 'rotateX(0deg) rotateY(0deg)';
+    });
+  });
+
+
+</script>
+{% endblock %}

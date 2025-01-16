@@ -1,0 +1,259 @@
+{% extends "base.html"%}
+{% load static %}
+{% load i18n %}
+{% block content %}
+<style>
+  #section-home {
+    height: 90vh;
+    background-image: 
+    radial-gradient(circle farthest-side at 50% -40%, rgba(61, 89, 233, 0.5) 40%, rgba(11, 28, 58, 0.9) 60%, transparent 100%),
+    linear-gradient(to bottom, #0B1C3A, #000000);
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    color: white; 
+    text-align: center; 
+  }
+
+  .section {
+    padding-top: 80px; 
+  }
+  .section-home h1 {
+    font-family: 'Helvetica Neue LT Std, 63 Medium Extended', sans-serif !important;
+    src: url('fonts/helvetica/HELVETICANEUELTSTDBDEX.OTF') format('opentype');
+    font-size: 0.7vw !important;
+    font-weight: 400 !important;
+}
+
+.boton-home {
+  background: linear-gradient(150deg, rgba(61, 89, 233, 0.9), rgba(11, 28, 58, 0.9)); /* Ajusta el degradado */ 
+  border: 2px solid var(--framework-blue); 
+  color: var(--heading); 
+  text-align: center; 
+  border-radius: 15px; 
+  padding: 15px 25px; 
+  font-size: 18px; 
+  font-weight: 400; 
+  line-height: 140%;
+  transition: background-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+              transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
+}
+
+.boton-home:hover {
+  transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+  background: linear-gradient(150deg, rgba(61, 89, 233, 0.9), rgba(11, 28, 58, 0.9)); /* Ajusta el degradado */
+
+  color: #ffffff; /* Asegura que el texto siga siendo blanco */
+}
+
+
+
+
+/* Contenedor principal de la sección */
+#training {
+  padding: 50px 0;
+}
+/* Encabezado */
+#training {
+  background-color: #000;
+  padding: 50px 0;
+}
+
+#training h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #fff;
+}
+
+#training p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #fff;
+}
+
+/* Botón */
+#training .btn-primary {
+  background-color: #00bcd4;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Beneficios */
+#training .benefits {
+  background-color: #111;
+  border-radius: 10px;
+  color: #fff;
+  padding: 20px;
+  text-align: left;
+}
+
+#training .benefits h3 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#training .benefits-item {
+  background-color: #1a1a2e;
+  border-radius: 10px;
+  color: #fff;
+  padding: 15px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: left;
+}
+.service-benefits{
+  color:#fff;
+  padding: 15px
+
+}
+.card-services {
+  background-image: linear-gradient(140deg, #3D59E9, #081C3A); /* Degradado con RISD Blue y Oxford Blue */
+  border: none;
+  box-shadow: 0 4px 6px rgba(11, 28, 58, 0.4); /* Sombra ligera con un tono de Oxford Blue */
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 20px;
+  color: #FEFEFF; /* Texto en blanco */
+}
+
+.card-services:hover {
+  transform: translateY(-5px); /* Eleva la tarjeta en hover */
+  box-shadow: 0 8px 12px rgba(11, 28, 58, 0.6); /* Incrementa la sombra en hover */
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* Tres columnas */
+  grid-template-rows: auto auto; /* Dos filas automáticas */
+  gap: 25px; /* Espaciado uniforme */
+}
+
+.card {
+  background: linear-gradient(140deg, #081C3A, #111);
+  border-radius: 10px;
+  padding: 30px;
+  color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card-large {
+  grid-column: span 1; /* Ocupa una columna */
+  grid-row: span 2; /* Ocupa dos filas */
+  background: linear-gradient(140deg, #081C3A, #111);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-title {
+color:#fff;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-text {
+color:#fff;
+  line-height: 1.6;
+}
+
+</style>
+<section id="section-home" class="ftco-section ftco-no-pt ftco-no-pb">
+  <div class="container">
+    <div class="row justify-content-center mb-5 pb-2">
+      <div class="col-md-10 text-center heading-section ftco-animate">
+        <h1 class="mb-4 text-white" style="font-weight:bold">{% translate "Protect Your Company From Cyber Attacks" %}</h1>
+        <h4 class="mb-4 text-white">{% translate "The leader in both compliance and penetration testing automation powered by AI" %}</h4>
+        <div class="p-4">
+          <a href="#" class="btn ms-3 boton-home" >{% translate "Get Started" %}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<section id="section-home2" class="ftco-section ftco-no-pt ftco-no-pb">
+<div class="container py-5">
+  <div class="grid-layout">
+    <!-- Tarjeta grande izquierda -->
+    <div class="card card-large">
+      <h3 class="card-title">Benefits</h3>
+      <h5 class="card-text">How this will improve your cybersecurity posture</h5>
+    </div>
+
+    <!-- Tarjetas pequeñas derecha -->
+    <div class="card">
+      <h5 class="card-text">Reduces the risk of being compromised by attackers.</h5>
+    </div>
+    <div class="card">
+      <h5 class="card-text">Proactively searches for threats, instead of waiting for them to be detected.</h5>
+    </div>
+    <div class="card">
+      <h5 class="card-text">Part of an organization’s organization’s  gfgf  hfghfhf overall cybersecurity strategy.</h5>
+    </div>
+    <div class="card">
+      <h5 class="card-text">Helps maintain the confidentiality, integrity, and availability of data.</h5>
+    </div>
+  </div>
+</div>
+</section>
+<section id="section-home3" class="ftco-section contact-section ">
+  <div class="container fondo-formulario mt-5 mb-5">
+    <div class="container mt-5 ">
+      <div class="row justify-content-center mt-5 pb-2">
+        <div class="col-md-8 mt-5 text-center align-items-center  ftco-animate">
+          <h1 class="mb-4" style="font-weight:bold">{% translate "Let's Work Together" %}</h1>
+          <h4 class="mb-4">{% translate "Tell us about yourself and we’ll figure out the best solution for you and your organization's needs." %}</h4>
+        </div>
+      </div>
+    </div>
+    <div class="row d-flex align-items-stretch no-gutters">
+      <div class="col-md-10  p-md-5 mx-auto ">
+        <form action="{% url 'contact' %}" method='post' class="">
+          {% csrf_token %}
+          <div class="form-group">
+              <input type="text" class="form-control" name='nombre' placeholder="Nome">
+          </div>
+          <div class="form-group">
+              <input type="text" class="form-control" name='correo' placeholder="Email">
+          </div>
+          <div class="form-group">
+              <input type="text" class="form-control" name='asunto' placeholder="Assunto">
+          </div>
+          <div class="form-group">
+              <textarea name="mensaje" cols="30" rows="7" class="form-control" placeholder="Mensagem"></textarea>
+          </div>
+          <div class="p-4 d-flex justify-content-start">
+            <input type="submit" value="Enviar" class="btn ms-3 pe-5 ps-5 boton-home">
+          </div>
+      </form>         
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+{% block scrips%}
+
+<script>
+  document.addEventListener("DOMContentLoaded",function(){
+    $('.nav-link').removeClass('active');
+    $('#index-navlink').addClass('active');
+
+   
+  });
+
+</script>
+{% endblock %}

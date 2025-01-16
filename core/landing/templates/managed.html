@@ -1,0 +1,118 @@
+{% extends "base.html"%}
+{% load static %}
+{% load i18n %}
+{% block content %}
+<style>
+  #section-managed {
+    position: relative;
+    height: 90vh;
+    background: 
+      url("{% static 'images/imagenService2.jpg' %}") no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Oculta contenido fuera del contenedor */
+  }
+  
+  .background-mask {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+  }
+  
+  .background-mask::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle farthest-side at 50% 300%, rgba(61, 89, 233, 0.5) 40%, rgba(0, 0, 0, 0.9) 10%, transparent 100%),
+                linear-gradient(to bottom, #0B1C3A, #000000);
+    z-index: 1;
+    opacity: 0.9; /* Controla la intensidad del degradado */
+  }
+  
+  .background-mask .container {
+    position: relative;
+    z-index: 2; /* Asegura que el contenido esté encima de la máscara */
+  }
+
+  .section {
+    padding-top: 80px; 
+  }
+  #section-managed h1 {
+    font-family: 'Helvetica Neue LT Std', sans-serif; 
+    font-size: 4vw !important;
+    font-weight: 600 !important;
+    color:#ffffff;  
+    text-align:center;
+}
+#section-managed h4 {
+  font-family: 'Helvetica Neue LT Std', sans-serif; 
+  font-size: 1.2vw !important;
+  font-weight: 400 !important;
+  color:#ffffff;  
+  text-align:center;
+}
+
+.boton-home {
+  background: linear-gradient(150deg, rgba(61, 89, 233, 0.9), rgba(11, 28, 58, 0.9)); /* Ajusta el degradado */ 
+  border: 2px solid var(--framework-blue); 
+  color: var(--heading); 
+  text-align: center; 
+  border-radius: 15px; 
+  padding: 15px 25px; 
+  font-size: 18px; 
+  font-weight: 400; 
+  line-height: 140%;
+  transition: background-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+              transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
+}
+
+.boton-home:hover {
+  transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+  background: linear-gradient(150deg, rgba(61, 89, 233, 0.9), rgba(11, 28, 58, 0.9)); /* Ajusta el degradado */
+  color: #ffffff; /* Asegura que el texto siga siendo blanco */
+}
+
+</style>
+<section id="section-managed" class="ftco-section ftco-no-pt ftco-no-pb">
+  <div class="background-mask">
+    <!-- Contenido del texto -->
+    <div class="container">
+      <div class="row justify-content-center mb-5 pb-2">
+        <div class="col-md-10 text-center heading-section ftco-animate">
+          <h1 class="mb-4 text-white" style="font-weight:bold">{% translate "Protect Your Company From Cyber Attacks" %}</h1>
+          <h4 class="mb-4 text-white">{% translate "The leader in both compliance and penetration testing automation powered by AI" %}</h4>
+          <div class="p-4">
+            <a href="#" class="btn ms-3 boton-home">{% translate "Get Started" %}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+{% endblock %}
+{% block scrips%}
+
+<script>
+  document.addEventListener("DOMContentLoaded",function(){
+    $('.nav-link').removeClass('active');
+    $('#index-navlink').addClass('active');
+
+    
+    
+   
+  });
+
+</script>
+{% endblock %}

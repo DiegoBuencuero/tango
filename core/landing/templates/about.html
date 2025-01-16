@@ -1,0 +1,187 @@
+{% extends "base.html"%}
+{% load static %}
+{% load i18n %}
+{% block content %}
+<style>
+  #section-home {
+    height: 90vh;
+    background-image: 
+    radial-gradient(circle farthest-side at 50% -40%, rgba(61, 89, 233, 0.5) 40%, rgba(11, 28, 58, 0.9) 60%, transparent 100%),
+    linear-gradient(to bottom, #0B1C3A, #0B1C3A);
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    color: white; 
+    text-align: center; 
+  }
+
+  .section {
+    padding-top: 80px; 
+  }
+  .section-home h1 {
+    font-family: 'Helvetica Neue LT Std, 63 Medium Extended', sans-serif !important;
+    src: url('fonts/helvetica/HELVETICANEUELTSTDBDEX.OTF') format('opentype');
+    font-size: 0.7vw !important;
+    font-weight: 400 !important;
+}
+
+.boton-home {
+  background: linear-gradient(150deg, rgba(61, 89, 233, 0.9), rgba(11, 28, 58, 0.9)); /* Ajusta el degradado */ 
+  border: 2px solid var(--framework-blue); 
+  color: var(--heading); 
+  text-align: center; 
+  border-radius: 15px; 
+  padding: 15px 25px; 
+  font-size: 18px; 
+  font-weight: 400; 
+  line-height: 140%;
+  transition: background-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+              transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
+}
+
+.boton-home:hover {
+  transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+  background: linear-gradient(150deg, rgba(61, 89, 233, 0.9), rgba(11, 28, 58, 0.9)); /* Ajusta el degradado */
+
+  color: #ffffff; /* Asegura que el texto siga siendo blanco */
+}.profile-card {
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+  height: 350px;
+  object-fit: cover; /* Asegura que la imagen se vea bien */
+}
+
+.card-body {
+  text-align: center;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555; /* Color de texto más suave */
+  min-height: 120px; /* Asegura que todas las descripciones tengan el mismo alto */
+}
+#section-about{
+  background: 
+    linear-gradient(to bottom, #0B1C3A, #000000);
+  color: white;
+  padding: 60px 0;
+}
+
+#section-about h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+# section-about p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+</style>
+<section id="section-about" class="ftco-section ftco-no-pt ftco-no-pb ftco-animate">
+  <div class="container text-center py-5">
+    <h2 class="mb-4 text-white" style="font-weight:bold;">Who we are</h2>
+    <p class="text-white lead">
+      At [Your Company Name], we are committed to making cybersecurity straightforward, effective, and accessible for businesses of all sizes. In a landscape filled with complex tools and solutions, we cut through the noise to deliver practical advice, tailored guidance, and actionable strategies to protect your organization's most valuable assets.
+    </p>
+    <p class="text-white lead">
+      Our approach goes beyond selling solutions—we work closely with you to understand your unique business needs, assess risks, and implement security measures that align with your goals. From conducting penetration testing to establishing compliance frameworks, our experts provide comprehensive support to ensure robust protection.
+    </p>
+    <p class="text-white lead">
+      Partnering with [Your Company Name] means gaining a dedicated team that prioritizes your success. Together, we help your business navigate the digital world securely, confidently, and prepared for the challenges ahead.
+    </p>
+  </div>
+</section>
+<section class="ftco-section ftco-no-pt ftco-no-pb ftco-animate" style="background:#fbfbfd">
+  <div class="container py-5">
+    <div class="row justify-content-center g-4">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card profile-card h-100">
+          <img src="{% static 'images/team1-1.jpg' %}" class="card-img-top" alt="Person 1">
+          <div class="card-body">
+            <h5 class="card-title">Lic. Marcos López</h5>
+            <p class="card-text">
+              Ingeniero en Sistemas de Información.<br>
+              Especialista en ciberseguridad corporativa.<br>
+              Experiencia en auditorías de seguridad informática.<br>
+              Certificación CEH (Certified Ethical Hacker).<br>
+              Líder en proyectos de protección de datos.<br>
+              Consultor en soluciones de seguridad para infraestructura crítica.
+            </p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card profile-card h-100">
+          <img src="{% static 'images/team2-1.jpg' %}" class="card-img-top" alt="Person 2">
+          <div class="card-body">
+            <h5 class="card-title">Ing. Laura Fernández</h5>
+            <p class="card-text">
+              Licenciada en Informática.<br>
+              Experta en gestión de redes seguras.<br>
+              Certificación CISSP (Certified Information Systems Security Professional).<br>
+              Especialista en análisis forense digital.<br>
+              Docente universitaria en ciberseguridad.<br>
+              Implementación de sistemas SIEM (Security Information and Event Management).
+            </p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card profile-card h-100">
+          <img src="{% static 'images/team1-2.jpg' %}" class="card-img-top" alt="Person 3">
+          <div class="card-body">
+            <h5 class="card-title">Dr. Julián Martínez</h5>
+            <p class="card-text">
+              Doctor en Ciencias de la Computación.<br>
+              Especialista en inteligencia artificial aplicada a la ciberseguridad.<br>
+              Investigador en criptografía avanzada.<br>
+              Consultor en gestión de riesgos informáticos.<br>
+              Autor de artículos académicos en revistas internacionales.<br>
+              Mentor en programas de desarrollo en ciberseguridad.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+{% block scrips%}
+
+<script>
+  document.addEventListener("DOMContentLoaded",function(){
+    $('.nav-link').removeClass('active');
+    $('#index-navlink').addClass('active');
+
+    
+    
+   
+  });
+
+</script>
+{% endblock %}

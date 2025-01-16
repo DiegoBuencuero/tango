@@ -1,0 +1,90 @@
+{% extends "base.html"%}
+{% load static %}
+{% block content %}
+
+{% comment %} <section class="hero-wrap hero-wrap-2" style="background-image: url({% static 'images/bg_3.jpg' %});" data-stellar-background-ratio="0.5">
+  <div class="overlay" ></div>
+  <div class="container">
+    <div class="row no-gutters slider-text align-items-center justify-content-center">
+      <div class="col-md-9 ftco-animate text-center">
+        <h1 class="mb-2 bread">Contate-nos</h1>
+        <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Contato <i class="ion-ios-arrow-forward"></i></span></p>
+      </div>
+    </div>
+  </div>
+</section> {% endcomment %}
+
+<section class="ftco-section ftco-no-pt ftco-no-pb contact-section mt-5 ftco-animate">
+  <h1 class="mb-2 bread text-center">Contate-nos</h1>
+  {% comment %} <p class="breadcrumbs text-center"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Contato <i class="ion-ios-arrow-forward"></i></span></p> {% endcomment %}
+  <div class="container">
+    <div class="row d-flex align-items-stretch no-gutters">
+      <div class="col-md-6 p-4 p-md-5 order-md-last bg-light">
+        <form action="{% url 'contact' %}" method='post'>
+          {% csrf_token %}
+          <div class="form-group">
+              <input type="text" class="form-control" name='nombre' placeholder="Nome">
+          </div>
+          <div class="form-group">
+              <input type="text" class="form-control" name='correo' placeholder="Email">
+          </div>
+          <div class="form-group">
+              <input type="text" class="form-control" name='asunto' placeholder="Assunto">
+          </div>
+          <div class="form-group">
+              <textarea name="mensaje" cols="30" rows="7" class="form-control" placeholder="Mensagem"></textarea>
+          </div>
+          <div class="form-group">
+              <input type="submit" value="Enviar" class="btn btn-odonto py-3 px-5">
+          </div>
+      </form>      
+      </div>
+      <div class="col-md-6 d-flex align-items-stretch">
+          <iframe style="border:0; width: 100%; height: 100%;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3453.690288191948!2d-51.2106353!3d-30.045742!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95197845acfe8e7b%3A0x83eab2e3f9a5875e!2sMedplex%20-%20Torre%20Norte!5e0!3m2!1ses!2sbr!4v1709327016817!5m2!1ses!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="ftco-section contact-section">
+  <div class="container">
+    <div class="row d-flex mb-5 contact-info">
+      <div class="col-md-12 mb-4">
+        <h2 class="h4">Informações de Contato</h2>
+      </div>
+      <div class="w-100"></div>
+      <div class="col-md-3 d-flex justify-content-center">
+        <div class="bg-light d-flex align-self-stretch box p-4 text-center">
+          <p><span class="icon icon-map-marker mr-2"></span>MEDPLEX , R. Gomes Jardim 201, sala 513 - Torre saúde - Porto Alegre -RS</p>
+        </div>
+      </div>
+      <div class="col-md-3 d-flex justify-content-center">
+        <div class="bg-light d-flex align-self-stretch box p-4 text-center">
+          <p><span class="icon icon-phone mr-2"></span><a href="tel:+5555996119565">(55) 996119565</a></p>
+          {% comment %} <p><span class="icon icon-phone"></span><a href="tel://1234567920">+ 1235 2355 98</a></p> {% endcomment %}
+        </div>
+      </div>
+      <div class="col-md-3 d-flex justify-content-center">
+        <div class="bg-light d-flex align-self-stretch box p-4 text-center">
+          <p><span class="icon icon-envelope mr-2"></span><a href="mailto:dratainakoster@gmail.com">dratainakoster@gmail.com</a></p>
+        </div>
+      </div>
+      <div class="col-md-3 d-flex justify-content-center">
+        <div class="bg-light d-flex align-self-stretch box p-4 text-center">
+          <p><span class="icon icon-globe mr-2"></span><a href="www.tainakoster.com.br">wwww.tainakoster.com.br</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+</section>
+{% endblock %}
+{% block scrips%}
+<script>
+  document.addEventListener("DOMContentLoaded",function(){
+    $('.nav-link').removeClass('active');
+    $('#contact-navlink').addClass('active');
+   
+  });
+</script>
+{% endblock %}
