@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-09 22:40+0000\n"
+"POT-Creation-Date: 2025-01-27 23:29+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
 #: core/settings.py:119
 msgid "English"
 msgstr ""
@@ -25,30 +26,100 @@ msgstr ""
 msgid "Spanish"
 msgstr ""
 
-#: landing/templates/base.html:46
-msgid "Hello, World!"
+#: landing/templates/about.html:177 landing/templates/index.html:65
+#: landing/templates/managed.html:108 landing/templates/services.html:172
+#: landing/templates/training.html:217
+msgid "Let's Work Together"
 msgstr ""
 
-#: landing/templates/base.html:87
-msgid "home"
+#: landing/templates/about.html:178 landing/templates/index.html:66
+#: landing/templates/managed.html:109 landing/templates/services.html:173
+#: landing/templates/training.html:218
+msgid ""
+"Tell us about yourself and we’ll figure out the best solution for you and "
+"your organization's needs."
 msgstr ""
 
-#: landing/templates/base.html:88
-msgid "About us"
+#: landing/templates/base.html:96 landing/templates/base.html:165
+msgid "Home"
 msgstr ""
 
-#: landing/templates/base.html:89
+#: landing/templates/base.html:97 landing/templates/base.html:166
 msgid "Threat Intelligence Services"
 msgstr ""
 
-#: landing/templates/base.html:90
+#: landing/templates/base.html:98 landing/templates/base.html:167
 msgid "Managed cybersecurity"
 msgstr ""
 
-#: landing/templates/base.html:91
+#: landing/templates/base.html:99 landing/templates/base.html:168
 msgid "Training"
 msgstr ""
 
-#: landing/templates/base.html:95
-msgid "lenguaje"
+#: landing/templates/base.html:100 landing/templates/base.html:169
+msgid "About us"
+msgstr ""
+
+#: landing/templates/base.html:135 landing/templates/index.html:33
+#: landing/templates/managed.html:95 landing/templates/services.html:40
+#: landing/templates/training.html:180
+msgid "Get Started"
+msgstr ""
+
+#: landing/templates/index.html:30 landing/templates/managed.html:92
+#: landing/templates/training.html:177
+msgid "Protect Your Company From Cyber Attacks"
+msgstr ""
+
+#: landing/templates/index.html:31 landing/templates/index.html:55
+#: landing/templates/managed.html:93 landing/templates/services.html:162
+#: landing/templates/training.html:178
+msgid ""
+"The leader in both compliance and penetration testing automation powered by "
+"AI"
+msgstr ""
+
+#: landing/templates/index.html:54 landing/templates/services.html:161
+msgid "Comprehensive Cybersecurity Management"
+msgstr ""
+
+#: landing/templates/services.html:37
+msgid "THREAT INTELLIGENCE SERVICES"
+msgstr ""
+
+#: landing/templates/services.html:38
+msgid "subtitulo_threat"
+msgstr "Enhance your cybersecurity maturity with expert threat intelligence services."
+"Our team provides in-depth analysis, including vulnerability assessments,"
+"alongside comprehensive organizational consulting and cyber threat intelligence"
+"assessments. We help you identify, prioritize, and mitigate critical risks,"
+"including insider threats, supply chain attacks, and advanced persistent threats"
+"(APTs). Gain actionable insights to improve your security posture, make"
+"informed decisions, and demonstrate compliance with industry regulations and"
+"best practices."
+
+#: landing/templates/services.html:57
+msgid "Cyber Threat Intelligence Assessment:"
+msgstr "Cyber Threat Intelligence Assessment:"
+
+#: landing/templates/services.html:58
+msgid ""
+"Minerva simplifies the complexity of pentest report generation, enabling you "
+"to focus on what matters most – securing your applications and "
+"infrastructure."
+msgstr ""
+
+#: landing/templates/services.html:73
+msgid "Maturity Level Analysis:"
+msgstr ""
+
+#: landing/templates/services.html:76
+msgid "Gain valuable insights into your organization's cybersecurity maturity."
+msgstr ""
+
+#: landing/templates/services.html:77
+msgid ""
+"Our analysis leverages the CREST and CTI-CMM frameworks to identify gaps, "
+"prioritize improvements, and demonstrate compliance with industry’s best "
+"practices."
 msgstr ""

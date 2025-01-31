@@ -8142,7 +8142,7 @@ h1, h2, h3, h4, h5,
     .ftco-navbar-light .navbar-nav {
       padding-bottom: 10px; } }
   .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
-    font-size: clamp(13px, 0.85vw, 18px);
+    font-size: clamp(12px, 0.85vw, 16px);
     padding-top: 0.65rem;
     padding-bottom: 0.65rem;
     padding-left: 15px;

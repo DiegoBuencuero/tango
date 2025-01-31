@@ -3,195 +3,177 @@
 {% load i18n %}
 {% block content %}
 <style>
-  .custom-img {
-    width: 70%; /* La imagen ocupará el 70% del contenedor */
-    display: block; /* Hace que el margen auto funcione */
-    margin: 0 auto; /* Centra la imagen horizontalmente */
-    background-color: rgba(0, 0, 0, 0.9);
-  }
 
-.boton-home {
-  background: linear-gradient(150deg, rgba(61, 89, 233, 0.9), rgba(11, 28, 58, 0.9)); /* Ajusta el degradado */ 
-  border: 2px solid var(--framework-blue); 
-  color: var(--heading); 
-  text-align: center; 
-  border-radius: 15px; 
-  padding: 15px 25px; 
-  font-size: 18px; 
-  font-weight: 400; 
-  line-height: 140%;
-  transition: background-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
-              transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
+.icon-custom {
+  font-size: 45px;
+  margin-right: 20px;
+  vertical-align: middle;
+  color: #3D59E9;
 }
-
-.boton-home:hover {
-  transform: scale(1.1); /* Aumenta ligeramente el tamaño */
-  background: linear-gradient(150deg, rgba(61, 89, 233, 0.9), rgba(11, 28, 58, 0.9)); /* Ajusta el degradado */
-  color: #ffffff; /* Asegura que el texto siga siendo blanco */
+.highlight-uppercase {
+  color: #353535;
+  font-weight: bold; /* Opcional: Si querés resaltar más */
+}
+.custom-heading {
+  flex-grow: 1; /* Hace que el contenido se distribuya uniformemente */
+  display: flex;
+  flex-direction: column;
+  justify-content: start; /* Asegura que el texto arranque en la misma altura */
 }
 </style>
-<section id="section-home" class="ftco-section ftco-no-pt ftco-no-pb">
+
+<section id="section-service" class="ftco-section ftco-no-pt ftco-no-pb">
   <div class="container mt-5 ftco-animate">
-    <div class="row align-items-left mt-5">
-      <div class="col-md-6 text-left">
-        <h1 class="mb-4" style="font-weight:bold">{% translate "Protect Your Company From Cyber Attacks" %}</h1>
-        <h4 class="mb-4">{% translate "The leader in both compliance and penetration testing automation powered by AI" %}</h4>
+    <div class="row justify-content-center mt-5">
+      <div class="col-md-8 text-center align-items-center">
+        <h1 class="mb-4">{% translate "THREAT INTELLIGENCE SERVICES" %}</h1>
+        <h4 class="mb-4 subtitulo_threat">{% translate "subtitulo_threat" %}</h4>
         <div class="p-4">
-          <a href="#" class="btn ms-3 boton-home" >{% translate "Get Started" %}</a>
+          <button type="button" class="btn btn-primary btn-lg boton-home">{% translate "Get Started" %}</button>
         </div>
-      </div>
-      <div class="col-md-6 text-left ">
-        <img src="{% static 'images/services1.jpg' %}" class="custom-img">
-      </div>
- 
-    </div>
-  </div>
-</section>
-<section id="section-services2" class="ftco-section ftco-no-pt ftco-no-pb ftco-animate">
-  <div class="container mt-5 mb-5 position-relative">
-    <!-- Título principal -->
-    <div class="row align-items-center mb-5">
-      <div class="col-md-1 mb-4"> </div>
-      <div class="col-md-5">
-        <h1 class="mb-4" style="font-weight:bold">{% translate "Why Minerva?" %}</h1>
-        <h4 class="mb-4">{% translate "Minerva simplifies the complexity of pentest report generation, enabling you to focus on what matters most – securing your applications and infrastructure." %}</h4>
-      </div>
-      <div class="col-md-5 text-center">
-        <img src="{% static 'images/services1.jpg' %}" alt="Minerva Insights" class="img-fluid">
-      </div>
-      <div class="col-md-1 mb-4"> </div>
-    </div>
-    <!-- Tarjetas -->
-    <div class="row">
-      <!-- Tarjeta 1 -->
-      <div class="col-md-1 mb-4"> </div>
-      <div class="col-md-5 mb-4">
-        <div class="tasks-4 p-5 no-min-height light gradient-card">
-          <div class="tasks-block">
-            <img src="https://cdn.prod.website-files.com/629fd7fea86dd7891a8e1d0b/66b287d4eca6355cff4a6ea6_zap.svg" alt="" class="icon-tasks">
-            <h5 class="heading-tasks text-color-dark">Efficiency & Speed</h5>
-          </div>
-          <ul class="list-3 feature-bullet text-color-dark">
-            <li>Eliminate human errors and ensure consistency  all your reports.</li>
-            <li>Rely on Minerva’s standardized templates to  high-quality output.</li>
-            <li>Reduce the time spent on generating reports omating repetitive tasks.</li>
-          </ul>
-        </div>
-      </div>
-      <!-- Tarjeta 2 -->
-      <div class="col-md-5 mb-4">
-        <div class="tasks-4 p-5 no-min-height light gradient-card">
-          <div class="tasks-block">
-            <img src="https://cdn.prod.website-files.com/629fd7fea86dd7891a8e1d0b/66b287d4eca6355cff4a6ea6_zap.svg" alt="" class="icon-tasks">
-            <h5 class="heading-tasks text-color-dark">Accuracy & Consistency</h5>
-          </div>
-          <ul class="list-3 feature-bullet text-color-dark">
-            <li>Eliminate human errors and ensure consistency  all your reports.</li>
-            <li>Rely on Minerva’s standardized templates to  high-quality output.</li>
-            <li>Reduce the time spent on generating reports omating repetitive tasks.</li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-md-1 mb-4"> </div>
-      <!-- Tarjeta 3 -->
-      <div class="col-md-1 mb-4"> </div>
-      <div class="col-md-5 mb-4">
-        <div class="tasks-4 p-5 no-min-height light gradient-card">
-          <div class="tasks-block">
-            <img src="https://cdn.prod.website-files.com/629fd7fea86dd7891a8e1d0b/66b287d4eca6355cff4a6ea6_zap.svg" alt="" class="icon-tasks">
-            <h5 class="heading-tasks text-color-dark">Compliance & Customization</h5>
-          </div>
-          <ul class="list-3 feature-bullet text-color-dark">
-            <li>Eliminate human errors and ensure consistency  all your reports.</li>
-            <li>Rely on Minerva’s standardized templates to  high-quality output.</li>
-            <li>Reduce the time spent on generating reports omating repetitive tasks.</li>
-          </ul>
-        </div>
-      </div>
-      <!-- Tarjeta 4 -->
-      <div class="col-md-5 mb-4">
-        <div class="tasks-4 p-5 no-min-height light gradient-card">
-          <div class="tasks-block">
-            <img src="https://cdn.prod.website-files.com/629fd7fea86dd7891a8e1d0b/66b287d4eca6355cff4a6ea6_zap.svg" alt="" class="icon-tasks">
-            <h5 class="heading-tasks text-color-dark">Secure & Scalable</h5>
-          </div>
-          <ul class="list-3 feature-bullet text-color-dark">
-            <li>Eliminate human errors and ensure consistency  all your reports.</li>
-            <li>Rely on Minerva’s standardized templates to  high-quality output.</li>
-            <li>Reduce the time spent on generating reports omating repetitive tasks.</li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-md-1 mb-4"> </div>
-      <!-- Tarjeta 5 (última, ocupa toda la fila) -->
-      <div class="col-md-1 mb-4"> </div>
-      <div class="col-md-10">
-        <div class="tasks-4 p-5 no-min-height light gradient-card">
-          <div class="tasks-block">
-            <img src="https://cdn.prod.website-files.com/629fd7fea86dd7891a8e1d0b/66b287d4eca6355cff4a6ea6_zap.svg" alt="" class="icon-tasks">
-            <h5 class="heading-tasks text-color-dark">AI Powered Insights</h5>
-          </div>
-          <ul class="list-3 feature-bullet text-color-dark">
-            <li>Use AI to gain deeper insights into your security posture.</li>
-            <li>Automatically generate remediation instructions to address vulnerabilities efficiently.</li>
-            <li>Reduce the time spent on generating reports by automating repetitive tasks.</li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-md-1 mb-4"> </div>
-    </div>
-  </div>
-</section>
-<section id="section-home2" class="ftco-section ftco-no-pt ftco-no-pb">
-  <div class="container mt-5 position-relative">
-    <div class="row align-items-center mt-5 mb-5 pb-2">
-      <!-- Primera columna -->
-      <div class="col-md-6 text-center ftco-animate position-relative">
-        <div class="figure-block-c">
-          <div class="figure-c1" data-z="-4"></div>
-          <div class="figure-c2" data-z="15"></div>
-          <div class="figure-c3" data-z="8"></div>
-        </div>
-      </div> <!-- Cierre correcto de la primera columna -->
-      
-      <!-- Segunda columna -->
-      <div class="col-md-6 text-center ftco-animate">
-        <h1 class="mb-4" style="font-weight:bold">{% translate "Comprehensive Cybersecurity Management" %}</h1>
-        <h4 class="mb-4">{% translate "The leader in both compliance and penetration testing automation powered by AI" %}</h4>
       </div>
     </div>
   </div>
 </section>
+<section id="section-services2" class="ftco-section ftco-no-pt mt-5 mb-5 ftco-no-pb ftco-animate">
+  <div class="container-all">
+    <div class="container position-relative">
+      <div class="row align-items-center mb-5">
+        <div class="col-md-1 mb-4"></div>
+        <div class="col-md-10">
+            <h1 class="mb-4" style="font-weight:bold">{% translate "Cyber Threat Intelligence Assessment:" %}</h1>
+        </div>
+        <div class="col-md-1 mb-4"></div>
+      </div>    
+    </div>
+
+    <div class="container ftco-animate">
+      <div class="row justify-content-center align-items-stretch g-4">
+          <div class="col-md-5">
+              <div class=" card-fixed-height p-4 no-min-height light gradient-card h-100 d-flex flex-column">
+                  <div class="tasks-block d-flex align-items-start">
+                      <i class="icon-bar-chart-o icon-custom"></i>
+                      <h4 class="heading-tasks text-color-dark mb-0 ms-2">{% translate "Maturity Level Analysis:" %}</h4>
+                  </div>
+                  <div class="custom-heading mt-auto">
+                      <h5>{% translate "Gain valuable insights into your organization's cybersecurity maturity." %}</h5>
+                      <h5>{% translate "Our analysis leverages the CREST and CTI-CMM frameworks to identify gaps, prioritize improvements, and demonstrate compliance with industry’s best practices." %}</h5>
+                  </div>
+              </div>
+          </div>  
+          <div class="col-md-5">
+              <div class="card-fixed-height p-4 no-min-height light gradient-card h-100 d-flex flex-column">
+                  <div class="tasks-block d-flex align-items-start">
+                      <i class="icon-shield icon-custom"></i>
+                      <h4 class="heading-tasks text-color-dark mb-0 ms-2">{% translate "Threat Intelligence Organizational Consulting:" %}</h4>
+                  </div>
+                  <div class="custom-heading mt-auto">
+                      <h5>{% translate "Maximize the value of your threat intelligence program." %}</h5>
+                      <h5>{% translate "Maximize the value of your threat intelligence program. Our expert consultants guide you in implementing best practices, optimizing processes, and developing a high-performing threat intelligence team to proactively defend against cyber threats." %}</h5>
+                    </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <div class="container my-5 ftco-animate">
+      <div class="row justify-content-center align-items-stretch g-4">
+        <div class="col-md-5">
+          <div class="card-fixed-height p-4 no-min-height light gradient-card h-100 d-flex flex-column">
+            <div class="tasks-block d-flex align-items-start">
+                <i class="icon-settings_input_antenna icon-custom"></i>
+                <h4 class="heading-tasks text-color-dark mb-0 ms-2">{% translate "Cyber Threat modeling & profiling" %}</h4>
+            </div>
+            <div class="custom-heading mt-auto">
+              <h5>{% translate "Protect your assets with robust threat modeling and profiling. " %}</h5>
+              <h5>
+                {% translate "Our experts leverage industry-leading frameworks like " %}
+                <span class="highlight-uppercase">{% translate "STRIDE, PASTA, OWASP, NIST, OCTAVE, Cyber Kill-Chain, MITRE ATT&CK and DIAMOND MODEL" %}</span>
+                {% translate " to identify, analyze, and mitigate potential cyber threats, enabling you to proactively safeguard your critical systems and data." %}
+              </h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="card-fixed-height p-4 no-min-height light gradient-card h-100 d-flex flex-column">
+            <div class="tasks-block d-flex align-items-start">
+                <i class="icon-report icon-custom"></i>
+                <h4 class="heading-tasks text-color-dark mb-0 ms-2">{% translate "Intelligence Analysis Reporting" %}</h4>
+            </div>
+            <div class="custom-heading mt-auto">
+                <h5>{% translate "Gain actionable insights from integrated intelligence analysis." %}</h5>
+                <h5>{% translate "Our experts analyze both cyber intelligence and **non-digital intelligence** sources to provide comprehensive threat assessments, identify emerging threats, and support informed decision-making." %}</h5>
+            </div>
+          </div>
+        </div>  
+      </div>
+    </div>
+    <div class="container my-5 ftco-animate ">
+      <div class="row align-items-center ">
+        <div class="col-12 text-center">
+            <h1 class="mb-4" style="font-weight:bold">{% translate "OSINT" %}</h1>
+        </div>
+      </div>
+      <div class="row justify-content-center align-items-stretch g-4 my-5">
+        <div class="col-md-10">
+          <div class="card-fixed-height p-4 no-min-height  tarjeta-grande light  h-100 d-flex flex-column">
+            <div class="tasks-block d-flex align-items-start">
+                <i class="icon-globe icon-custom"></i>
+                <h4 class="heading-tasks text-color-dark mb-0 ms-2">{% translate "Organizational Human Risk Analysis (Digital HUMINT)" %}</h4>
+            </div>
+            <div class="custom-heading mt-auto">
+              <h5>{% translate "Reduce your organization's exposure to human risk with our expert analysis. We leverage OSINT data to identify and assess the potential for insider threats, employee negligence, and other human-centric security vulnerabilities. " %}</h5>
+              <h5>{% translate "Our in-depth assessments help you understand and mitigate the risks associated with employee behavior, including non-compliance with security policies, misuse of technology, and susceptibility to social engineering attacks." %}</h5>
+            </div>
+          </div>
+        </div>
+      </div> 
+      <div class="row justify-content-center align-items-stretch g-4">
+        <div class="col-md-10">
+          <div class="card-fixed-height p-4 no-min-height  tarjeta-grande light  h-100 d-flex flex-column">
+            <div class="tasks-block d-flex align-items-start">
+                <i class="icon-user-secret icon-custom"></i>
+                <h4 class="heading-tasks text-color-dark mb-0 ms-2">{% translate "Online profile risk assessment:" %}</h4>
+            </div>
+            <div class="custom-heading mt-auto">
+              <h5>{% translate "Understand and mitigate the risks of your online presence." %}</h5>
+              <h5>{% translate "Take control of your privacy** with our comprehensive profile risk assessment." %}</h5>
+              <h5>{% translate "We analyze your digital footprint to determine what personal information is publicly available, identify potential risks to your connections, assets, and reputation, and develop a customized action plan to minimize your online exposure." %}</h5>
+            </div>
+          </div>
+        </div>
+      </div>    
+  </div>
+</section>
+  
+
 <section id="section-home3" class="ftco-section contact-section ftco-animate">
-  <div class="container fondo-formulario mt-5 mb-5">
-    <div class="container mt-5 ">
-      <div class="row justify-content-center mt-5 pb-2">
-        <div class="col-md-8 mt-5 text-center align-items-center  ftco-animate">
-          <h1 class="mb-4" style="font-weight:bold">{% translate "Let's Work Together" %}</h1>
-          <h4 class="mb-4">{% translate "Tell us about yourself and we’ll figure out the best solution for you and your organization's needs." %}</h4>
-        </div>
+  <div class="container fondo-formulario d-flex flex-column justify-content-center align-items-center text-center mt-5 mb-5">
+    <div class="row justify-content-center w-100">
+      <div class="col-lg-8 col-md-10">
+        <h1 class="mb-4">{% translate "Let's Work Together" %}</h1>
+        <h4 class="mb-4">{% translate "Tell us about yourself and we’ll figure out the best solution for you and your organization's needs." %}</h4>
       </div>
     </div>
-    <div class="row d-flex align-items-stretch no-gutters">
-      <div class="col-md-10  p-md-5 mx-auto ">
-        <form action="{% url 'contact' %}" method='post' class="">
+    <div class="row justify-content-center w-100">
+      <div class="col-lg-8 col-md-10">
+        <form action="{% url 'contact' %}" method='post' class="p-4">
           {% csrf_token %}
-          <div class="form-group">
-              <input type="text" class="form-control" name='nombre' placeholder="Nome">
+          <div class="mb-3">
+            <input type="text" class="form-control" name='nombre' placeholder="Nome">
           </div>
-          <div class="form-group">
-              <input type="text" class="form-control" name='correo' placeholder="Email">
+          <div class="mb-3">
+            <input type="email" class="form-control" name='correo' placeholder="Email">
           </div>
-          <div class="form-group">
-              <input type="text" class="form-control" name='asunto' placeholder="Assunto">
+          <div class="mb-3">
+            <input type="text" class="form-control" name='asunto' placeholder="Assunto">
           </div>
-          <div class="form-group">
-              <textarea name="mensaje" cols="30" rows="7" class="form-control" placeholder="Mensagem"></textarea>
+          <div class="mb-3">
+            <textarea name="mensaje" cols="30" rows="5" class="form-control" placeholder="Mensagem"></textarea>
           </div>
-          <div class="p-4 d-flex justify-content-start">
-            <input type="submit" value="Enviar" class="btn ms-3 pe-5 ps-5 boton-home">
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary px-5 boton-home">Enviar</button>
           </div>
-      </form>         
+        </form>
       </div>
     </div>
   </div>
