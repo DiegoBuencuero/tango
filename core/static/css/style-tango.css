@@ -428,7 +428,28 @@
   font-size: 1.1rem; 
 }
 
+@media (max-width: 768px) {
+  #section-managed1  h1 {
+    font-size: 1.5rem; 
+  }
+  
+  #section-managed1 h4 {
+    font-size: 1rem; 
+  }
+  #section-managed1  {
+    height: 100vh;
+  }
+}
 
+@media (max-width: 480px) {
+  #section-managed1  h1 {
+    font-size: 2rem;
+  }
+  
+  #section-managed1  h4 {
+    font-size: 0.8rem;
+  }
+}
 
 #section-managed {
   position: relative;
