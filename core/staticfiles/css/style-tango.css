@@ -368,7 +368,7 @@
   
   @media (max-width: 480px) {
     #section-home3{
-      font-size: 100rem;
+      font-size: 100vh;
     }
     
   }
