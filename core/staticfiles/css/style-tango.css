@@ -377,7 +377,7 @@
     }
 
     .fondo-formulario {
-        width: 95%;
+        width: 98%;
         max-width: 90%;
         padding: 1rem;
     }
@@ -392,11 +392,11 @@
     }
 
     .fondo-formulario h1 {
-        font-size: 1.5rem !important;
+        font-size: 1.1rem !important;
     }
 
     .fondo-formulario h4 {
-        font-size: 1rem !important;
+        font-size: 0.8rem !important;
     }
 }
 
