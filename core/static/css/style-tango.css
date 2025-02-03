@@ -720,7 +720,21 @@
   pointer-events: none;
 }
 
+@media (max-width: 768px) {
+  #section-about2 {
+    background-attachment: scroll; /* Corrige el problema en móviles */
+    background-size: contain; /* Ajusta la imagen sin recortar */
+    min-height: 50vh; /* Reduce el tamaño para que no genere espacios en blanco */
+  }
+}
 
+@media (max-width: 480px) {
+  #section-about2 {
+    background-size: cover; /* Se asegura que la imagen cubra bien */
+    background-position: top; /* Alinea mejor en pantallas chicas */
+    min-height: 40vh; /* Reduce la altura para evitar espacios en blanco */
+  }
+}
 #section-about3{
   position: relative;
   width: 100%;
@@ -746,6 +760,21 @@
   pointer-events: none;
   background: rgba(11, 28, 58, 0.8);
 }
+@media (max-width: 768px) {
+  #section-about3 {
+    background-attachment: scroll; /* Corrige el problema en móviles */
+    background-size: contain; /* Ajusta la imagen sin recortar */
+    min-height: 50vh; /* Reduce el tamaño para que no genere espacios en blanco */
+  }
+}
+
+@media (max-width: 480px) {
+  #section-about3 {
+    background-size: cover; /* Se asegura que la imagen cubra bien */
+    background-position: top; /* Alinea mejor en pantallas chicas */
+    min-height: 40vh; /* Reduce la altura para evitar espacios en blanco */
+  }
+}
 
 #section-about4 {
   position: relative;
@@ -758,7 +787,7 @@
   justify-content: center;
   align-items: center;
   text-align: left;
-  
+  padding: 5vh 0;
 }
 
 /* Gradiente de fondo */
@@ -772,6 +801,21 @@
   background: linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgba(252, 252, 252, 0.9) 100%);
   z-index: 1;
   pointer-events: none;
+}
+@media (max-width: 768px) {
+  #section-about4 {
+    background-attachment: scroll; /* Corrige el problema en móviles */
+    background-size: contain; /* Ajusta la imagen sin recortar */
+    min-height: 50vh; /* Reduce el tamaño para que no genere espacios en blanco */
+  }
+}
+
+@media (max-width: 480px) {
+  #section-about4 {
+    background-size: cover; /* Se asegura que la imagen cubra bien */
+    background-position: top; /* Alinea mejor en pantallas chicas */
+    min-height: 40vh; /* Reduce la altura para evitar espacios en blanco */
+  }
 }
 
 #section-about5{
