@@ -617,25 +617,27 @@
   font-size: 1.1rem; 
 }
 @media (max-width: 768px) {
-  #section-training h1 {
-    font-size: 3rem; 
+  #section-training  h1 {
+    font-size: 1.5rem; 
   }
   
   #section-training h4 {
     font-size: 1rem; 
   }
+  #section-training  {
+    height: 100vh;
+  }
 }
 
 @media (max-width: 480px) {
   #section-training h1 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
   
   #section-training h4 {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 }
-
 
 /* ================================================================================ */
 /*                                 ESTILO DE ABOUT                          */
@@ -669,22 +671,25 @@
 }
 
 @media (max-width: 768px) {
-  #section-about h1 {
-    font-size: 3rem; 
+  #section-about  h1 {
+    font-size: 1.5rem; 
   }
   
   #section-about h4 {
     font-size: 1rem; 
   }
+  #section-about  {
+    height: 100vh;
+  }
 }
 
 @media (max-width: 480px) {
   #section-about h1 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
   
   #section-about h4 {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 }
 
