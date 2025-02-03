@@ -361,19 +361,18 @@
   }
   .fondo-formulario form {
     width: 100%;
-    max-width: 400px; /* Limita el ancho del formulario */
+    max-width: 400px;
 }
 
 .fondo-formulario .form-control {
     width: 100%;
 }
 
-/* Ajustes en pantallas más pequeñas */
 @media (max-width: 768px) {
     #section-home3 {
         height: 100vh;
         padding: 10px;
-        overflow: auto; /* Permite scroll si es necesario */
+        overflow: auto; 
     }
 
     .fondo-formulario {
@@ -430,22 +429,25 @@
 }
 
 @media (max-width: 768px) {
-  #section-managed1 h1 {
-    font-size: 3rem; 
+  #section-managed h1 {
+    font-size: 1.5rem; 
   }
   
-  #section-managed1 h4 {
+  #section-managed h4 {
     font-size: 1rem; 
+  }
+  #section-managed {
+    height: 100vh;
   }
 }
 
 @media (max-width: 480px) {
-  #section-managed1 h1 {
-    font-size: 3rem;
+  #section-managed h1 {
+    font-size: 2rem;
   }
   
-  #section-managed1 h4 {
-    font-size: 1rem;
+  #section-managed h4 {
+    font-size: 0.8rem;
   }
 }
 
@@ -614,23 +616,27 @@
   line-height: 1.8;
   font-size: 1.1rem; 
 }
+
 @media (max-width: 768px) {
   #section-training h1 {
-    font-size: 3rem; 
+    font-size: 1.5rem; 
   }
   
   #section-training h4 {
     font-size: 1rem; 
   }
+  #section-training {
+    height: 100vh;
+  }
 }
 
 @media (max-width: 480px) {
   #section-training h1 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
   
   #section-training h4 {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 }
 
