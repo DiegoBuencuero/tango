@@ -344,10 +344,6 @@
     overflow: hidden; 
 }
 
-.fondo-formulario .form-control {
-  width: 100%;
-}
-
   #section-home3 h4 {
     font-family: 'Helvetica Neue LT Std', sans-serif;
     font-size: 1.2rem !important;
@@ -363,38 +359,47 @@
     text-align: center;
     font-size: 2rem !important;
   }
+  .fondo-formulario form {
+    width: 100%;
+    max-width: 400px; /* Limita el ancho del formulario */
+}
 
-  /* Ajustes en pantallas más pequeñas */
+.fondo-formulario .form-control {
+    width: 100%;
+}
+
+/* Ajustes en pantallas más pequeñas */
 @media (max-width: 768px) {
-  #section-home3 {
-      height: 100vh;
-      padding: 10px;
-      overflow: auto; /* Permite scroll si es necesario */
-  }
+    #section-home3 {
+        height: 100vh;
+        padding: 10px;
+        overflow: auto; /* Permite scroll si es necesario */
+    }
 
-  .fondo-formulario {
-      width: 95%;
-      max-width: 90%;
-      padding: 1rem;
-  }
+    .fondo-formulario {
+        width: 95%;
+        max-width: 90%;
+        padding: 1rem;
+    }
 }
 
 @media (max-width: 480px) {
-  .fondo-formulario {
-      width: 100%;
-      max-width: 95%;
-      padding: 0.8rem;
-      min-height: auto;
-  }
+    .fondo-formulario {
+        width: 100%;
+        max-width: 95%;
+        padding: 0.8rem;
+        min-height: auto;
+    }
 
-  .fondo-formulario h1 {
-      font-size: 1.5rem !important;
-  }
+    .fondo-formulario h1 {
+        font-size: 1.5rem !important;
+    }
 
-  .fondo-formulario h4 {
-      font-size: 1rem !important;
-  }
+    .fondo-formulario h4 {
+        font-size: 1rem !important;
+    }
 }
+
 /* ================================================================================ */
 /*                                 ESTILO DE MANAGED                             */
 /* ================================================================================ */

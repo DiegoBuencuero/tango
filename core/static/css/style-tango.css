@@ -314,7 +314,7 @@
 
   
   #section-home3 {
-    height: 90vh;
+    height: 100vh;
     background-image: 
     radial-gradient(circle farthest-side at 50% 300%, rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0.9) 60%, transparent 100%),
     linear-gradient(to bottom, #0B1C3A,  #000000);
@@ -324,6 +324,7 @@
     color: white; 
     text-align: center; 
     overflow: hidden;
+    padding: 20px;
 }
 
 .fondo-formulario {
@@ -333,7 +334,7 @@
     border-radius: 15px;
     width: 80%;
     max-width: 500px;
-    min-height: 80vh; 
+    min-height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -342,7 +343,6 @@
     padding: 1rem;
     overflow: hidden; 
 }
-
 
   #section-home3 h4 {
     font-family: 'Helvetica Neue LT Std', sans-serif;
@@ -359,19 +359,47 @@
     text-align: center;
     font-size: 2rem !important;
   }
+  .fondo-formulario form {
+    width: 100%;
+    max-width: 400px; /* Limita el ancho del formulario */
+}
 
-  @media (max-width: 768px) {
+.fondo-formulario .form-control {
+    width: 100%;
+}
+
+/* Ajustes en pantallas más pequeñas */
+@media (max-width: 768px) {
     #section-home3 {
-      height: 100vh;
+        height: 100vh;
+        padding: 10px;
+        overflow: auto; /* Permite scroll si es necesario */
     }
-  }
-  
-  @media (max-width: 480px) {
-    #section-home3{
-      font-size: 100vh;
+
+    .fondo-formulario {
+        width: 95%;
+        max-width: 90%;
+        padding: 1rem;
     }
-    
-  }
+}
+
+@media (max-width: 480px) {
+    .fondo-formulario {
+        width: 100%;
+        max-width: 95%;
+        padding: 0.8rem;
+        min-height: auto;
+    }
+
+    .fondo-formulario h1 {
+        font-size: 1.5rem !important;
+    }
+
+    .fondo-formulario h4 {
+        font-size: 1rem !important;
+    }
+}
+
 /* ================================================================================ */
 /*                                 ESTILO DE MANAGED                             */
 /* ================================================================================ */
