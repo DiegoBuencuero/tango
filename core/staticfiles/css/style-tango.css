@@ -219,7 +219,7 @@
 
 @media (max-width: 768px) {
   #section-service h1 {
-    font-size: 3rem; 
+    font-size: 2rem; 
   }
   
   #section-service h4 {
@@ -229,11 +229,11 @@
 
 @media (max-width: 480px) {
   #section-service h1 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
   
   #section-service h4 {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 }
 
