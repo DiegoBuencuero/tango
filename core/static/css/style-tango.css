@@ -428,28 +428,7 @@
   font-size: 1.1rem; 
 }
 
-@media (max-width: 768px) {
-  #section-managed h1 {
-    font-size: 1.5rem; 
-  }
-  
-  #section-managed h4 {
-    font-size: 1rem; 
-  }
-  #section-managed {
-    height: 100vh;
-  }
-}
 
-@media (max-width: 480px) {
-  #section-managed h1 {
-    font-size: 2rem;
-  }
-  
-  #section-managed h4 {
-    font-size: 0.8rem;
-  }
-}
 
 #section-managed {
   position: relative;
@@ -616,27 +595,23 @@
   line-height: 1.8;
   font-size: 1.1rem; 
 }
-
 @media (max-width: 768px) {
   #section-training h1 {
-    font-size: 1.5rem; 
+    font-size: 3rem; 
   }
   
   #section-training h4 {
     font-size: 1rem; 
   }
-  #section-training {
-    height: 100vh;
-  }
 }
 
 @media (max-width: 480px) {
   #section-training h1 {
-    font-size: 2rem;
+    font-size: 3rem;
   }
   
   #section-training h4 {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 }
 
