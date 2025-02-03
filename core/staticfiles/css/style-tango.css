@@ -225,6 +225,9 @@
   #section-service h4 {
     font-size: 1rem; 
   }
+  #section-service {
+    height: 100vh;
+  }
 }
 
 @media (max-width: 480px) {
