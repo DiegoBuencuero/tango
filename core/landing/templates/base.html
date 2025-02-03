@@ -39,48 +39,7 @@
   
   </head>
   <style>
-    .boton-nav {
-      background: linear-gradient(150deg, rgba(61, 89, 233, 0.9), rgba(11, 28, 58, 0.9)); /* Ajusta el degradado */ 
-      border: 2px solid var(--framework-blue); 
-      color: var(--heading); 
-      text-align: center; 
-      border-radius: 18px; 
-      padding: 13px 22px; 
-      font-size: 14px; 
-      font-weight: 400; 
-      line-height: 140%;
-      transition: background-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
-                  transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
-      color: #ffffff; /* Asegura que el texto siga siendo blanco */
-    }
     
-    .boton-nav:hover {
-      transform: scale(1.1); /* Aumenta ligeramente el tamaño */
-      background: linear-gradient(150deg, rgba(61, 89, 233, 0.9), rgba(11, 28, 58, 0.9)); /* Ajusta el degradado */
-    
-      color: #ffffff; /* Asegura que el texto siga siendo blanco */
-    }
-
-    .logo-img{
-      width: 70%; /* Hace que el logo ocupe todo el ancho del contenedor */
-      height: auto; /* Mantiene la proporción del logo */
-    }
-    .logo-img-footer{
-      width: 130%; /* Hace que el logo ocupe todo el ancho del contenedor */
-      height: auto; /* Mantiene la proporción del logo */
-    }
-    @media (max-width: 768px) {
-      .logo-img {
-        width: 150%; /* Hace que el logo ocupe todo el ancho del contenedor */
-        height: auto; /* Mantiene la proporción del logo */
-      }
-    
-      .navbar-brand {
-        display: block; /* Asegura que el contenedor del logo sea un bloque completo */
-        text-align: center; /* Centra el logo */
-        padding: 0; /* Elimina relleno adicional si es necesario */
-      }
-    }
   </style>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar"> 
@@ -93,11 +52,11 @@
         </button>
         <div class="collapse navbar-collapse mt-3 mb-3" id="ftco-nav">
           <ul class="navbar-nav m-auto">
-            <li class="nav-item me-5" id="index-navlink"><a href="{% url 'index' %}" class="nav-link pl-0 text-light">{% translate "Home" %}</a></li>
-            <li class="nav-item me-5" id="about-navlink"><a href="{% url 'services' %}" class="nav-link text-light">{% translate "Threat Intelligence Services" %}</a></li>
-            <li class="nav-item me-5" id="doctors-navlink"><a href="{% url 'managed'  %}" class="nav-link text-light">{% translate "Managed cybersecurity" %}</a></li>
-            <li class="nav-item " id="services-navlink"><a href="{% url 'training' %}" class="nav-link text-light">{% translate "Training" %}</a></li>
-            <li class="nav-item" id="blog-navlink"><a href="{% url 'about' %}" class="nav-link text-light">{% translate "About us" %}</a></li> 
+            {% comment %} <li class="nav-item me-5" id="index-navlink"><a href="{% url 'index' %}" class="nav-link pl-0 text-light">{% translate "Home" %}</a></li> {% endcomment %}
+            <li class="nav-item me-5" id="service-navlink"><a href="{% url 'services' %}" class="nav-link text-light">{% translate "Threat Intelligence Services" %}</a></li>
+            <li class="nav-item me-5" id="managed-navlink"><a href="{% url 'managed'  %}" class="nav-link text-light">{% translate "Managed cybersecurity" %}</a></li>
+            <li class="nav-item " id="training-navlink"><a href="{% url 'training' %}" class="nav-link text-light">{% translate "Training" %}</a></li>
+            <li class="nav-item" id="about-navlink"><a href="{% url 'about' %}" class="nav-link text-light">{% translate "About us" %}</a></li> 
             <li class="nav-item" id="contact-navlink">
               <div class="dropdown d-inline-block nav-item">
                 <button class="btn btn-secondary dropdown-toggle border-0 bg-transparent" type="button" id="dropdownLangButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -135,86 +94,109 @@
           <a href="#" class="btn ms-3 btn ms-3 boton-nav d-none d-md-block boton-nav" >{% translate "Get Started" %}</a>
         </div>
       </div>
-    </nav>
-    
-    {% block content%}
-    {% endblock %}
-    <div id="whatsapp-button" class="btn-lg animate__animated animate__heartBeat">
-      <a href="https://api.whatsapp.com/send?phone=+5555996119565&text=Olá! Envie-nos uma mensagem." target="_blank">
-          <img src="{% static 'images/whatsapp.png' %}" alt="WhatsApp" />
-      </a>
+    </nav>    
+  {% block content%}
+  {% endblock %}
+  <section id="section-home3" class="ftco-section ftco-animate ">
+    <div class="container fondo-formulario d-flex flex-column justify-content-center align-items-center text-center mt-5 mb-5">
+      <div class="row justify-content-center w-75">
+        <div class="col-lg-8 col-md-10">
+          <h1 class="mb-4">{% translate "Let's Work Together" %}</h1>
+          <h4 class="mb-4">{% translate "Tell us about yourself and we’ll figure out the best solution for you and your organization's needs." %}</h4>
+        </div>
+      </div>
+      <div class="row justify-content-center w-100">
+        <div class="col-lg-8 col-md-10">
+          <form action="{% url 'contact' %}" method='post' class="p-4">
+            {% csrf_token %}
+            <div class="mb-3">
+              <input type="text" class="form-control" name='nombre' placeholder="{% trans 'Name' %}">
+            </div>
+            <div class="mb-3">
+              <input type="email" class="form-control" name='correo' placeholder="{% trans 'Email' %}">
+            </div>
+            <div class="mb-3">
+              <input type="text" class="form-control" name='asunto' placeholder="{% trans 'Subject' %}">
+            </div>
+            <div class="mb-3">
+              <textarea name="mensaje" cols="30" rows="5" class="form-control" placeholder="{% trans 'Message' %}"></textarea>
+            </div>
+            <div class="text-center mt-5">
+              <button type="submit" class="btn btn-primary px-5 boton-home">{% translate "Send" %}</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>    
+  <div id="whatsapp-button" class="btn-lg animate__animated animate__heartBeat">
+     <a href="https://api.whatsapp.com/send?phone=+5555996119565&text=Olá! Envie-nos uma mensagem." target="_blank">
+      <img src="{% static 'images/whatsapp.png' %}" alt="WhatsApp" />
+    </a>
   </div>
   <footer class="footer-fondo ftco-section">
-  <div class="container mt-5">
-    <div class="row mb-4 mt-5">
-      <!-- Logo y descripción -->
-      <div class="col-md-3">
-        <div class="ftco-footer-widget mb-4">
-          <a href="{% url 'index' %}" class="navbar-brand d-flex align-items-center ">
-            <img src="{% static 'images/logo-nav1.png' %}" alt="Logo" class="logo-img-footer">
-          </a>
-          <p  class="mt-5">Protegiendo tu negocio con soluciones de ciberseguridad avanzadas. Confianza y seguridad para tus datos.</p>
+    <div class="container mt-5">
+      <div class="row mb-4 mt-5">
+        <div class="col-md-3">
+          <div class="ftco-footer-widget mb-4">
+            <a href="{% url 'index' %}" class="navbar-brand d-flex align-items-center ">
+              <img src="{% static 'images/logo-nav1.png' %}" alt="Logo" class="logo-img-footer">
+            </a>
+            <p  class="mt-5">{% translate "Protegiendo tu negocio con soluciones de ciberseguridad avanzadas. Confianza y seguridad para tus datos." %}</p>
+          </div>
+        </div> 
+        <div class="col-md-2"></div> 
+        <div class="col-md-3">
+          <div class="ftco-footer-widget mb-4">
+            <h3 class="ftco-heading-2 titulos-footer">{% translate "Enlaces" %}</h3>
+            <ul class="list-unstyled">
+              {% comment %} <li><a href="{% url 'index' %}"></span>{% translate "Home" %}</a></li> {% endcomment %}
+              <li><a href="{% url 'services' %}">{% translate "Threat Intelligence Services" %}</a></li>
+              <li><a href="{% url 'managed'  %}">{% translate "Managed cybersecurity" %}</a></li>
+              <li><a href="{% url 'training' %}">{% translate "Training" %}</a></li>
+              <li><a href="{% url 'about' %}">{% translate "About us" %}</a>  </li>
+            </ul>
+          </div>
         </div>
-      </div> 
-      <div class="col-md-2">        </div> 
-      <!-- Enlaces rápidos -->
-      <div class="col-md-3">
-        <div class="ftco-footer-widget mb-4">
-          <h2 class="ftco-heading-2 titulos-footer">Enlaces</h2>
-          <ul class="list-unstyled">
-            <li><a href="{% url 'index' %}"></span>{% translate "Home" %}</a></li>
-            <li><a href="{% url 'services' %}">{% translate "Threat Intelligence Services" %}</a></li>
-            <li><a href="{% url 'managed'  %}">{% translate "Managed cybersecurity" %}</a></li>
-            <li><a href="{% url 'training' %}">{% translate "Training" %}</a></li>
-            <li><a href="{% url 'about' %}">{% translate "About us" %}</a>  </li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Servicios destacados -->
-      {% comment %} <div class="col-md-3">
-        <div class="ftco-footer-widget mb-4">
-          <h2 class="ftco-heading-2">Servicios</h2>
-          <ul class="list-unstyled">
-            <li><a href="{% url 'services' %}"><span class="ion-ios-arrow-round-forward mr-2"></span>Monitoreo 24/7</a></li>
-            <li><a href="{% url 'services' %}"><span class="ion-ios-arrow-round-forward mr-2"></span>Gestión de incidentes</a></li>
-            <li><a href="{% url 'services' %}"><span class="ion-ios-arrow-round-forward mr-2"></span>Auditorías de seguridad</a></li>
-            <li><a href="{% url 'services' %}"><span class="ion-ios-arrow-round-forward mr-2"></span>Protección de datos</a></li>
-            <li><a href="{% url 'services' %}"><span class="ion-ios-arrow-round-forward mr-2"></span>Análisis de vulnerabilidades</a></li>
-          </ul>
-        </div>
-      </div> {% endcomment %}
-      <!-- Contacto -->
-      <div class="col-md-4">
-        <div class="ftco-footer-widget mb-4">
-          <h2 class="ftco-heading-2 titulos-footer">Contacto</h2>
-          <ul class="list-unstyled">
-            <li><a href="#"><span class="icon icon-map-marker mr-2"></span>Oficinas: Av. Ciberseguridad 123, Ciudad Segura</a></li>
-            <li><a href="#"><span class="icon icon-phone mr-2"></span>+1 (800) 123-4567</a></li>
-            <li><a href="#"><span class="icon icon-envelope mr-2"></span>contacto@cybershield.com</a></li>
-          </ul>
-          <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
-            <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-            <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-            <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-            <li class="ftco-animate"><a href="#"><span class="icon-linkedin"></span></a></li>
-          </ul>
+        <!-- Servicios destacados -->
+        {% comment %} <div class="col-md-3">
+          <div class="ftco-footer-widget mb-4">
+            <h2 class="ftco-heading-2">Servicios</h2>
+            <ul class="list-unstyled">
+              <li><a href="{% url 'services' %}"><span class="ion-ios-arrow-round-forward mr-2"></span>Monitoreo 24/7</a></li>
+              <li><a href="{% url 'services' %}"><span class="ion-ios-arrow-round-forward mr-2"></span>Gestión de incidentes</a></li>
+              <li><a href="{% url 'services' %}"><span class="ion-ios-arrow-round-forward mr-2"></span>Auditorías de seguridad</a></li>
+              <li><a href="{% url 'services' %}"><span class="ion-ios-arrow-round-forward mr-2"></span>Protección de datos</a></li>
+              <li><a href="{% url 'services' %}"><span class="ion-ios-arrow-round-forward mr-2"></span>Análisis de vulnerabilidades</a></li>
+            </ul>
+          </div>
+        </div> {% endcomment %}
+        <!-- Contacto -->
+        <div class="col-md-4">
+          <div class="ftco-footer-widget mb-4">
+            <h2 class="ftco-heading-2 titulos-footer">Contacto</h2>
+            <ul class="list-unstyled">
+              <li><a href="#"><span class="icon icon-map-marker mr-2"></span>Oficinas: Av. Ciberseguridad 123, Ciudad Segura</a></li>
+              <li><a href="#"><span class="icon icon-phone mr-2"></span>+1 (800) 123-4567</a></li>
+              <li><a href="#"><span class="icon icon-envelope mr-2"></span>contacto@cybershield.com</a></li>
+            </ul>
+            <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
+              <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+              <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+              <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+              <li class="ftco-animate"><a href="#"><span class="icon-linkedin"></span></a></li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-    <!-- Nota al pie -->
-    <div class="row">
-      <div class="col-md-12 text-center">
-        <p>&copy; 2025 CyberShield. Todos los derechos reservados.</p>
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <p>&copy; {% translate "2025 CyberShield. Todos los derechos reservados." %} </p>
+        </div>
       </div>
     </div>
-  </div>
 </footer>
-
-  <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-
-
   <script src="{% static 'js/jquery.min.js' %}"></script>
   <script src="{% static 'js/jquery-migrate-3.0.1.min.js' %}"></script>
   <script src="{% static 'js/popper.min.js' %}"></script>
@@ -231,7 +213,6 @@
   <script src="{% static 'js/scrollax.min.js' %}"></script>
   <script src="{% static 'js/main.js' %}"></script>
   <script>
-
       document.addEventListener("DOMContentLoaded", function () {
         const navbar = document.getElementById("ftco-navbar");
     

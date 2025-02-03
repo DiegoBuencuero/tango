@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-27 23:29+0000\n"
+"POT-Creation-Date: 2025-02-02 15:48+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,18 +27,18 @@ msgstr ""
 msgid "Spanish"
 msgstr ""
 
-#: landing/templates/about.html:177 landing/templates/index.html:65
-#: landing/templates/managed.html:108 landing/templates/services.html:172
-#: landing/templates/training.html:217
-msgid "Let's Work Together"
+#: landing/templates/about.html:88
+msgid "ABOUT US"
 msgstr ""
 
-#: landing/templates/about.html:178 landing/templates/index.html:66
-#: landing/templates/managed.html:109 landing/templates/services.html:173
-#: landing/templates/training.html:218
-msgid ""
-"Tell us about yourself and we’ll figure out the best solution for you and "
-"your organization's needs."
+#: landing/templates/about.html:89
+msgid "subtitulo_about"
+msgstr ""
+
+#: landing/templates/about.html:91 landing/templates/base.html:135
+#: landing/templates/index.html:33 landing/templates/managed.html:14
+#: landing/templates/services.html:32 landing/templates/training.html:14
+msgid "Get Started"
 msgstr ""
 
 #: landing/templates/base.html:96 landing/templates/base.html:165
@@ -61,59 +61,207 @@ msgstr ""
 msgid "About us"
 msgstr ""
 
-#: landing/templates/base.html:135 landing/templates/index.html:33
-#: landing/templates/managed.html:95 landing/templates/services.html:40
-#: landing/templates/training.html:180
-msgid "Get Started"
-msgstr ""
-
-#: landing/templates/index.html:30 landing/templates/managed.html:92
-#: landing/templates/training.html:177
+#: landing/templates/index.html:30 landing/templates/training.html:11
 msgid "Protect Your Company From Cyber Attacks"
 msgstr ""
 
 #: landing/templates/index.html:31 landing/templates/index.html:55
-#: landing/templates/managed.html:93 landing/templates/services.html:162
-#: landing/templates/training.html:178
 msgid ""
 "The leader in both compliance and penetration testing automation powered by "
 "AI"
 msgstr ""
 
-#: landing/templates/index.html:54 landing/templates/services.html:161
+#: landing/templates/index.html:54
 msgid "Comprehensive Cybersecurity Management"
 msgstr ""
 
-#: landing/templates/services.html:37
+#: landing/templates/index.html:65 landing/templates/managed.html:74
+#: landing/templates/services.html:153 landing/templates/training.html:104
+msgid "Let's Work Together"
+msgstr ""
+
+#: landing/templates/index.html:66 landing/templates/managed.html:75
+#: landing/templates/services.html:154 landing/templates/training.html:105
+msgid ""
+"Tell us about yourself and we’ll figure out the best solution for you and "
+"your organization's needs."
+msgstr ""
+
+#: landing/templates/managed.html:11
+msgid "MANAGED CYBERSECURITY"
+msgstr ""
+
+#: landing/templates/managed.html:12
+msgid "subtitulo_Managed"
+msgstr ""
+
+#: landing/templates/managed.html:24
+msgid "Strategic Cybersecurity & Risk Assessment"
+msgstr ""
+
+#: landing/templates/managed.html:37 landing/templates/services.html:121
+#: landing/templates/training.html:41 landing/templates/training.html:87
+msgid "Organizational Human Risk Analysis (Digital HUMINT)"
+msgstr ""
+
+#: landing/templates/managed.html:42 landing/templates/training.html:46
+msgid "Elevate your cybersecurity program with a dedicated Virtual CISO."
+msgstr ""
+
+#: landing/templates/managed.html:43 landing/templates/training.html:47
+msgid ""
+"Our experienced security leaders provide strategic guidance, risk "
+"assessments, and ongoing support to help you achieve your security "
+"objectives, optimize your security budget, and ensure compliance with "
+"industry standards."
+msgstr ""
+
+#: landing/templates/managed.html:55 landing/templates/training.html:59
+msgid "Online profile risk assessment"
+msgstr ""
+
+#: landing/templates/managed.html:60 landing/templates/training.html:64
+msgid "Improve your cybersecurity maturity with expert consulting."
+msgstr ""
+
+#: landing/templates/managed.html:61 landing/templates/training.html:65
+msgid ""
+"We conduct in-depth assessments to evaluate your current security posture, "
+"identify gaps, and guide you towards achieving compliance with industry "
+"standards like ISO 27001, GDPR, NIST Cybersecurity Framework, and CIS "
+"Controls."
+msgstr ""
+
+#: landing/templates/managed.html:62 landing/templates/training.html:66
+msgid ""
+"Our services include risk assessments, audits, and ongoing support to "
+"enhance your overall security posture."
+msgstr ""
+
+#: landing/templates/services.html:29
 msgid "THREAT INTELLIGENCE SERVICES"
 msgstr ""
 
-#: landing/templates/services.html:38
+#: landing/templates/services.html:30
 msgid "subtitulo_threat"
 msgstr ""
 
-#: landing/templates/services.html:57
+#: landing/templates/services.html:44 landing/templates/training.html:26
 msgid "Cyber Threat Intelligence Assessment:"
 msgstr ""
 
-#: landing/templates/services.html:58
-msgid ""
-"Minerva simplifies the complexity of pentest report generation, enabling you "
-"to focus on what matters most – securing your applications and "
-"infrastructure."
-msgstr ""
-
-#: landing/templates/services.html:73
+#: landing/templates/services.html:56
 msgid "Maturity Level Analysis:"
 msgstr ""
 
-#: landing/templates/services.html:76
+#: landing/templates/services.html:59
 msgid "Gain valuable insights into your organization's cybersecurity maturity."
 msgstr ""
 
-#: landing/templates/services.html:77
+#: landing/templates/services.html:60
 msgid ""
 "Our analysis leverages the CREST and CTI-CMM frameworks to identify gaps, "
 "prioritize improvements, and demonstrate compliance with industry’s best "
 "practices."
+msgstr ""
+
+#: landing/templates/services.html:68
+msgid "Threat Intelligence Organizational Consulting:"
+msgstr ""
+
+#: landing/templates/services.html:71
+msgid "Maximize the value of your threat intelligence program."
+msgstr ""
+
+#: landing/templates/services.html:72
+msgid ""
+"Maximize the value of your threat intelligence program. Our expert "
+"consultants guide you in implementing best practices, optimizing processes, "
+"and developing a high-performing threat intelligence team to proactively "
+"defend against cyber threats."
+msgstr ""
+
+#: landing/templates/services.html:84
+msgid "Cyber Threat modeling & profiling"
+msgstr ""
+
+#: landing/templates/services.html:87
+msgid "Protect your assets with robust threat modeling and profiling. "
+msgstr ""
+
+#: landing/templates/services.html:89
+msgid "Our experts leverage industry-leading frameworks like "
+msgstr ""
+
+#: landing/templates/services.html:90
+msgid ""
+"STRIDE, PASTA, OWASP, NIST, OCTAVE, Cyber Kill-Chain, MITRE ATT&CK and "
+"DIAMOND MODEL"
+msgstr ""
+
+#: landing/templates/services.html:91
+msgid ""
+" to identify, analyze, and mitigate potential cyber threats, enabling you to "
+"proactively safeguard your critical systems and data."
+msgstr ""
+
+#: landing/templates/services.html:100
+msgid "Intelligence Analysis Reporting"
+msgstr ""
+
+#: landing/templates/services.html:103
+msgid "Gain actionable insights from integrated intelligence analysis."
+msgstr ""
+
+#: landing/templates/services.html:104
+msgid ""
+"Our experts analyze both cyber intelligence and **non-digital intelligence** "
+"sources to provide comprehensive threat assessments, identify emerging "
+"threats, and support informed decision-making."
+msgstr ""
+
+#: landing/templates/services.html:113 landing/templates/training.html:75
+msgid "OSINT"
+msgstr ""
+
+#: landing/templates/services.html:124 landing/templates/training.html:92
+msgid ""
+"Reduce your organization's exposure to human risk with our expert analysis. "
+"We leverage OSINT data to identify and assess the potential for insider "
+"threats, employee negligence, and other human-centric security "
+"vulnerabilities. "
+msgstr ""
+
+#: landing/templates/services.html:125 landing/templates/training.html:93
+msgid ""
+"Our in-depth assessments help you understand and mitigate the risks "
+"associated with employee behavior, including non-compliance with security "
+"policies, misuse of technology, and susceptibility to social engineering "
+"attacks."
+msgstr ""
+
+#: landing/templates/services.html:135
+msgid "Online profile risk assessment:"
+msgstr ""
+
+#: landing/templates/services.html:138
+msgid "Understand and mitigate the risks of your online presence."
+msgstr ""
+
+#: landing/templates/services.html:139
+msgid ""
+"Take control of your privacy** with our comprehensive profile risk "
+"assessment."
+msgstr ""
+
+#: landing/templates/services.html:140
+msgid ""
+"We analyze your digital footprint to determine what personal information is "
+"publicly available, identify potential risks to your connections, assets, "
+"and reputation, and develop a customized action plan to minimize your online "
+"exposure."
+msgstr ""
+
+#: landing/templates/training.html:12
+msgid "subtitulos_training"
 msgstr ""

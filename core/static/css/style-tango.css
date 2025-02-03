@@ -5,17 +5,23 @@
   font-style: normal;
 }
 /*---------------------------------------NAV -FOOTER -------------------------------------------*/
+
+.nav-link.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 .logo-img{
   width: 70%; 
   height: auto; 
 }
 .logo-img-footer{
-  width: 130%;
+  width: 90%;
   height: auto; 
 }
 @media (max-width: 768px) {
   .logo-img {
-    width: 150%; 
+    width: 100%; 
     height: auto; 
   }
 
@@ -61,17 +67,38 @@
   radial-gradient(circle farthest-side at 50% 300%, rgba(0, 0, 0, 0.1) 40%, rgba(11, 28, 58, 0.9) 60%, transparent 100%),
   linear-gradient(to bottom, #000000, #0B1C3A);
   color: #ffffff;
-  font-family: 'Helvetica Neue LT Std', sans-serif; /* Usa la fuente cargada */
-  font-size: .8vw !important;
+  font-family: 'Helvetica Neue LT Std', sans-serif; 
+  font-size: 0.8rem !important;
   font-weight: 400 !important;
   
 }
 
 .titulos-footer {
   font-family: 'Helvetica Neue LT Std', sans-serif !important;
-  font-size: 1.3vw !important;
+  font-size: 1.2rem !important;
   font-weight: 600 !important;
   color:#ffffff;
+}
+
+
+.boton-nav {
+  background: linear-gradient(150deg, rgba(61, 89, 233, 0.9), rgba(11, 28, 58, 0.9)) !important; 
+  border: 2px solid var(--framework-blue) !important; 
+  text-align: center  !important; 
+  color: white  !important;
+  padding: 10px 25px !important; 
+  border-radius: 15px  !important; 
+  display: inline-block  !important;
+  cursor: pointer  !important;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2)  !important; 
+  font-size: 16px !important;
+}
+
+.boton-nav:hover {
+  background: linear-gradient(150deg, rgba(11, 28, 58, 0.9), rgba(61, 89, 233, 0.9)) !important; 
+  transform: translateY(-2px); 
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+  color: white !important;
 }
 
 
@@ -105,7 +132,7 @@
 }
 
 .boton-home {
-  background: linear-gradient(150deg, rgba(61, 89, 233, 0.9), rgba(11, 28, 58, 0.9)) !important; /* Degradado */
+  background: linear-gradient(150deg, rgba(61, 89, 233, 0.9), rgba(11, 28, 58, 0.9)) !important; 
   border: 2px solid var(--framework-blue) !important; 
   text-align: center  !important; 
   color: white  !important;
@@ -113,13 +140,13 @@
   border-radius: 15px  !important; 
   display: inline-block  !important;
   cursor: pointer  !important;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2)  !important; /* Sombra sutil */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2)  !important; 
   font-size: 16px !important;
 }
 
 .boton-home:hover {
-  background: linear-gradient(150deg, rgba(11, 28, 58, 0.9), rgba(61, 89, 233, 0.9)) !important; /* Invertir colores en hover */
-  transform: translateY(-2px); /* Efecto de elevación */
+  background: linear-gradient(150deg, rgba(11, 28, 58, 0.9), rgba(61, 89, 233, 0.9)) !important; 
+  transform: translateY(-2px); 
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
   color: white !important;
 }
@@ -156,17 +183,14 @@
         color: white;
       }
   }
-  
-
-
 
 /* ================================================================================ */
 /*                                 ESTILO DE SERVICIOS                              */
 /* ================================================================================ */
 #section-service {
-  height: 95vh;
+  height: 90vh;
   background-image: 
-  radial-gradient(circle farthest-side at 50% -40%, rgba(61, 89, 233, 0.5) 40%, rgba(11, 28, 58, 0.9) 60%, transparent 100%),
+  radial-gradient(circle farthest-side at 50% -20%, rgba(61, 89, 233, 0.5) 35%, rgba(11, 28, 58, 0.9) 70%, transparent 100%),
   linear-gradient(to bottom, #0B1C3A, #000000);
   display: flex; 
   justify-content: center; 
@@ -178,22 +202,43 @@
   padding-top: 80px; 
 }
 #section-service h1 {
-  font-family: 'Helvetica Neue LT Std', sans-serif; /* Usa la fuente cargada */
-  font-size: 3.4rem; /* Ajusta el tamaño si es necesario */
+  font-family: 'Helvetica Neue LT Std', sans-serif; 
+  font-size: 3.4rem; 
   color:#ffffff;  
   font-weight: 600;
   letter-spacing: -1.1px;
 }
 #section-service h4 {
-  font-family: 'Helvetica Neue LT Std', sans-serif; /* Usa la fuente cargada */
+  font-family: 'Helvetica Neue LT Std', sans-serif; 
   color:#ffffff;  
   line-height: 1.8;
-  font-size: 1.05rem; 
+  font-size: 1.1rem; 
 }
 
+@media (max-width: 768px) {
+  #section-service h1 {
+    font-size: 3rem; 
+  }
+  
+  #section-service h4 {
+    font-size: 1rem; 
+  }
+}
+
+@media (max-width: 480px) {
+  #section-service h1 {
+    font-size: 3rem;
+  }
+  
+  #section-service h4 {
+    font-size: 1rem;
+  }
+}
+
+
 #section-services2 h1 {
-  font-family: 'Helvetica Neue LT Std', sans-serif !important; /* Usa la fuente cargada */
-  font-size: 2.2rem !important; 
+  font-family: 'Helvetica Neue LT Std', sans-serif !important; 
+  font-size: 1.6rem !important; 
   font-weight: bold;
   text-align: center;
   color: #1a2a4a; 
@@ -202,19 +247,19 @@
 
 #section-services2 h4{
   font-family: 'Helvetica Neue LT Std', sans-serif !important; 
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: bold;
   color:#3D59E9;
 }
 #section-services2 h5{
   font-family: 'Helvetica Neue LT Std', sans-serif !important; 
-  font-size: 1rem;
+  font-size: 0.9rem;
   color:#303030;
   line-height: 1.8; 
 }
 
 .gradient-card {
-  background-image: linear-gradient(140deg, #ffffffe6, #f3f3f3cc);
+  background-image: linear-gradient(140deg, #ffffff, #fcfdfdcc);
   border: none;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -262,37 +307,9 @@
   margin-right: 15px;
 }
 
-@media (max-width: 991px) {
-  #section-home h1 {
-    font-size: 80px;
-  }
-  #section-home h4{
-      font-size: 13px; 
-    }
-}
-  
-  @media (max-width: 767px) {
-    #section-home h1 {
-      font-size: 58px;
-    }
-    #section-home h4{
-        font-size: 13px; 
-      }
-  }
-
-  @media (max-width: 479px) {
-    #section-home h1 {
-      font-size: 3vw;
-    }
-    #section-home h4{
-        font-size: 13px; 
-      }
-  }
-  
-
   
   #section-home3 {
-    height: 100vh;
+    height: 90vh;
     background-image: 
     radial-gradient(circle farthest-side at 50% 300%, rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0.9) 60%, transparent 100%),
     linear-gradient(to bottom, #0B1C3A,  #000000);
@@ -309,28 +326,22 @@
     radial-gradient(circle farthest-side at 50% 300%,  rgba(21, 50, 100, 0.8) 60%,rgba(61, 89, 233, 0.3) 70%,transparent 100%),
     linear-gradient(to bottom, #070f1b,  #000000);
     border-radius: 15px;
-    width: 90%;
-    max-width: 900px;
-    min-height: 80vh; /* Esto evita que se corte el contenido */
+    width: 80%;
+    max-width: 500px;
+    min-height: 80vh; 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 2rem;
-    overflow: hidden; /* Evita que el contenido se salga */
+    padding: 1rem;
+    overflow: hidden; 
 }
 
 
-
-/* Ajustar altura del formulario para que nunca se salga */
-.fondo-formulario form {
-    width: 100%;
-    max-width: 700px;
-}
   #section-home3 h4 {
     font-family: 'Helvetica Neue LT Std', sans-serif;
-    font-size: 1.2vw !important;
+    font-size: 1.2rem !important;
     font-weight: 400 !important;
     color:#ffffff;  
     text-align: center;
@@ -341,27 +352,453 @@
     font-weight: 400 !important;
     color:#ffffff;  
     text-align: center;
-    font-size: 2.8vw !important;
+    font-size: 2rem !important;
   }
 
 
+/* ================================================================================ */
+/*                                 ESTILO DE MANAGED                             */
+/* ================================================================================ */
+ #section-managed1{  
+  height: 90vh;
+  background-image: 
+  radial-gradient(circle farthest-side at 50% -20%, rgba(61, 89, 233, 0.5) 35%, rgba(11, 28, 58, 0.9) 70%, transparent 100%),
+  linear-gradient(to bottom, #0B1C3A, #000000);
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  color: white; 
+  text-align: center; 
+} 
 
-
-
-
-
-/* ============================= */
-/* RESPONSIVIDAD */
-/* ============================= */
-@media (max-width: 768px) {
-    .card-fixed-height {
-        max-width: 100%;
-    }
-
-    #section-services2 h1 {
-        font-size: 1.6rem;
-    }
+#section-managed1 h1 {
+  font-family: 'Helvetica Neue LT Std', sans-serif; 
+  font-size: 3.4rem; 
+  color:#ffffff;  
+  font-weight: 600;
+  letter-spacing: -1.1px;
 }
+#section-managed1 h4 {
+  font-family: 'Helvetica Neue LT Std', sans-serif; 
+  color:#ffffff;  
+  line-height: 1.8;
+  font-size: 1.1rem; 
+}
+
+@media (max-width: 768px) {
+  #section-managed1 h1 {
+    font-size: 3rem; 
+  }
+  
+  #section-managed1 h4 {
+    font-size: 1rem; 
+  }
+}
+
+@media (max-width: 480px) {
+  #section-managed1 h1 {
+    font-size: 3rem;
+  }
+  
+  #section-managed1 h4 {
+    font-size: 1rem;
+  }
+}
+
+#section-managed {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("/static/images/1.png");
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#section-managed::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(to bottom, 
+      rgba(0, 0, 0, 1) 0%, 
+      rgba(0, 0, 0, 0.7) 20%, 
+      rgba(11, 28, 58, 0.8) 40%, 
+      rgba(11, 28, 58, 0.6) 60%, 
+      rgba(11, 28, 58, 0.3) 80%, 
+      rgba(11, 28, 58, 0) 100%),
+    linear-gradient(to top, 
+      rgba(0, 0, 0, 0.3) 0%, 
+      rgba(0, 0, 0, 0.7) 20%, 
+      rgba(11, 28, 58, 0.8) 40%, 
+      rgba(11, 28, 58, 0.6) 60%, 
+      rgba(11, 28, 58, 0.7) 80%, 
+      rgba(0, 0, 0, 0.9) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+#section-managed .container {
+  position: relative;
+  z-index: 2;
+}
+
+#section-managed .titulo-section h1 {
+  font-family: 'Helvetica Neue LT Std', sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  color: #ffffff;
+}
+
+#section-managed .tarjeta-managed {
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  width: 100%;
+  max-width: 700px;
+  min-height: 350px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  text-align: left;
+  padding: 3rem;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex-grow: 1;
+}
+
+#section-managed .tarjeta-managed:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+#section-managed .row.align-items-center {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+#section-managed .col-md-6 {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 100%;
+}
+
+#section-managed .card-fixed-height {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  min-height: 100%;
+}
+
+#section-managed .tasks-block {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 1rem;
+}
+
+#section-managed .custom-heading {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  text-align: left;
+  flex: 1;
+}
+
+#section-managed .icon-custom {
+  font-size: 45px;
+  margin-right: 20px;
+  color: #3D59E9;
+  padding: 0.9rem;
+}
+
+#section-managed .titulo-tarjeta {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #3D59E9;
+}
+
+#section-managed h5 {
+  font-size: 1rem;
+  color: #303030; 
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+
+/* ================================================================================ */
+/*                                 ESTILO DE TRAINING                            */
+/* ================================================================================ */
+
+#section-training {
+  height: 90vh;
+  background-image: 
+  radial-gradient(circle farthest-side at 50% -20%, rgba(61, 89, 233, 0.5) 35%, rgba(11, 28, 58, 0.9) 70%, transparent 100%),
+  linear-gradient(to bottom, #0B1C3A, #000000);
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  color: white; 
+  text-align: center; 
+}
+
+
+#section-training h1 {
+  font-family: 'Helvetica Neue LT Std', sans-serif; 
+  font-size: 3.4rem; 
+  color:#ffffff;  
+  font-weight: 600;
+  letter-spacing: -1.1px;
+}
+#section-training h4 {
+  font-family: 'Helvetica Neue LT Std', sans-serif; 
+  color:#ffffff;  
+  line-height: 1.8;
+  font-size: 1.1rem; 
+}
+@media (max-width: 768px) {
+  #section-training h1 {
+    font-size: 3rem; 
+  }
+  
+  #section-training h4 {
+    font-size: 1rem; 
+  }
+}
+
+@media (max-width: 480px) {
+  #section-training h1 {
+    font-size: 3rem;
+  }
+  
+  #section-training h4 {
+    font-size: 1rem;
+  }
+}
+
+
+/* ================================================================================ */
+/*                                 ESTILO DE ABOUT                          */
+/* ================================================================================ */
+
+#section-about {
+  height: 90vh;
+  background-image: 
+  radial-gradient(circle farthest-side at 50% -20%, rgba(61, 89, 233, 0.5) 35%, rgba(11, 28, 58, 0.9) 70%, transparent 100%),
+  linear-gradient(to bottom, #0B1C3A, #000000);
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  color: white; 
+  text-align: center; 
+  line-height: 1.8;
+}
+
+#section-about h1 {
+  font-family: 'Helvetica Neue LT Std', sans-serif; 
+  font-size: 3.4rem; 
+  color:#ffffff;  
+  font-weight: 600;
+  letter-spacing: -1.1px;
+}
+#section-about h4 {
+  font-family: 'Helvetica Neue LT Std', sans-serif; 
+  color:#ffffff;  
+  line-height: 1.8;
+  font-size: 1.1rem; 
+}
+
+@media (max-width: 768px) {
+  #section-about h1 {
+    font-size: 3rem; 
+  }
+  
+  #section-about h4 {
+    font-size: 1rem; 
+  }
+}
+
+@media (max-width: 480px) {
+  #section-about h1 {
+    font-size: 3rem;
+  }
+  
+  #section-about h4 {
+    font-size: 1rem;
+  }
+}
+
+#section-about2{
+  position: relative;
+  width: 100%;
+  min-height: 60vh;
+  background-image: url("/static/images/1.png");
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#section-about2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(to bottom, 
+      rgb(255, 255, 255) 0%, rgba(252, 252, 252, 0.9) 100%);  
+  z-index: 1;
+  pointer-events: none;
+}
+
+
+#section-about3{
+  position: relative;
+  width: 100%;
+  min-height: 60vh;
+  background-image: url("/static/images/3.png");
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#section-about3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 5;
+  z-index: 1;
+  pointer-events: none;
+  background: rgba(11, 28, 58, 0.8);
+}
+
+#section-about4 {
+  position: relative;
+  width: 100%;
+  min-height: 60vh;
+  background-image: url("/static/images/1.png");
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  padding: 5vh 0;
+}
+
+/* Gradiente de fondo */
+#section-about4::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgba(252, 252, 252, 0.9) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+#section-about5{
+  position: relative;
+  width: 100%;
+  min-height: 30vh;
+  background-image: 
+  linear-gradient(to bottom, 
+    rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0.9) 100%);
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+
+  align-items: center;
+  text-align: center;
+}
+
+
+#section-about2 .container {
+  position: relative;
+  z-index: 2;
+}
+#section-about3 .container {
+  position: relative;
+  z-index: 2;
+}
+#section-about4 .container {
+  position: relative;
+  z-index: 2;
+}
+
+.custom-image {
+  width: 400px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+#section-about2 h5 {
+  font-family: 'Helvetica Neue LT Std', sans-serif;
+  font-size: 1.2rem; 
+  color:#0B1C3A;  
+  font-weight: 400;
+  line-height: 2;
+
+}
+
+#section-about3 h5 {
+  font-family: 'Helvetica Neue LT Std', sans-serif;
+  font-size: 1.2rem; 
+  color:#ffffff;  
+  font-weight: 400;
+  line-height: 2;
+}
+
+#section-about4 h5 {
+  font-family: 'Helvetica Neue LT Std', sans-serif;
+  font-size: 1.2rem; 
+  color:#0B1C3A; 
+  font-weight: 400;
+  line-height: 2;
+}
+
+#section-about5 h5 {
+  font-family: 'Helvetica Neue LT Std', sans-serif;
+  font-size: 1.5rem; 
+  color:#0B1C3A; 
+  font-weight: 400;
+  line-height: 2;
+}
+
+.highlight {
+  font-weight: bold;
+  color: #3D59E9;
+}
+
+
   /*----------------------------------------------SECCION2 HOME---------------------------------*/
   #section-home2 {
     height: 90vh;
@@ -389,6 +826,7 @@
     color:#ffffff;  
     text-align:left;
   }
+
 
   .figure-block-c {
     will-change: transform;
@@ -441,136 +879,3 @@
   
 
 
-  /*----------------------------------------------SECCION3 HOME---------------------------------*/
-
-  /*----------------------------------------------SECCION SERVICE---------------------------------*/
-
-  
-  
-  
-
-  
-  .feature-bullet {
-    list-style: none;
-    padding-left: 0;
-  }
-
-  #section-services {
-    height: 90vh;
-    background-image: 
-    radial-gradient(circle farthest-side at 50% -40%, rgba(61, 89, 233, 0.5) 40%, rgba(11, 28, 58, 0.9) 60%, transparent 100%),
-    linear-gradient(to bottom, #0B1C3A, #000000);
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    color: white; 
-    text-align: center; 
-  }
-
-  .section {
-    padding-top: 80px; 
-  }
-  #section-services h1 {
-    font-family: 'Helvetica Neue LT Std', sans-serif; /* Usa la fuente cargada */
-    font-size: 4vw; /* Ajusta el tamaño si es necesario */
-    font-weight: 600; /* Peso de la fuente */
-  }
-  
-  #section-services h4 {
-    font-family: 'Helvetica Neue LT Std', sans-serif; /* Usa la fuente cargada */
-    font-size: 1.2vw !important;
-    font-weight: 400 !important;
-    color:#ffffff;  
-
-  }
-  
-  #section-services2 .feature-bullet li {
-    font-family: 'Helvetica Neue LT Std', sans-serif; /* Usa la fuente Helvetica */
-    font-size: 1rem; /* Ajusta el tamaño del texto */
-    font-weight: 400; /* Peso regular */
-    color: #555; /* Color del texto */
-    line-height: 1.6; /* Espaciado entre líneas */
-    margin-bottom: 10px; /* Espaciado entre ítems */
-    list-style: none; /* Elimina los puntos de lista */
-    position: relative;
-    padding-left: 25px; /* Espaciado para el ícono */
-  }
-  
-  #section-services2 .feature-bullet li::before {
-    content: "✔"; /* Símbolo de ícono */
-    color: #0056b3; /* Color del ícono */
-    font-size: 0.9rem;
-    position: absolute;
-    left: 0;
-    top: 0;
-  }
-
-   /*----------------------------------------------SECCION MANAGED---------------------------------*/
-   @media (max-width: 768px) {
-    
-    .titulos-footer {
-      font-family: 'Helvetica Neue LT Std', sans-serif !important;
-      font-size: 6vw !important;
-      font-weight: 600 !important;
-      color:#ffffff;
-    }
-    
-    .footer-fondo{
-      font-size: 3.5vw !important;
-      font-weight: 400 !important;
-      
-    }
-    
-    #section-home {
-      height: auto; /* Permite que la altura dependa del contenido */
-      padding: 2rem 1rem; /* Espacio interno para un diseño cómodo */
-    }
-  
-    #section-home h1 {
-      font-size: 6vw; /* Texto principal más pequeño en móviles */
-      font-weight: bold;
-      color: white;
-    }
-  
-    #section-home h4 {
-      font-size: 4vw; /* Subtítulo más pequeño en móviles */
-      font-weight: 400;
-      color: white;
-    }
-  
-    #section-home2 {
-      height: auto; /* Altura adaptativa */
-      padding: 2rem 1rem;
-    }
-  
-    #section-home2 h1 {
-      font-size: 7vw !important; /* Ajuste del texto principal */
-      font-weight: bold;
-      color: white;
-      text-align: center; /* Alineado a la izquierda para consistencia */
-    }
-  
-    #section-home2 h4 {
-      font-size: 4.5vw; /* Subtítulo más pequeño */
-      font-weight: 400;
-      color: white;
-      text-align: center; 
-    }
-  
-    #section-home3 {
-      height: auto;
-      padding: 1rem 1rem;
-    }
-  
-    #section-home3 h1 {
-      font-size: 6vw; /* Texto principal */
-      font-weight: bold;
-      color: white;
-    }
-  
-    #section-home3 h4 {
-      font-size: 4vw; /* Subtítulo */
-      font-weight: 400;
-      color: white;
-    }
-  }

@@ -20,12 +20,17 @@
   flex-direction: column;
   justify-content: start; /* Asegura que el texto arranque en la misma altura */
 }
+@media (max-width: 768px) { 
+  .gradient-card {
+    margin-bottom: 1.5rem !important; /* Espaciado solo en móviles */
+  }
+}
 </style>
 
 <section id="section-service" class="ftco-section ftco-no-pt ftco-no-pb">
   <div class="container mt-5 ftco-animate">
     <div class="row justify-content-center mt-5">
-      <div class="col-md-8 text-center align-items-center">
+      <div class="col-md-10 text-center align-items-center">
         <h1 class="mb-4">{% translate "THREAT INTELLIGENCE SERVICES" %}</h1>
         <h4 class="mb-4 subtitulo_threat">{% translate "subtitulo_threat" %}</h4>
         <div class="p-4">
@@ -41,7 +46,7 @@
       <div class="row align-items-center mb-5">
         <div class="col-md-1 mb-4"></div>
         <div class="col-md-10">
-            <h1 class="mb-4" style="font-weight:bold">{% translate "Cyber Threat Intelligence Assessment:" %}</h1>
+            <h1 class="mb-4 text-center" style="font-weight:bold">{% translate "Cyber Threat Intelligence Assessment:" %}</h1>
         </div>
         <div class="col-md-1 mb-4"></div>
       </div>    
@@ -49,8 +54,8 @@
 
     <div class="container ftco-animate">
       <div class="row justify-content-center align-items-stretch g-4">
-          <div class="col-md-5">
-              <div class=" card-fixed-height p-4 no-min-height light gradient-card h-100 d-flex flex-column">
+          <div class="col-md-5 mb-md-0 mb-4 d-flex justify-content-center"> 
+              <div class="card-fixed-height p-4 no-min-height light gradient-card h-100 d-flex flex-column">
                   <div class="tasks-block d-flex align-items-start">
                       <i class="icon-bar-chart-o icon-custom"></i>
                       <h4 class="heading-tasks text-color-dark mb-0 ms-2">{% translate "Maturity Level Analysis:" %}</h4>
@@ -61,7 +66,7 @@
                   </div>
               </div>
           </div>  
-          <div class="col-md-5">
+          <div class="col-md-5 mb-md-0 mb-4 d-flex justify-content-center"> 
               <div class="card-fixed-height p-4 no-min-height light gradient-card h-100 d-flex flex-column">
                   <div class="tasks-block d-flex align-items-start">
                       <i class="icon-shield icon-custom"></i>
@@ -75,9 +80,10 @@
           </div>
       </div>
     </div>
+
     <div class="container my-5 ftco-animate">
       <div class="row justify-content-center align-items-stretch g-4">
-        <div class="col-md-5">
+        <div class="col-md-5 mb-md-0 mb-4 d-flex justify-content-center"> 
           <div class="card-fixed-height p-4 no-min-height light gradient-card h-100 d-flex flex-column">
             <div class="tasks-block d-flex align-items-start">
                 <i class="icon-settings_input_antenna icon-custom"></i>
@@ -93,7 +99,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-5">
+        <div class="col-md-5 mb-md-0 mb-4 d-flex justify-content-center"> 
           <div class="card-fixed-height p-4 no-min-height light gradient-card h-100 d-flex flex-column">
             <div class="tasks-block d-flex align-items-start">
                 <i class="icon-report icon-custom"></i>
@@ -107,15 +113,16 @@
         </div>  
       </div>
     </div>
-    <div class="container my-5 ftco-animate ">
+
+    <div class="container my-5 ftco-animate">
       <div class="row align-items-center ">
         <div class="col-12 text-center">
             <h1 class="mb-4" style="font-weight:bold">{% translate "OSINT" %}</h1>
         </div>
       </div>
       <div class="row justify-content-center align-items-stretch g-4 my-5">
-        <div class="col-md-10">
-          <div class="card-fixed-height p-4 no-min-height  tarjeta-grande light  h-100 d-flex flex-column">
+        <div class="col-md-10 mb-md-0 mb-4 d-flex justify-content-center"> 
+          <div class="card-fixed-height p-4 no-min-height tarjeta-grande light h-100 d-flex flex-column">
             <div class="tasks-block d-flex align-items-start">
                 <i class="icon-globe icon-custom"></i>
                 <h4 class="heading-tasks text-color-dark mb-0 ms-2">{% translate "Organizational Human Risk Analysis (Digital HUMINT)" %}</h4>
@@ -128,8 +135,8 @@
         </div>
       </div> 
       <div class="row justify-content-center align-items-stretch g-4">
-        <div class="col-md-10">
-          <div class="card-fixed-height p-4 no-min-height  tarjeta-grande light  h-100 d-flex flex-column">
+        <div class="col-md-10 mb-md-0 mb-4 d-flex justify-content-center"> 
+          <div class="card-fixed-height p-4 no-min-height tarjeta-grande light h-100 d-flex flex-column">
             <div class="tasks-block d-flex align-items-start">
                 <i class="icon-user-secret icon-custom"></i>
                 <h4 class="heading-tasks text-color-dark mb-0 ms-2">{% translate "Online profile risk assessment:" %}</h4>
@@ -144,67 +151,19 @@
       </div>    
   </div>
 </section>
-  
 
-<section id="section-home3" class="ftco-section contact-section ftco-animate">
-  <div class="container fondo-formulario d-flex flex-column justify-content-center align-items-center text-center mt-5 mb-5">
-    <div class="row justify-content-center w-100">
-      <div class="col-lg-8 col-md-10">
-        <h1 class="mb-4">{% translate "Let's Work Together" %}</h1>
-        <h4 class="mb-4">{% translate "Tell us about yourself and we’ll figure out the best solution for you and your organization's needs." %}</h4>
-      </div>
-    </div>
-    <div class="row justify-content-center w-100">
-      <div class="col-lg-8 col-md-10">
-        <form action="{% url 'contact' %}" method='post' class="p-4">
-          {% csrf_token %}
-          <div class="mb-3">
-            <input type="text" class="form-control" name='nombre' placeholder="Nome">
-          </div>
-          <div class="mb-3">
-            <input type="email" class="form-control" name='correo' placeholder="Email">
-          </div>
-          <div class="mb-3">
-            <input type="text" class="form-control" name='asunto' placeholder="Assunto">
-          </div>
-          <div class="mb-3">
-            <textarea name="mensaje" cols="30" rows="5" class="form-control" placeholder="Mensagem"></textarea>
-          </div>
-          <div class="text-center">
-            <button type="submit" class="btn btn-primary px-5 boton-home">Enviar</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
+
+
+
 {% endblock %}
 {% block scrips%}
 
 <script>
   document.addEventListener("DOMContentLoaded",function(){
     $('.nav-link').removeClass('active');
-    $('#index-navlink').addClass('active');
+    $('#service-navlink').addClass('active');
 
-    cconst container = document.querySelector('.figure-block-c');
-
-    container.addEventListener('mousemove', (e) => {
-      const { width, height, left, top } = container.getBoundingClientRect();
-      const x = e.clientX - left - width / 2;
-      const y = e.clientY - top - height / 2;
-    
-      const rotateX = (y / height) * 10; // Movimiento más suave
-      const rotateY = -(x / width) * 10;
-    
-      // Aplicar la rotación al contenedor completo
-      container.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
     });
-    
-    container.addEventListener('mouseleave', () => {
-      // Resetear la rotación del bloque completo
-      container.style.transform = 'rotateX(0deg) rotateY(0deg)';
-    });
-  });
 
 
 </script>
