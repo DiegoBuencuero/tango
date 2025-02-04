@@ -842,10 +842,19 @@
 }
 
 .custom-image {
-  width: 400px;
+  width: 100%; /* Se ajusta al ancho del contenedor */
+  max-width: 400px; /* Máximo ancho en pantallas grandes */
   height: auto;
   object-fit: cover;
   border-radius: 15px;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .custom-image {
+    max-width: 90%; /* Reduce el tamaño en móviles */
+    margin: 0 auto; /* Centra la imagen */
+  }
 }
 
 #section-about2 h5 {
