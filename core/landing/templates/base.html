@@ -99,14 +99,14 @@
   {% endblock %}
   <section id="section-home3" class="ftco-section ftco-animate ">
     <div class="container fondo-formulario d-flex flex-column justify-content-center align-items-center text-center mt-5 mb-5">
-      <div class="row justify-content-center w-75">
+      <div class="row justify-content-center w-100">
         <div class="col-lg-8 col-md-10">
           <h1 class="mb-4">{% translate "Let's Work Together" %}</h1>
           {% comment %} <h4 class="mb-4">{% translate "Tell us about yourself and we’ll figure out the best solution for you and your organization's needs." %}</h4> {% endcomment %}
         </div>
       </div>
-      <div class="row justify-content-center w-100">
-        <div class="col-lg-8 col-md-10">
+      <div class="row align-items-center  justify-content-center w-100">
+        <div class="col-lg-10 col-md-12">
           <form action="{% url 'contact' %}" method='post' class="p-4">
             {% csrf_token %}
             <div class="mb-3">
