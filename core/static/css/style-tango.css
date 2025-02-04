@@ -697,7 +697,7 @@
   position: relative;
   width: 100%;
   min-height: 60vh;
-  /* background-image: url("/static/images/1.png"); */
+  background-image: url("/static/images/1.png");
   background-position: center;
   background-attachment: fixed;
   display: flex;
@@ -739,7 +739,7 @@
   position: relative;
   width: 100%;
   min-height: 60vh;
-  /* background-image: url("/static/images/3.png"); */
+  background-image: url("/static/images/3.png");
   background-position: center;
   background-attachment: fixed;
   display: flex;
@@ -780,7 +780,7 @@
   position: relative;
   width: 100%;
   min-height: 60vh;
-  /* background-image: url("/static/images/1.png"); */
+  background-image: url("/static/images/1.png");
   background-position: center;
   background-attachment: fixed;
   display: flex;
@@ -852,6 +852,13 @@
   height: auto;
   object-fit: cover;
   border-radius: 15px;
+}
+
+@media (max-width: 768px) {
+  .custom-image {
+    width: 100%;  /* Hace que la imagen sea totalmente responsiva */
+    max-width: 300px; /* Limita el tamaño máximo en móviles */
+  }
 }
 
 #section-about2 h5 {
