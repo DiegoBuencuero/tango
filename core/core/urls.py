@@ -22,10 +22,10 @@ import os
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('i18n/', include('django.conf.urls.i18n')),
-    path("", index, name='index'),
+    # path("", index, name='index'),
     path('about', about, name='about'),
     path('managed', managed, name='managed'),
-    path('services', services, name='services'),
+    path('', services, name='services'),
     path('training', training, name='training'),
     path('contact', contact, name='contact'),
     path('thanks', thanks, name='thanks'),
