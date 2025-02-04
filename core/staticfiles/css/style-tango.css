@@ -857,7 +857,9 @@
 @media (max-width: 768px) {
   .custom-image {
     width: 100%;  /* Hace que la imagen sea totalmente responsiva */
-    max-width: 300px; /* Limita el tamaño máximo en móviles */
+    max-width: 100%; /* Limita el tamaño máximo en móviles */
+    padding-bottom: 15px;
+    border-radius: 15px;
   }
 }
 
