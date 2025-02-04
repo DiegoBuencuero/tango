@@ -219,14 +219,20 @@
 
 @media (max-width: 768px) {
   #section-service h1 {
-    font-size: 1.5rem; 
+    font-size: 1.7rem; 
   }
   
   #section-service h4 {
-    font-size: 1rem; 
+    font-size: 1.2rem; 
   }
   #section-service {
-    height: 100vh;
+    height: 90vh; /* Elimina la altura fija en móviles */
+    padding-top: 2rem; /* Agrega margen superior */
+    display: block; /* Evita que Flexbox centre verticalmente */
+  }
+
+  .container.mt-5 {
+    margin-top: 0 !important; /* Evita doble margen si Bootstrap ya aplica uno */
   }
 }
 
@@ -379,9 +385,9 @@
     }
 
     .fondo-formulario {
-        width: 80%;
+        width: 90%;
         max-width: 90%;
-        padding: 1rem;
+        padding: 0.5rem;
     }
 }
 
@@ -433,14 +439,21 @@
 
 @media (max-width: 768px) {
   #section-managed1  h1 {
-    font-size: 1.5rem; 
+    font-size: 1.7rem; 
   }
   
   #section-managed1 h4 {
-    font-size: 1rem; 
+    font-size: 1.2rem; 
   }
+
   #section-managed1  {
-    height: 100vh;
+    height: 90vh; /* Elimina la altura fija en móviles */
+    padding-top: 2rem; /* Agrega margen superior */
+    display: block; /* Evita que Flexbox centre verticalmente */
+  }
+
+  #section-managed1 .container.mt-5 {
+    margin-top: 0 !important; /* Evita doble margen si Bootstrap ya aplica uno */
   }
 }
 
@@ -621,14 +634,23 @@
 }
 @media (max-width: 768px) {
   #section-training  h1 {
-    font-size: 1.5rem; 
+    font-size: 1.7rem; 
   }
   
   #section-training h4 {
-    font-size: 1rem; 
+    font-size: 1.2rem; 
   }
   #section-training  {
     height: 100vh;
+  }
+  #section-training {
+    height: 90vh; /* Elimina la altura fija en móviles */
+    padding-top: 2rem; /* Agrega margen superior */
+    display: block; /* Evita que Flexbox centre verticalmente */
+  }
+
+  #section-training .container.mt-5 {
+    margin-top: 0 !important; /* Evita doble margen si Bootstrap ya aplica uno */
   }
 }
 
@@ -675,14 +697,20 @@
 
 @media (max-width: 768px) {
   #section-about  h1 {
-    font-size: 1.5rem; 
+    font-size: 1.7rem; 
   }
   
   #section-about h4 {
-    font-size: 1rem; 
+    font-size: 1.2rem; 
   }
-  #section-about  {
-    height: 100vh;
+  #section-about{
+    height: 90vh; /* Elimina la altura fija en móviles */
+    padding-top: 2rem; /* Agrega margen superior */
+    display: block; /* Evita que Flexbox centre verticalmente */
+  }
+
+  #section-about .container.mt-5 {
+    margin-top: 0 !important; /* Evita doble margen si Bootstrap ya aplica uno */
   }
 }
 
