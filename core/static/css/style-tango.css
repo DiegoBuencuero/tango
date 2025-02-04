@@ -306,11 +306,7 @@
   transform: translateY(-5px);
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
-.tasks-block {
-  display: flex;
-  align-items: center;
-  margin-bottom: 15px;
-}
+
 
 .icon-tasks {
   width: 40px;
@@ -569,8 +565,7 @@
 #section-managed .tasks-block {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 1rem;
+  gap: 5px;
 }
 
 #section-managed .custom-heading {
