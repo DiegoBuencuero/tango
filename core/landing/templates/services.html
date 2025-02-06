@@ -5,7 +5,7 @@
 <style>
 
 .icon-custom {
-  font-size: 45px;
+  font-size: 35px;
   margin-right: 20px;
   vertical-align: middle;
   color: #3D59E9;
@@ -28,13 +28,15 @@
 </style>
 
 <section id="section-service" class="ftco-section ftco-no-pt ftco-no-pb">
-  <div class="container mt-5 ftco-animate">
+  <div class="container ftco-animate">
     <div class="row justify-content-center mt-5">
-      <div class="col-md-10 text-center align-items-center">
+      <div class="col-md-11 text-center align-items-center">
         <h1 class="mb-4">{% translate "THREAT INTELLIGENCE SERVICES" %}</h1>
         <h4 class="mb-4 subtitulo_threat">{% translate "subtitulo_threat" %}</h4>
-        <div class="p-4">
-          <button type="button" class="btn btn-primary btn-lg boton-home">{% translate "Get Started" %}</button>
+        <div class="text-center mt-5">
+          <button type="button" class="btn btn-primary px-5 boton-home" onclick="location.href='#section-home3'">
+            {% translate "Contact us" %}
+          </button>
         </div>
       </div>
     </div>
@@ -46,7 +48,7 @@
       <div class="row align-items-center mb-5">
         <div class="col-md-1 mb-4"></div>
         <div class="col-md-10">
-            <h1 class="mb-4 text-center" style="font-weight:bold">{% translate "Cyber Threat Intelligence Assessment:" %}</h1>
+            <h1 class="mb-5 text-center mt-5 text-uppercase" style="font-weight:bold">{% translate "Cyber Threat Intelligence Assessment" %}</h1>
         </div>
         <div class="col-md-1 mb-4"></div>
       </div>    
@@ -56,26 +58,24 @@
       <div class="row justify-content-center align-items-stretch g-4">
           <div class="col-md-5 mb-md-0 mb-4 d-flex justify-content-center"> 
               <div class="card-fixed-height p-4 no-min-height light gradient-card h-100 d-flex flex-column">
-                  <div class="tasks-block d-flex align-items-start">
-                      <i class="icon-bar-chart-o icon-custom"></i>
-                      <h4 class="heading-tasks text-color-dark mb-0 ms-2">{% translate "Maturity Level Analysis:" %}</h4>
+                  <div class="tasks-block d-flex align-items-center">
+                    <i class="icon-bar-chart-o icon-custom"></i>
+                    <h4 class="heading-tasks text-uppercase text-color-dark mb-0 ms-2">{% translate "Maturity Level Analysis" %}</h4>
                   </div>
-                  <div class="custom-heading mt-auto">
-                      <h5>{% translate "Gain valuable insights into your organization's cybersecurity maturity." %}</h5>
-                      <h5>{% translate "Our analysis leverages the CREST and CTI-CMM frameworks to identify gaps, prioritize improvements, and demonstrate compliance with industry’s best practices." %}</h5>
+                  <div class="custom-heading mt-3">
+                    <h5>{% translate "Gain valuable insights into your organization's cybersecurity maturity. Our analysis leverages the CREST and CTI-CMM frameworks to identify gaps, prioritize improvements, and demonstrate compliance with industry’s best practices." %}</h5>
                   </div>
               </div>
           </div>  
           <div class="col-md-5 mb-md-0 mb-4 d-flex justify-content-center"> 
               <div class="card-fixed-height p-4 no-min-height light gradient-card h-100 d-flex flex-column">
-                  <div class="tasks-block d-flex align-items-start">
-                      <i class="icon-shield icon-custom"></i>
-                      <h4 class="heading-tasks text-color-dark mb-0 ms-2">{% translate "Threat Intelligence Organizational Consulting:" %}</h4>
-                  </div>
-                  <div class="custom-heading mt-auto">
-                      <h5>{% translate "Maximize the value of your threat intelligence program." %}</h5>
-                      <h5>{% translate "Maximize the value of your threat intelligence program. Our expert consultants guide you in implementing best practices, optimizing processes, and developing a high-performing threat intelligence team to proactively defend against cyber threats." %}</h5>
-                    </div>
+                <div class="tasks-block d-flex align-items-center">
+                  <i class="icon-shield icon-custom"></i>
+                  <h4 class="heading-tasks text-uppercase text-color-dark mb-0 ms-2">{% translate "Threat Intelligence Organizational Consulting" %}</h4>
+               </div>
+                <div class="custom-heading mt-auto">
+                  <h5>{% translate "Maximize the value of your threat intelligence program. Our expert consultants guide you in implementing best practices, optimizing processes, and developing a high-performing threat intelligence team to proactively defend against cyber threats." %}</h5>
+                </div>
               </div>
           </div>
       </div>
@@ -85,29 +85,23 @@
       <div class="row justify-content-center align-items-stretch g-4">
         <div class="col-md-5 mb-md-0 mb-4 d-flex justify-content-center"> 
           <div class="card-fixed-height p-4 no-min-height light gradient-card h-100 d-flex flex-column">
-            <div class="tasks-block d-flex align-items-start">
+            <div class="tasks-block d-flex align-items-center">
                 <i class="icon-settings_input_antenna icon-custom"></i>
-                <h4 class="heading-tasks text-color-dark mb-0 ms-2">{% translate "Cyber Threat modeling & profiling" %}</h4>
+                <h4 class="heading-tasks text-uppercase text-color-dark mb-0 ms-2">{% translate "Cyber Threat modeling & profiling" %}</h4>
             </div>
-            <div class="custom-heading mt-auto">
-              <h5>{% translate "Protect your assets with robust threat modeling and profiling. " %}</h5>
-              <h5>
-                {% translate "Our experts leverage industry-leading frameworks like " %}
-                <span class="highlight-uppercase">{% translate "STRIDE, PASTA, OWASP, NIST, OCTAVE, Cyber Kill-Chain, MITRE ATT&CK and DIAMOND MODEL" %}</span>
-                {% translate " to identify, analyze, and mitigate potential cyber threats, enabling you to proactively safeguard your critical systems and data." %}
-              </h5>
+            <div class="custom-heading mt-3">
+              <h5>{% translate "Protect your assets with robust threat modeling and profiling. Our experts leverage industry-leading frameworks like STRIDE, PASTA, OWASP, NIST, OCTAVE, Cyber Kill-Chain, MITRE ATT&CK and DIAMOND MODEL to identify, analyze, and mitigate potential cyber threats, enabling you to proactively safeguard your critical systems and data." %}</h5>
             </div>
           </div>
         </div>
         <div class="col-md-5 mb-md-0 mb-4 d-flex justify-content-center"> 
           <div class="card-fixed-height p-4 no-min-height light gradient-card h-100 d-flex flex-column">
-            <div class="tasks-block d-flex align-items-start">
+            <div class="tasks-block d-flex align-items-center">
                 <i class="icon-report icon-custom"></i>
-                <h4 class="heading-tasks text-color-dark mb-0 ms-2">{% translate "Intelligence Analysis Reporting" %}</h4>
+                <h4 class="heading-tasks text-uppercase text-color-dark mb-0 ms-2">{% translate "Intelligence Analysis Reporting" %}</h4>
             </div>
-            <div class="custom-heading mt-auto">
-                <h5>{% translate "Gain actionable insights from integrated intelligence analysis." %}</h5>
-                <h5>{% translate "Our experts analyze both cyber intelligence and **non-digital intelligence** sources to provide comprehensive threat assessments, identify emerging threats, and support informed decision-making." %}</h5>
+            <div class="custom-heading mt-3">
+                <h5>{% translate "Gain actionable insights from integrated intelligence analysis. Our experts analyze both cyber intelligence and non-digital intelligence sources to provide comprehensive threat assessments, identify emerging threats, and support informed decision-making" %}</h5>
             </div>
           </div>
         </div>  
@@ -123,13 +117,12 @@
       <div class="row justify-content-center align-items-stretch g-4 my-5">
         <div class="col-md-10 mb-md-0 mb-4 d-flex justify-content-center"> 
           <div class="card-fixed-height p-4 no-min-height tarjeta-grande light h-100 d-flex flex-column">
-            <div class="tasks-block d-flex align-items-start">
+            <div class="tasks-block d-flex align-items-center">
                 <i class="icon-globe icon-custom"></i>
-                <h4 class="heading-tasks text-color-dark mb-0 ms-2">{% translate "Organizational Human Risk Analysis (Digital HUMINT)" %}</h4>
+                <h4 class="heading-tasks text-uppercase text-color-dark mb-0 ms-2">{% translate "Organizational Human Risk Analysis (Digital HUMINT)" %}</h4>
             </div>
-            <div class="custom-heading mt-auto">
-              <h5>{% translate "Reduce your organization's exposure to human risk with our expert analysis. We leverage OSINT data to identify and assess the potential for insider threats, employee negligence, and other human-centric security vulnerabilities. " %}</h5>
-              <h5>{% translate "Our in-depth assessments help you understand and mitigate the risks associated with employee behavior, including non-compliance with security policies, misuse of technology, and susceptibility to social engineering attacks." %}</h5>
+            <div class="custom-heading mt-3">
+              <h5>{% translate "Reduce your organization's exposure to human risk with our expert analysis. We leverage OSINT data to identify and assess the potential for insider threats, employee negligence, and other human-centric security vulnerabilities. Our in-depth assessments help you understand and mitigate the risks associated with employee behavior, including non-compliance with security policies, misuse of technology, and susceptibility to social engineering attacks. " %}</h5>
             </div>
           </div>
         </div>
@@ -137,24 +130,18 @@
       <div class="row justify-content-center align-items-stretch g-4">
         <div class="col-md-10 mb-md-0 mb-4 d-flex justify-content-center"> 
           <div class="card-fixed-height p-4 no-min-height tarjeta-grande light h-100 d-flex flex-column">
-            <div class="tasks-block d-flex align-items-start">
+            <div class="tasks-block d-flex align-items-center">
                 <i class="icon-user-secret icon-custom"></i>
-                <h4 class="heading-tasks text-color-dark mb-0 ms-2">{% translate "Online profile risk assessment:" %}</h4>
+                <h4 class="heading-tasks text-uppercase text-color-dark mb-0 ms-2">{% translate "Online profile risk assessment" %}</h4>
             </div>
-            <div class="custom-heading mt-auto">
-              <h5>{% translate "Understand and mitigate the risks of your online presence." %}</h5>
-              <h5>{% translate "Take control of your privacy** with our comprehensive profile risk assessment." %}</h5>
-              <h5>{% translate "We analyze your digital footprint to determine what personal information is publicly available, identify potential risks to your connections, assets, and reputation, and develop a customized action plan to minimize your online exposure." %}</h5>
+            <div class="custom-heading mt-auto mt-3">
+              <h5>{% translate "Understand and mitigate the risks of your online presence. Take control of your privacy with our comprehensive profile risk assessment. We analyze your digital footprint to determine what personal information is publicly available, identify potential risks to your connections, assets, and reputation, and develop a customized action plan to minimize your online exposure." %}</h5>
             </div>
           </div>
         </div>
       </div>    
   </div>
 </section>
-
-
-
-
 {% endblock %}
 {% block scrips%}
 

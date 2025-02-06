@@ -39,7 +39,8 @@
   
   </head>
   <style>
-    
+ 
+
   </style>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar"> 
@@ -52,7 +53,6 @@
         </button>
         <div class="collapse navbar-collapse mt-3 mb-3" id="ftco-nav">
           <ul class="navbar-nav m-auto">
-            {% comment %} <li class="nav-item me-5" id="index-navlink"><a href="{% url 'index' %}" class="nav-link pl-0 text-light">{% translate "Home" %}</a></li> {% endcomment %}
             <li class="nav-item me-5" id="service-navlink"><a href="{% url 'services' %}" class="nav-link text-light">{% translate "Threat Intelligence Services" %}</a></li>
             <li class="nav-item me-5" id="managed-navlink"><a href="{% url 'managed'  %}" class="nav-link text-light">{% translate "Managed cybersecurity" %}</a></li>
             <li class="nav-item " id="training-navlink"><a href="{% url 'training' %}" class="nav-link text-light">{% translate "Training" %}</a></li>
@@ -71,27 +71,24 @@
                 </button>
                 <div class="dropdown-menu p-0 fables-forth-background-color rounded-0 m-0 border-0 lang-dropdown" aria-labelledby="dropdownLangButton">
                   <form action="{% url 'set_language' %}" method="post">
-                      {% csrf_token %}
-                      {% get_current_language as LANGUAGE_CODE %}
-                      {% get_available_languages as LANGUAGES %}
-                      {% get_language_info_list for LANGUAGES as languages %}
-                      {% for lang in languages %}
-                          <button type="submit" class="dropdown-item white-color fables-second-hover-color" name="language" value="{{ lang.code }}" >
-                              {% if lang.code == 'en'  %}
-                                  <img src="{% static 'images/england.png' %}" alt="england flag" class=" flag-icon mr-1" style="width: auto;height: auto;max-width: 20px;"> {{ lang.name_local }}  
-                              {% else %}
-                                  <img src="{% static 'images/espana(1).png' %}" alt="españa flag" class=" flag-icon mr-1" style="width: auto;height: auto;max-width: 20px;"> {{ lang.name_local }}
-                              {% endif %}
-                          </button>
-                      {% endfor %}
+                    {% csrf_token %}
+                    {% get_current_language as LANGUAGE_CODE %}
+                    {% get_available_languages as LANGUAGES %}
+                    {% get_language_info_list for LANGUAGES as languages %}
+                    {% for lang in languages %}
+                        <button type="submit" class="dropdown-item lang-button" name="language" value="{{ lang.code }}">
+                            {% if lang.code == 'en' %}
+                                <img src="{% static 'images/england.png' %}" alt="English" class="flag-icon" style="width: auto;height: auto;max-width: 25px;">
+                            {% elif lang.code == 'es' %}
+                                <img src="{% static 'images/espana.png' %}" alt="Español" class="flag-icon" style="width: auto;height: auto;max-width: 25px;">
+                            {% endif %}
+                        </button>
+                    {% endfor %}                      
                   </form>
                 </div>
               </div>
             </li>
           </ul>
-        </div>
-        <div class="p-4">
-          <a href="#" class="btn ms-3 btn ms-3 boton-nav d-none d-md-block boton-nav" >{% translate "Get Started" %}</a>
         </div>
       </div>
     </nav>    
@@ -102,7 +99,6 @@
       <div class="row justify-content-center w-100">
         <div class="col-lg-8 col-md-10">
           <h1 class="mb-4">{% translate "Let's Work Together" %}</h1>
-          {% comment %} <h4 class="mb-4">{% translate "Tell us about yourself and we’ll figure out the best solution for you and your organization's needs." %}</h4> {% endcomment %}
         </div>
       </div>
       <div class="row align-items-center  justify-content-center w-100">
@@ -129,72 +125,72 @@
       </div>
     </div>
   </section>    
-  <div id="whatsapp-button" class="btn-lg animate__animated animate__heartBeat">
+  {% comment %} <div id="whatsapp-button" class="btn-lg animate__animated animate__heartBeat">
      <a href="https://api.whatsapp.com/send?phone=+5555996119565&text=Olá! Envie-nos uma mensagem." target="_blank">
       <img src="{% static 'images/whatsapp.png' %}" alt="WhatsApp" />
     </a>
-  </div>
-  <footer class="footer-fondo ftco-section">
-    <div class="container mt-5">
-      <div class="row mb-4 mt-5">
-        <div class="col-md-3">
-          <div class="ftco-footer-widget mb-4">
-            <a href="{% url 'services' %}" class="navbar-brand d-flex align-items-center ">
-              <img src="{% static 'images/logo-nav1.png' %}" alt="Logo" class="logo-img-footer">
-            </a>
-            <p  class="mt-5">{% translate "Protegiendo tu negocio con soluciones de ciberseguridad avanzadas. Confianza y seguridad para tus datos." %}</p>
-          </div>
-        </div> 
-        <div class="col-md-2"></div> 
-        <div class="col-md-3">
-          <div class="ftco-footer-widget mb-4">
-            <h3 class="ftco-heading-2 titulos-footer">{% translate "Enlaces" %}</h3>
-            <ul class="list-unstyled">
-              {% comment %} <li><a href="{% url 'index' %}"></span>{% translate "Home" %}</a></li> {% endcomment %}
-              <li><a href="{% url 'services' %}">{% translate "Threat Intelligence Services" %}</a></li>
-              <li><a href="{% url 'managed'  %}">{% translate "Managed cybersecurity" %}</a></li>
-              <li><a href="{% url 'training' %}">{% translate "Training" %}</a></li>
-              <li><a href="{% url 'about' %}">{% translate "About us" %}</a>  </li>
-            </ul>
+  </div> {% endcomment %}
+
+
+<footer class="footer-fondo ftco-section">
+  <div class="container mt-5">
+    <div class="row mb-4 mt-5">
+      <div class="col-md-4">
+        <div class="row mb-4 mt-5">
+          <div class="col-md-4"></div>
+          <div class="col-md-8">
+            <div class="ftco-footer-widget mb-4">
+              <a href="{% url 'services' %}" class="navbar-brand d-flex align-items-center ">
+                <img src="{% static 'images/logo-nav1.png' %}" alt="Logo" class="logo-img-footer">
+              </a>
+              <p  class="mt-5">{% translate "Secure your future. Advanced intelligence solutions for your business." %}</p>
+            </div>
           </div>
         </div>
-        <!-- Servicios destacados -->
-        {% comment %} <div class="col-md-3">
-          <div class="ftco-footer-widget mb-4">
-            <h2 class="ftco-heading-2">Servicios</h2>
-            <ul class="list-unstyled">
-              <li><a href="{% url 'services' %}"><span class="ion-ios-arrow-round-forward mr-2"></span>Monitoreo 24/7</a></li>
-              <li><a href="{% url 'services' %}"><span class="ion-ios-arrow-round-forward mr-2"></span>Gestión de incidentes</a></li>
-              <li><a href="{% url 'services' %}"><span class="ion-ios-arrow-round-forward mr-2"></span>Auditorías de seguridad</a></li>
-              <li><a href="{% url 'services' %}"><span class="ion-ios-arrow-round-forward mr-2"></span>Protección de datos</a></li>
-              <li><a href="{% url 'services' %}"><span class="ion-ios-arrow-round-forward mr-2"></span>Análisis de vulnerabilidades</a></li>
-            </ul>
+      </div> 
+      <div class="col-md-4">
+        <div class="row mb-4 mt-5">
+          <div class="col-md-4"></div>
+          <div class="col-md-8">
+            <div class="ftco-footer-widget mb-4">
+              <h3 class="ftco-heading-2 titulos-footer">{% translate "Enlaces" %}</h3>
+              <ul class="list-unstyled">
+                {% comment %} <li><a href="{% url 'index' %}"></span>{% translate "Home" %}</a></li> {% endcomment %}
+                <li><a href="{% url 'services' %}">{% translate "Threat Intelligence Services" %}</a></li>
+                <li><a href="{% url 'managed'  %}">{% translate "Managed cybersecurity" %}</a></li>
+                <li><a href="{% url 'training' %}">{% translate "Training" %}</a></li>
+                <li><a href="{% url 'about' %}">{% translate "About us" %}</a>  </li>
+              </ul>
+            </div>
           </div>
-        </div> {% endcomment %}
-        <!-- Contacto -->
-        <div class="col-md-4">
-          <div class="ftco-footer-widget mb-4">
-            <h2 class="ftco-heading-2 titulos-footer">Contacto</h2>
+        </div>
+      </div> 
+      <div class="col-md-4">
+        <div class="row mb-4 mt-5">
+          <div class="col-md-4"></div>
+          <div class="col-md-8">
+            <h3 class="ftco-heading-2 titulos-footer">{% translate "Contacto" %}</h3>
             <ul class="list-unstyled">
-              <li><a href="#"><span class="icon icon-map-marker mr-2"></span>Oficinas: Av. Ciberseguridad 123, Ciudad Segura</a></li>
-              <li><a href="#"><span class="icon icon-phone mr-2"></span>+1 (800) 123-4567</a></li>
-              <li><a href="#"><span class="icon icon-envelope mr-2"></span>contacto@cybershield.com</a></li>
+              {% comment %} <li><a href="#"><span class="icon icon-map-marker mr-2"></span>Oficinas: Av. Ciberseguridad 123, Ciudad Segura</a></li>
+              <li><a href="#"><span class="icon icon-phone mr-2"></span>+1 (800) 123-4567</a></li> {% endcomment %}
+              <li><a href="#"><span class="icon icon-envelope mr-2"></span> info@tangosecurity.net</a></li>
             </ul>
             <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
               <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-              <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-              <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-              <li class="ftco-animate"><a href="#"><span class="icon-linkedin"></span></a></li>
+              {% comment %} <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li> {% endcomment %}
+              {% comment %} <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li> {% endcomment %}
+              <li class="ftco-animate"><a href="https://www.linkedin.com/company/t4ngo"><span class="icon-linkedin"></span></a></li>
             </ul>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12 text-center">
-          <p>&copy; {% translate "2025 CyberShield. Todos los derechos reservados." %} </p>
-        </div>
-      </div>
+      </div> 
     </div>
+    <div class="col-md-12 text-center" style="color:#F0F0F080">
+      <p>&copy; {% translate "2025 Developed by Innobrar Solutions" %} </p>
+    </div> 
+  </div>
+  </div>
 </footer>
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
   <script src="{% static 'js/jquery.min.js' %}"></script>

@@ -1,11 +1,69 @@
 @font-face {
-  font-family: 'Helvetica Neue LT Std';
-  src: url('fonts/helvetica/HELVETICANEUELTSTDBDEX.OTF') format('opentype');
+  font-family: 'Helvetica Neue LT Std BdEx';
+  src: url('/static/fonts/helvetica/HELVETICANEUELTSTDBDEX.OTF') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue LT Std Md';
+  src: url('/static/fonts/helvetica/HELVETICANEUELTSTDMD.OTF') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
-/*---------------------------------------NAV -FOOTER -------------------------------------------*/
 
+@font-face {
+  font-family: 'Helvetica Neue LT Std MdEx';
+  src: url('/static/fonts/helvetica/HELVETICANEUELTSTDMDEX.OTF') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue LT Std ThEx';
+  src: url('/static/fonts/helvetica/HELVETICANEUELTSTDTHEX.OTF') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PP Mori Regular';
+  src: url('/static/fonts/mori/PPMori-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'PP Mori Regular';
+}
+
+/*---------------------------------------NAV -FOOTER -------------------------------------------*/
+.navbar-nav {
+  font-family: 'Helvetica Neue LT Std Md';
+  display: flex;
+  align-items: center;
+  color:#ffffff;
+}
+.dropdown .btn {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+.navbar-nav .nav-item {
+  display: flex;
+  align-items: center;
+}
+.navbar-nav .nav-link {
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+}
+
+.flag-icon {
+  vertical-align: middle;
+  margin-left: 5px;
+}
 .nav-link.active {
   font-weight: bold;
   text-decoration: underline;
@@ -81,7 +139,7 @@
 }
 
 
-.boton-nav {
+/* .boton-nav {
   background: linear-gradient(150deg, rgba(61, 89, 233, 0.9), rgba(11, 28, 58, 0.9)) !important; 
   border: 2px solid var(--framework-blue) !important; 
   text-align: center  !important; 
@@ -100,7 +158,7 @@
   transform: translateY(-2px); 
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
   color: white !important;
-}
+} */
 
 
 
@@ -205,7 +263,7 @@
 }
 #section-service h1 {
   font-family: 'Helvetica Neue LT Std', sans-serif; 
-  font-size: 3.4rem; 
+  font-size: 3.3rem; 
   color:#ffffff;  
   font-weight: 600;
   letter-spacing: -1.1px;
@@ -214,12 +272,12 @@
   font-family: 'Helvetica Neue LT Std', sans-serif; 
   color:#ffffff;  
   line-height: 1.8;
-  font-size: 1.1rem; 
+  font-size: 1.15rem; 
 }
 
 @media (max-width: 768px) {
   #section-service h1 {
-    font-size: 1.7rem; 
+    font-size: 2rem; 
   }
   
   #section-service h4 {
@@ -248,7 +306,7 @@
 
 
 #section-services2 h1 {
-  font-family: 'Helvetica Neue LT Std', sans-serif !important; 
+  font-family: 'PP Mori Regular'!important;
   font-size: 1.6rem !important; 
   font-weight: bold;
   text-align: center;
@@ -257,16 +315,17 @@
 }
 
 #section-services2 h4{
-  font-family: 'Helvetica Neue LT Std', sans-serif !important; 
-  font-size: 1rem;
-  font-weight: bold;
+  font-family: 'PP Mori Regular'!important;
+  font-size: 1.1rem;
+  /* font-weight: bold; */
   color:#3D59E9;
 }
 #section-services2 h5{
-  font-family: 'Helvetica Neue LT Std', sans-serif !important; 
-  font-size: 0.9rem;
+  font-family: 'PP Mori Regular'!important;
+  font-size: 1rem;
   color:#303030;
-  line-height: 1.8; 
+  line-height: 2; 
+  margin-top: 10px;
 }
 
 .gradient-card {
@@ -309,9 +368,9 @@
 
 
 .icon-tasks {
-  width: 40px;
-  height: 40px;
-  margin-right: 15px;
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
 }
 
   
@@ -348,7 +407,7 @@
 
   #section-home3 h4 {
     font-family: 'Helvetica Neue LT Std', sans-serif;
-    font-size: 1.2rem !important;
+    font-size: 1.1rem !important;
     font-weight: 400 !important;
     color:#ffffff;  
     text-align: center;
@@ -408,7 +467,7 @@
 /*                                 ESTILO DE MANAGED                             */
 /* ================================================================================ */
  #section-managed1{  
-  height: 90vh;
+  height: 85vh;
   background-image: 
   radial-gradient(circle farthest-side at 50% -20%, rgba(61, 89, 233, 0.5) 35%, rgba(11, 28, 58, 0.9) 70%, transparent 100%),
   linear-gradient(to bottom, #0B1C3A, #000000);
@@ -421,7 +480,7 @@
 
 #section-managed1 h1 {
   font-family: 'Helvetica Neue LT Std', sans-serif; 
-  font-size: 3.4rem; 
+  font-size: 3.3rem; 
   color:#ffffff;  
   font-weight: 600;
   letter-spacing: -1.1px;
@@ -430,12 +489,12 @@
   font-family: 'Helvetica Neue LT Std', sans-serif; 
   color:#ffffff;  
   line-height: 1.8;
-  font-size: 1.1rem; 
+  font-size: 1.15rem; 
 }
 
 @media (max-width: 768px) {
   #section-managed1  h1 {
-    font-size: 1.7rem; 
+    font-size: 2rem; 
   }
   
   #section-managed1 h4 {
@@ -466,7 +525,7 @@
 #section-managed {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  min-height: 70vh;
   background-image: url("/static/images/1.png");
   background-position: center;
   background-attachment: fixed;
@@ -508,7 +567,7 @@
 }
 
 #section-managed .titulo-section h1 {
-  font-family: 'Helvetica Neue LT Std', sans-serif;
+  font-family: 'PP Mori Regular'!important;
   font-size: 2rem;
   font-weight: bold;
   text-align: center;
@@ -578,23 +637,26 @@
 }
 
 #section-managed .icon-custom {
-  font-size: 45px;
+  font-size: 35px;
   margin-right: 20px;
   color: #3D59E9;
   padding: 0.9rem;
 }
 
 #section-managed .titulo-tarjeta {
+  font-family: 'PP Mori Regular' !important;
   font-size: 1.1rem;
-  font-weight: bold;
   color: #3D59E9;
 }
+
 
 #section-managed h5 {
   font-size: 1rem;
   color: #303030; 
-  line-height: 1.8;
+  line-height: 2;
   margin-bottom: 10px;
+  font-family: 'PP Mori Regular'!important;
+
 }
 
 /* ================================================================================ */
@@ -616,7 +678,7 @@
 
 #section-training h1 {
   font-family: 'Helvetica Neue LT Std', sans-serif; 
-  font-size: 3.4rem; 
+  font-size: 3.3rem; 
   color:#ffffff;  
   font-weight: 600;
   letter-spacing: -1.1px;
@@ -625,11 +687,11 @@
   font-family: 'Helvetica Neue LT Std', sans-serif; 
   color:#ffffff;  
   line-height: 1.8;
-  font-size: 1.1rem; 
+  font-size: 1.15rem; 
 }
 @media (max-width: 768px) {
   #section-training  h1 {
-    font-size: 1.7rem; 
+    font-size: 2rem; 
   }
   
   #section-training h4 {
@@ -678,7 +740,7 @@
 
 #section-about h1 {
   font-family: 'Helvetica Neue LT Std', sans-serif; 
-  font-size: 3.4rem; 
+  font-size: 3.3rem; 
   color:#ffffff;  
   font-weight: 600;
   letter-spacing: -1.1px;
@@ -687,7 +749,7 @@
   font-family: 'Helvetica Neue LT Std', sans-serif; 
   color:#ffffff;  
   line-height: 1.6;
-  font-size: 1.1rem; 
+  font-size: 1.15rem; 
 }
 
 @media (max-width: 768px) {
@@ -747,11 +809,6 @@
 }
 
 
-
-
-
-
-
 #section-about3{
   position: relative;
   width: 100%;
@@ -763,6 +820,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  font-family: 'PP Mori Regular' !important;
 }
 
 #section-about3::before {
@@ -881,7 +939,7 @@
 }
 
 #section-about2 h5 {
-  font-family: 'Helvetica Neue LT Std', sans-serif;
+  font-family: 'PP Mori Regular' !important;
   font-size: 1.2rem; 
   color:#0B1C3A;  
   font-weight: 400;
@@ -890,7 +948,7 @@
 }
 
 #section-about3 h5 {
-  font-family: 'Helvetica Neue LT Std', sans-serif;
+  font-family: 'PP Mori Regular' !important;
   font-size: 1.2rem; 
   color:#ffffff;  
   font-weight: 400;
@@ -898,7 +956,7 @@
 }
 
 #section-about4 h5 {
-  font-family: 'Helvetica Neue LT Std', sans-serif;
+  font-family: 'PP Mori Regular' !important;
   font-size: 1.2rem; 
   color:#0B1C3A; 
   font-weight: 400;
@@ -906,8 +964,8 @@
 }
 
 #section-about5 h5 {
-  font-family: 'Helvetica Neue LT Std', sans-serif;
-  font-size: 1.1rem; 
+  font-family: 'PP Mori Regular' !important;
+  font-size: 1.2rem; 
   color:#0B1C3A; 
   font-weight: 400;
   line-height: 2;
