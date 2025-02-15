@@ -3,16 +3,76 @@
 {% load i18n %}
 {% block content %}
 <style>
+
   .icon-custom {
-    font-size: 45px;
+    font-size: 35px;
     margin-right: 20px;
     vertical-align: middle;
-    color: #3D59E9;
+    color: #0B1C3A;
   }
   .highlight-uppercase {
     color: #353535;
     font-weight: bold; /* Opcional: Si querés resaltar más */
   }
+  .custom-heading {
+    flex-grow: 1; /* Hace que el contenido se distribuya uniformemente */
+    display: flex;
+    flex-direction: column;
+    justify-content: start; /* Asegura que el texto arranque en la misma altura */
+  }
+  @media (max-width: 768px) { 
+    .gradient-card {
+      margin-bottom: 1.5rem !important; /* Espaciado solo en móviles */
+    }
+  }
+  
+  #section-services2 {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  /* Video de fondo */
+  .video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+  
+  .video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.4; /* Controla la transparencia del video */
+  }
+  
+  /* Capa de transparencia encima del video */
+  .video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, 
+        rgba(0, 0, 0, 0.9) 0%, 
+        rgba(0, 0, 0, 0.85) 20%, 
+        rgba(0, 0, 0, 0.8) 40%, 
+        rgba(0, 0, 0, 0.75) 60%, 
+        rgba(0, 0, 0, 0.7) 80%, 
+        rgba(0, 28, 58, 0.6) 100%);
+    z-index: 0;
+  }
+  
+  /* Para que las tarjetas queden encima */
+  .container-all {
+    position: relative;
+    z-index: 1;
+  }
+  
+
 </style>
 <section id="section-training" class="">
   <div class="container  ftco-animate">
@@ -29,64 +89,67 @@
     </div>
   </div>  
 </section>
-<section id="section-services2" class="ftco-section ftco-no-pt mt-5 mb-5 ftco-no-pb ftco-animate">
-  <div class="container-all">
+
+
+<section id="section-training2" class="ftco-section ftco-no-pt ftco-no-pb position-relative">
+  <!-- Contenido principal -->
+  <div class="container-all position-relative">
     <div class="container position-relative">
+      <div class="row align-items-center mb-5">
+        <div class="col-md-1 mb-4"></div>
+        <div class="col-md-10">
+            <h1 class="mb-5 text-center mt-5 text-uppercase" style="font-weight:bold; color:#ffffff">
+              {% translate "Cyber Threat Intelligence Assessment" %}
+            </h1>
+        </div>
+        <div class="col-md-1 mb-4"></div>
+      </div>    
     </div>
-    <div class="container ftco-animate">
+    <div class="container my-5 ftco-animate">
       <div class="row justify-content-center align-items-stretch g-4">
-        <div class="col-md-5 mb-4 mb-md-0"> 
+        <div class="col-md-5 mb-md-0 mb-4 d-flex justify-content-center"> 
           <div class="card-fixed-height p-4 no-min-height light gradient-card h-100 d-flex flex-column">
             <div class="tasks-block d-flex align-items-center">
-              <div class="col-2 d-flex justify-content-start">
-                <i class="icon-people icon-custom"></i>
-              </div>
-              <div class="col-10">
-                <h4 class="titulo-tarjeta  text-uppercase mb-0">
-                  {% translate "OSINT" %}</h4>                  
-                </h4>
-              </div>
+              <i class="icon-people icon-custom"></i>
+                <h4 class="heading-tasks text-uppercase text-color-dark mb-0 ms-2">{% translate "OSINT" %}</h4>
             </div>
-            <div class="custom-heading mt-auto">
+            <div class="custom-heading mt-3">
               <h5>{% translate "Master intelligence and cyberintelligence analysis with our training programs. Learn and apply practical frameworks like the Diamond Model, MITRE ATT&CK, Cyber-Kill Chain, and Structured Analysis Techniques to real-world scenarios, improving your ability to collect, analyze, interpret information for informed decision-making and generate actionable insights." %}</h5>
             </div>
           </div>
         </div>
-        <div class="col-md-5"> 
-          <div class="card-fixed-height p-4 no-min-height light gradient-card h-100 d-flex flex-column">
+        <div class="col-md-5 mb-md-0 mb-4 d-flex justify-content-center"> 
+          <div class="card-fixed-height p-4 no-min-height tarjeta-grande light h-100 d-flex flex-column">
             <div class="tasks-block d-flex align-items-center">
-              <div class="col-2 d-flex justify-content-start">
-                <i class="icon-search2 icon-custom"></i>
-              </div>
-              <div class="col-10">
-                <h4 class="mb-0 text-uppercase titulo-tarjeta">
-                  {% translate "Social – engineering" %}
-                </h4>
-              </div>
+              <i class="icon-search2 icon-custom"></i>
+                <h4 class="heading-tasks text-uppercase text-color-dark mb-0 ms-2">{% translate "Social – engineering" %}</h4>
             </div>
-            <div class="custom-heading mt-auto">
-              <h5>{% translate "Gain practical skills in OSINT with our hands-on training programs. Learn to effectively utilize online resources to collect, analyze, and interpret open-source data and information to generate valuable intelligence for investigative purposes and informed decision-making." %}</h5>
+            <div class="custom-heading mt-3">
+                <h5>{% translate "Gain practical skills in OSINT with our hands-on training programs. Learn to effectively utilize online resources to collect, analyze, and interpret open-source data and information to generate valuable intelligence for investigative purposes and informed decision-making." %}</h5>
             </div>
           </div>
         </div>  
       </div>
-    </div>    
-    <div class="container my-5 ftco-animate ">
-      <div class="row justify-content-center align-items-stretch g-4 my-5">
+    </div>
+
+    <div class="container  ftco-animate">
+      <div class="row justify-content-center align-items-stretch mb-5 g-4">
         <div class="col-md-10 mb-md-0 mb-4 d-flex justify-content-center"> 
           <div class="card-fixed-height p-4 no-min-height tarjeta-grande light h-100 d-flex flex-column">
-            <div class="tasks-block d-flex align-items-start">
-                <i class="icon-shield icon-custom"></i>
+            <div class="tasks-block d-flex align-items-center">
+              <i class="icon-shield icon-custom"></i>
                 <h4 class="heading-tasks text-uppercase text-color-dark mb-0 ms-2">{% translate "Intelligence & Cyberintelligence Analysis Technics" %}</h4>
             </div>
-            <div class="custom-heading mt-auto">
+            <div class="custom-heading mt-auto mt-3">
               <h5>{% translate "Develop your understanding of social engineering. Learn how these techniques, including deception and manipulation, are used to compromise security. This course covers the psychology behind attacks, common tools and techniques, and provides practical strategies for prevention and mitigation." %}</h5>
             </div>
           </div>
         </div>
-      </div>     
+      </div>    
+  </div>
   </div>
 </section>
+ 
 {% endblock %}
 {% block scrips%}
 

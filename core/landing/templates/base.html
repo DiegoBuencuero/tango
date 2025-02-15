@@ -39,17 +39,18 @@
   
   </head>
   <style>
- 
+
 
   </style>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar"> 
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark " id="ftco-navbar"> 
       <a href="{% url 'services' %}" class="navbar-brand d-flex align-items-center p-4">
         <img src="{% static 'images/logo-nav1.png' %}" alt="Logo" class="logo-img">
       </a>
       <div class="container d-flex align-items-center">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="oi oi-menu"></span> Menu
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" 
+            aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="oi oi-menu"></span> <span class="menu-text">MENU</span>
         </button>
         <div class="collapse navbar-collapse mt-3 mb-3" id="ftco-nav">
           <ul class="navbar-nav m-auto">
@@ -94,10 +95,10 @@
     </nav>    
   {% block content%}
   {% endblock %}
-  <section id="section-home3" class="ftco-section ftco-animate ">
-    <div class="container fondo-formulario d-flex flex-column justify-content-center align-items-center text-center mt-5 mb-5">
+  <section id="section-home3" class="ftco-section ">
+    <div class="container fondo-formulario d-flex flex-column justify-content-center align-items-center text-center mt-5 mb-5 ftco-animate">
       <div class="row justify-content-center w-100">
-        <div class="col-lg-8 col-md-10">
+        <div class="col-lg-8 col-md-10 mt-5">
           <h1 class="mb-4">{% translate "Let's Work Together" %}</h1>
         </div>
       </div>
@@ -143,7 +144,7 @@
               <a href="{% url 'services' %}" class="navbar-brand d-flex align-items-center ">
                 <img src="{% static 'images/logo-nav1.png' %}" alt="Logo" class="logo-img-footer">
               </a>
-              <p  class="mt-5">{% translate "Secure your future. Advanced intelligence solutions for your business." %}</p>
+              <h6  class="mt-2"style="color:#ffffff; line-height: 1.8; font-size: 14px">{% translate "Secure your future. Advanced intelligence solutions for your business." %}</h6>
             </div>
           </div>
         </div>

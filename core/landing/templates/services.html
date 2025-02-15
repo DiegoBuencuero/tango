@@ -4,27 +4,6 @@
 {% block content %}
 <style>
 
-.icon-custom {
-  font-size: 35px;
-  margin-right: 20px;
-  vertical-align: middle;
-  color: #3D59E9;
-}
-.highlight-uppercase {
-  color: #353535;
-  font-weight: bold; /* Opcional: Si querés resaltar más */
-}
-.custom-heading {
-  flex-grow: 1; /* Hace que el contenido se distribuya uniformemente */
-  display: flex;
-  flex-direction: column;
-  justify-content: start; /* Asegura que el texto arranque en la misma altura */
-}
-@media (max-width: 768px) { 
-  .gradient-card {
-    margin-bottom: 1.5rem !important; /* Espaciado solo en móviles */
-  }
-}
 </style>
 
 <section id="section-service" class="ftco-section ftco-no-pt ftco-no-pb">
@@ -42,18 +21,20 @@
     </div>
   </div>
 </section>
-<section id="section-services2" class="ftco-section ftco-no-pt mt-5 mb-5 ftco-no-pb ftco-animate">
-  <div class="container-all">
+<section id="section-services2" class="ftco-section ftco-no-pt ftco-no-pb position-relative">
+  <div class="video-overlay"></div>
+  <div class="container-all position-relative">
     <div class="container position-relative">
       <div class="row align-items-center mb-5">
         <div class="col-md-1 mb-4"></div>
         <div class="col-md-10">
-            <h1 class="mb-5 text-center mt-5 text-uppercase" style="font-weight:bold">{% translate "Cyber Threat Intelligence Assessment" %}</h1>
+            <h1 class="mb-5 text-center mt-5 text-uppercase" style="font-weight:bold; color:#ffffff">
+              {% translate "Cyber Threat Intelligence Assessment" %}
+            </h1>
         </div>
         <div class="col-md-1 mb-4"></div>
       </div>    
     </div>
-
     <div class="container ftco-animate">
       <div class="row justify-content-center align-items-stretch g-4">
           <div class="col-md-5 mb-md-0 mb-4 d-flex justify-content-center"> 
@@ -108,10 +89,10 @@
       </div>
     </div>
 
-    <div class="container my-5 ftco-animate">
+    <div class="container  ftco-animate">
       <div class="row align-items-center ">
         <div class="col-12 text-center">
-            <h1 class="mb-4" style="font-weight:bold">{% translate "OSINT" %}</h1>
+            <h1 class="mb-4" style="font-weight:bold; color:#ffffff">{% translate "OSINT" %}</h1>
         </div>
       </div>
       <div class="row justify-content-center align-items-stretch g-4 my-5">
@@ -127,21 +108,24 @@
           </div>
         </div>
       </div> 
-      <div class="row justify-content-center align-items-stretch g-4">
+      <div class="row justify-content-center align-items-stretch mb-5 g-4">
         <div class="col-md-10 mb-md-0 mb-4 d-flex justify-content-center"> 
           <div class="card-fixed-height p-4 no-min-height tarjeta-grande light h-100 d-flex flex-column">
             <div class="tasks-block d-flex align-items-center">
                 <i class="icon-user-secret icon-custom"></i>
                 <h4 class="heading-tasks text-uppercase text-color-dark mb-0 ms-2">{% translate "Online profile risk assessment" %}</h4>
             </div>
-            <div class="custom-heading mt-auto mt-3">
+            <div class="custom-heading mt-3">
               <h5>{% translate "Understand and mitigate the risks of your online presence. Take control of your privacy with our comprehensive profile risk assessment. We analyze your digital footprint to determine what personal information is publicly available, identify potential risks to your connections, assets, and reputation, and develop a customized action plan to minimize your online exposure." %}</h5>
             </div>
           </div>
         </div>
       </div>    
   </div>
+
+  </div>
 </section>
+
 {% endblock %}
 {% block scrips%}
 

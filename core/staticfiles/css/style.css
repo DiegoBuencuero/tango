@@ -8154,6 +8154,7 @@ h1, h2, h3, h4, h5,
       color: #ecf1f2; }
     @media (max-width: 991.98px) {
       .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
+        font-family: 'Helvetica Neue LT Std Md';
         padding-left: 0;
         padding-right: 0;
         padding-top: .9rem;

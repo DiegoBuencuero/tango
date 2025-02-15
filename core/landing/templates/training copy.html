@@ -1,0 +1,99 @@
+{% extends "base.html"%}
+{% load static %}
+{% load i18n %}
+{% block content %}
+<style>
+  .icon-custom {
+    font-size: 45px;
+    margin-right: 20px;
+    vertical-align: middle;
+    color: #0B1C3A;
+  }
+  .highlight-uppercase {
+    color: #353535;
+    font-weight: bold; /* Opcional: Si querés resaltar más */
+  }
+
+</style>
+<section id="section-training" class="">
+  <div class="container  ftco-animate">
+    <div class="row justify-content-center mt-5">
+      <div class="col-md-9 mt-0 text-center  align-items-center">
+        <h1 class="mb-4 text-uppercase">{% translate "TRAININGS" %}</h1>
+        <h4 class="mb-4 subtitulo_threat">{% translate "subtitulos_training" %}</h4>
+        <div class="text-center mt-5">
+          <button type="button" class="btn btn-primary px-5 boton-home" onclick="location.href='#section-home3'">
+            {% translate "Contact us" %}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>  
+</section>
+
+<section id="section-training2">
+  <div class="container">
+      <div class="row align-items-center">
+      </div>
+    <div class="container my-5 ftco-animate">
+      <div class="row justify-content-center align-items-stretch g-4">
+        <div class="col-md-5 mb-4 mb-md-0"> 
+          <div class="card-fixed-height p-4 no-min-height light gradient-card h-100 d-flex flex-column">
+            <div class="tasks-block d-flex align-items-left">
+              <div class="tasks-block d-flex align-items-center">
+                <i class="icon-globe icon-custom"></i>
+                <h1 class="text-uppercase  titulo-tarjeta text-color-dark mb-0">{% translate "OSINT" %}</h1>
+              </div>
+              
+            </div>
+            <div class="custom-heading mt-auto ms-3">
+              <h5>{% translate "Master intelligence and cyberintelligence analysis with our training programs. Learn and apply practical frameworks like the Diamond Model, MITRE ATT&CK, Cyber-Kill Chain, and Structured Analysis Techniques to real-world scenarios, improving your ability to collect, analyze, interpret information for informed decision-making and generate actionable insights." %}</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5"> 
+          <div class="card-fixed-height p-4 no-min-height light gradient-card h-100 d-flex flex-column">
+            <div class="tasks-block d-flex align-items-center">
+              <div class="tasks-block d-flex align-items-center">
+                <i class="icon-lock icon-custom"></i>
+                <h1 class="text-uppercase titulo-tarjeta text-uppercase text-color-dark mb-0">{% translate "Social – engineering" %}</h1>
+              </div>              
+            </div>
+            <div class="custom-heading mt-auto">
+              <h5>{% translate "Gain practical skills in OSINT with our hands-on training programs. Learn to effectively utilize online resources to collect, analyze, and interpret open-source data and information to generate valuable intelligence for investigative purposes and informed decision-making." %}</h5>
+            </div>
+          </div>
+        </div>  
+      </div>
+      <div class="p-4 no-min-height mt-5 tarjeta-grande light h-100 d-flex flex-column">
+        <div class="tasks-block d-flex align-items-center">
+          <div class="col-2 d-flex justify-content-start">
+            <i class="icon-shield icon-custom"></i>
+          </div>
+          <div class="col-10">
+            <h4 class="mb-0 text-uppercase titulo-tarjeta">
+              <h4 class="mb-0 text-uppercase titulo-tarjeta">{% translate "Intelligence & Cyberintelligence Analysis Technics" %}</h4>
+            </h4>
+          </div>
+        </div>     
+        <div class="custom-heading mt-auto">
+          <h5>{% translate "Develop your understanding of social engineering. Learn how these techniques, including deception and manipulation, are used to compromise security. This course covers the psychology behind attacks, common tools and techniques, and provides practical strategies for prevention and mitigation." %}</h5>
+        </div>
+      </div>
+    </div>    
+  </div>
+</section>
+
+{% endblock %}
+{% block scrips%}
+
+<script>
+  document.addEventListener("DOMContentLoaded",function(){
+    $('.nav-link').removeClass('active');
+    $('#training-navlink').addClass('active');
+
+   
+  });
+
+</script>
+{% endblock %}
