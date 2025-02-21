@@ -100,6 +100,9 @@ position:fixed;
     overflow-x: hidden;
   }
 
+  #section-service, #section-managed, #section-training, #section-about{
+    margin-top: 50px;
+  }
 
 
   .logo-img {
