@@ -34,7 +34,7 @@
 
 body {
   font-family: 'PP Mori Regular';
-  background-color: #070f1b;
+  background: #070f1b !important;
 }
 
 /*---------------------------------------NAV -FOOTER -------------------------------------------*/
@@ -98,10 +98,11 @@ position:fixed;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+
   }
 
   #section-service, #section-managed, #section-training, #section-about{
-    margin-top: 50px;
+    margin-top: 15vh;
   }
 
 
