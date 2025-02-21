@@ -347,7 +347,7 @@ form textarea {
 /* ================================================================================ */
 
 #section-training, #section-about, #section-service, #section-about{
-  margin-top: 80px; /* Ajustá según la altura de tu nav */
+  margin-top: 120px; /* Ajustá según la altura de tu nav */
   padding-top: 20px; /* Espacio extra para mayor separación */
 }
 
