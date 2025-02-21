@@ -141,20 +141,12 @@
         </div>
       </div>
     </div>
-  </section>    
-  {% comment %} <div id="whatsapp-button" class="btn-lg animate__animated animate__heartBeat">
-     <a href="https://api.whatsapp.com/send?phone=+5555996119565&text=Olá! Envie-nos uma mensagem." target="_blank">
-      <img src="{% static 'images/whatsapp.png' %}" alt="WhatsApp" />
-    </a>
-  </div> {% endcomment %}
+  </section>   
   <div id="contact-button" class="btn-lg animate__animated animate__heartBeat text-white d-flex align-items-center justify-content-center">
     <a href="#section-home3" class="">
       <span>{% translate "Contact Us" %}</span>
     </a>
-  </div>
-  
-
-
+  </div> 
 <footer class="footer-fondo ftco-section">
   <div class="container mt-5">
     <div class="row mb-4 mt-5">
@@ -177,8 +169,7 @@
           <div class="col-md-8">
             <div class="ftco-footer-widget mb-4">
               <h3 class="ftco-heading-2 titulos-footer">{% translate "Enlaces" %}</h3>
-              <ul class="list-unstyled">
-                {% comment %} <li><a href="{% url 'index' %}"></span>{% translate "Home" %}</a></li> {% endcomment %}
+              <ul class="list-unstyled">              
                 <li><a href="{% url 'services' %}">{% translate "Threat Intelligence Services" %}</a></li>
                 <li><a href="{% url 'managed'  %}">{% translate "Managed cybersecurity" %}</a></li>
                 <li><a href="{% url 'training' %}">{% translate "Training" %}</a></li>
@@ -196,7 +187,11 @@
             <ul class="list-unstyled">
               {% comment %} <li><a href="#"><span class="icon icon-map-marker mr-2"></span>Oficinas: Av. Ciberseguridad 123, Ciudad Segura</a></li>
               <li><a href="#"><span class="icon icon-phone mr-2"></span>+1 (800) 123-4567</a></li> {% endcomment %}
-              <li><a href="#"><span class="icon icon-envelope mr-2"></span> info@tangosecurity.net</a></li>
+              <li>
+                <a href="mailto:info@tangosecurity.net">
+                  <span class="icon icon-envelope mr-2"></span> info@tangosecurity.net
+                </a>
+              </li>              
             </ul>
             <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
               <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>

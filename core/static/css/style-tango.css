@@ -219,6 +219,13 @@ transition: background 0.3s ease-in-out !important; /* 🔹 Efecto de transició
 max-width: 900px;
 }
 
+form input,
+form textarea {
+  font-family: 'Helvetica Neue LT Std', sans-serif;
+  font-size: 0.8rem !important;
+  color:#ffffff;  
+}
+
 @media (max-width: 768px) {
   #section-home3 {
       height: 75vh;
@@ -338,6 +345,14 @@ max-width: 900px;
 /* ================================================================================ */
 /*                                 ESTILO DE SERVICIOS                              */
 /* ================================================================================ */
+
+#section-training, #section-about, #section-service, #section-about{
+  margin-top: 80px; /* Ajustá según la altura de tu nav */
+  padding-top: 20px; /* Espacio extra para mayor separación */
+}
+
+
+
 #section-service {
   height: 100vh;
   background-image: 
