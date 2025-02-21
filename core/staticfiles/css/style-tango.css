@@ -101,6 +101,7 @@ transition: background 0.3s ease-in-out !important; /* 🔹 Efecto de transició
     backdrop-filter: blur(10px) !important; /* Aplica el efecto difuminado */
     -webkit-backdrop-filter: blur(10px) !important; /* 🔹 Soporte para Safari */
     transition: background 0.3s ease-in-out !important; /* 🔹 Efecto de transición suave */
+    
   }
     
   .navbar-brand {
@@ -346,11 +347,6 @@ form textarea {
 /*                                 ESTILO DE SERVICIOS                              */
 /* ================================================================================ */
 
-#section-training, #section-about, #section-service, #section-about{
-  margin-top: 120px; /* Ajustá según la altura de tu nav */
-  padding-top: 20px; /* Espacio extra para mayor separación */
-}
-
 
 
 #section-service {
@@ -515,7 +511,7 @@ form textarea {
 
 @media (max-width: 768px) {
   #section-service {
-    min-height: 70vh; /* Usar min-height en lugar de height para evitar cortes */
+    min-height: 95vh; /* Usar min-height en lugar de height para evitar cortes */
     display: flex; /* Activamos flexbox */
     flex-direction: column; /* Asegura que los elementos se ordenen en columna */
     justify-content: center; /* Centra verticalmente */
