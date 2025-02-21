@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-06 03:36+0000\n"
+"POT-Creation-Date: 2025-02-21 05:51+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,11 +26,11 @@ msgstr ""
 msgid "Spanish"
 msgstr ""
 
-#: landing/templates/about.html:15
+#: landing/templates/about.html:45
 msgid "ABOUT US"
 msgstr ""
 
-#: landing/templates/about.html:17
+#: landing/templates/about.html:47
 msgid ""
 "At T4NGO Security, we provide cyber threat intelligence services to "
 "multinational corporations, financial institutions, government agencies, and "
@@ -39,13 +39,13 @@ msgid ""
 "an increasingly complex digital landscape."
 msgstr ""
 
-#: landing/templates/about.html:21 landing/templates/index.html:33
-#: landing/templates/managed.html:15 landing/templates/services.html:38
-#: landing/templates/training.html:25
+#: landing/templates/about.html:51 landing/templates/index.html:33
+#: landing/templates/managed.html:15 landing/templates/services.html:17
+#: landing/templates/training copy.html:27 landing/templates/training.html:85
 msgid "Contact us"
 msgstr ""
 
-#: landing/templates/about.html:34
+#: landing/templates/about.html:68
 msgid ""
 "In a world where cyber threats are evolving at an unprecedented pace, "
 "organizations must fully understand the environment they operate in. "
@@ -55,7 +55,7 @@ msgid ""
 "resilient digital ecosystems."
 msgstr ""
 
-#: landing/templates/about.html:54
+#: landing/templates/about.html:85
 msgid ""
 "We make cyber intelligence operational. By leveraging our extensive network "
 "and real-world experience, we deliver high-quality threat intelligence, "
@@ -65,26 +65,26 @@ msgid ""
 "and compliant in dynamic regulatory environments."
 msgstr ""
 
-#: landing/templates/about.html:85
+#: landing/templates/about.html:95
 msgid ""
 "We support organizations across LATAM and EMEA through two core services"
 msgstr ""
 
-#: landing/templates/about.html:89
+#: landing/templates/about.html:99
 msgid ""
 "Threat Intelligence & Advisory – Delivering deep analytical insights, "
 "training, and strategic guidance to help organizations proactively manage "
 "cyber threats."
 msgstr ""
 
-#: landing/templates/about.html:94
+#: landing/templates/about.html:103
 msgid ""
 "Collaboration & Intelligence Sharing – Facilitating the creation and "
 "operation of intelligence-sharing communities to strengthen collective "
 "security."
 msgstr ""
 
-#: landing/templates/about.html:112
+#: landing/templates/about.html:117
 msgid ""
 "At T4NGO Security we believe that intelligence is the key to resilience. By "
 "anticipating cyber threats and understanding evolving risks, we empower "
@@ -92,59 +92,79 @@ msgid ""
 "navigate an increasingly volatile digital world with confidence"
 msgstr ""
 
-#: landing/templates/base.html:56 landing/templates/base.html:161
-msgid "Threat Intelligence Services"
-msgstr ""
+#: landing/templates/base.html:74
+msgid "services_nav"
+msgstr "Threat Intelligence Services"
 
-#: landing/templates/base.html:57 landing/templates/base.html:162
-msgid "Managed cybersecurity"
-msgstr ""
+#: landing/templates/base.html:75
+msgid "managed_nav"
+msgstr "Managed cybersecurity"
 
-#: landing/templates/base.html:58 landing/templates/base.html:163
-msgid "Training"
-msgstr ""
+#: landing/templates/base.html:76
+msgid "training_nav"
+msgstr "Training"
 
-#: landing/templates/base.html:59 landing/templates/base.html:164
-msgid "About us"
-msgstr ""
+#: landing/templates/base.html:77
+msgid "about_nav"
+msgstr "About us"
 
-#: landing/templates/base.html:101
+#: landing/templates/base.html:119
 msgid "Let's Work Together"
 msgstr ""
 
-#: landing/templates/base.html:109
+#: landing/templates/base.html:127
 msgid "Name"
 msgstr ""
 
-#: landing/templates/base.html:112
+#: landing/templates/base.html:130
 msgid "Email"
 msgstr ""
 
-#: landing/templates/base.html:115
+#: landing/templates/base.html:133
 msgid "Subject"
 msgstr ""
 
-#: landing/templates/base.html:118
+#: landing/templates/base.html:136
 msgid "Message"
 msgstr ""
 
-#: landing/templates/base.html:121
+#: landing/templates/base.html:139
 msgid "Send"
 msgstr ""
 
-#: landing/templates/base.html:147
+#: landing/templates/base.html:154
+msgid "Contact Us"
+msgstr ""
+
+#: landing/templates/base.html:171
 msgid "Secure your future. Advanced intelligence solutions for your business."
 msgstr ""
 
-#: landing/templates/base.html:157
+#: landing/templates/base.html:181
 msgid "Enlaces"
+msgstr "Links"
+
+#: landing/templates/base.html:185
+msgid "Threat Intelligence Services"
 msgstr ""
 
-#: landing/templates/base.html:174
+#: landing/templates/base.html:186
+msgid "Managed cybersecurity"
+msgstr ""
+
+#: landing/templates/base.html:187
+msgid "Training"
+msgstr ""
+
+#: landing/templates/base.html:188
+msgid "About us"
+msgstr ""
+
+#: landing/templates/base.html:198
 msgid "Contacto"
-msgstr ""
+msgstr "Contact"
 
-#: landing/templates/base.html:195
+#: landing/templates/base.html:219
 msgid "2025 Developed by Innobrar Solutions"
 msgstr ""
 
@@ -174,11 +194,11 @@ msgstr ""
 "consulting, and maturity level assessments, to strengthen your defenses, "
 "reduce cyber risk, and achieve compliance objectives."
 
-#: landing/templates/managed.html:33
+#: landing/templates/managed.html:31
 msgid "VIRTUAL CISO"
 msgstr ""
 
-#: landing/templates/managed.html:38
+#: landing/templates/managed.html:36
 msgid ""
 "Elevate your cybersecurity program with a dedicated Virtual CISO. Our "
 "experienced security leaders provide strategic guidance, risk assessments, "
@@ -186,11 +206,11 @@ msgid ""
 "your security budget, and ensure compliance with industry standards."
 msgstr ""
 
-#: landing/templates/managed.html:47
+#: landing/templates/managed.html:45
 msgid "Cybersecurity Consulting"
 msgstr ""
 
-#: landing/templates/managed.html:51
+#: landing/templates/managed.html:49
 msgid ""
 "Improve your cybersecurity maturity with expert consulting. We conduct in-"
 "depth assessments to evaluate your current security posture, identify gaps, "
@@ -198,33 +218,31 @@ msgid ""
 "27001, GDPR, NIST Cybersecurity Framework, and CIS Controls."
 msgstr ""
 
-#: landing/templates/services.html:34
+#: landing/templates/services.html:13
 msgid "THREAT INTELLIGENCE SERVICES"
 msgstr ""
 
-#: landing/templates/services.html:35
+#: landing/templates/services.html:14
 msgid "subtitulo_threat"
 msgstr ""
-"Enhance your cybersecurity maturity with expert threat intelligence services."
-"Our team provides in-depth analysis, including vulnerability assessments,"
-"alongside comprehensive organizational consulting and cyber threat "
-"intelligenceassessments. We help you identify, prioritize, and mitigate "
-"critical risks,including insider threats, supply chain attacks, and advanced "
-"persistent threats(APTs). Gain actionable insights to improve your security "
-"posture, makeinformed decisions, and demonstrate compliance with industry "
-"regulations andbest practices."
+"Enhance your cybersecurity maturity with expert threat intelligence "
+"services. Our team provides in-depth analysis, including vulnerability "
+"assessments, alongside comprehensive organizational consulting and cyber "
+"threat intelligence assessments. We help you identify, prioritize, and "
+"mitigate critical risks, including insider threats, supply chain attacks, "
+"and advanced persistent threats (APTs). Gain actionable insights to improve "
+"your security posture, make informed decisions, and demonstrate compliance "
+"with industry regulations and best practices."
 
-#: landing/templates/services.html:51
-#, fuzzy
-#| msgid "Cyber Threat Intelligence Assessment:"
+#: landing/templates/services.html:32
 msgid "Cyber Threat Intelligence Assessment"
-msgstr "Cyber Threat Intelligence Assessment:"
+msgstr ""
 
-#: landing/templates/services.html:63
+#: landing/templates/services.html:44
 msgid "Maturity Level Analysis"
 msgstr ""
 
-#: landing/templates/services.html:66
+#: landing/templates/services.html:47
 msgid ""
 "Gain valuable insights into your organization's cybersecurity maturity. Our "
 "analysis leverages the CREST and CTI-CMM frameworks to identify gaps, "
@@ -232,11 +250,11 @@ msgid ""
 "practices."
 msgstr ""
 
-#: landing/templates/services.html:74
+#: landing/templates/services.html:55
 msgid "Threat Intelligence Organizational Consulting"
 msgstr ""
 
-#: landing/templates/services.html:77
+#: landing/templates/services.html:58
 msgid ""
 "Maximize the value of your threat intelligence program. Our expert "
 "consultants guide you in implementing best practices, optimizing processes, "
@@ -244,11 +262,11 @@ msgid ""
 "defend against cyber threats."
 msgstr ""
 
-#: landing/templates/services.html:90
+#: landing/templates/services.html:71
 msgid "Cyber Threat modeling & profiling"
 msgstr ""
 
-#: landing/templates/services.html:93
+#: landing/templates/services.html:74
 msgid ""
 "Protect your assets with robust threat modeling and profiling. Our experts "
 "leverage industry-leading frameworks like STRIDE, PASTA, OWASP, NIST, "
@@ -257,11 +275,11 @@ msgid ""
 "safeguard your critical systems and data."
 msgstr ""
 
-#: landing/templates/services.html:101
+#: landing/templates/services.html:82
 msgid "Intelligence Analysis Reporting"
 msgstr ""
 
-#: landing/templates/services.html:104
+#: landing/templates/services.html:85
 msgid ""
 "Gain actionable insights from integrated intelligence analysis. Our experts "
 "analyze both cyber intelligence and non-digital intelligence sources to "
@@ -269,15 +287,15 @@ msgid ""
 "support informed decision-making"
 msgstr ""
 
-#: landing/templates/services.html:114 landing/templates/training.html:46
-msgid "OSINT"
+#: landing/templates/services.html:95
+msgid "OSINT (INTELIGENCIA DE FUENTES ABIERTAS)"
 msgstr ""
 
-#: landing/templates/services.html:122
+#: landing/templates/services.html:103
 msgid "Organizational Human Risk Analysis (Digital HUMINT)"
 msgstr ""
 
-#: landing/templates/services.html:125
+#: landing/templates/services.html:106
 msgid ""
 "Reduce your organization's exposure to human risk with our expert analysis. "
 "We leverage OSINT data to identify and assess the potential for insider "
@@ -288,11 +306,11 @@ msgid ""
 "engineering attacks. "
 msgstr ""
 
-#: landing/templates/services.html:135
+#: landing/templates/services.html:116
 msgid "Online profile risk assessment"
 msgstr ""
 
-#: landing/templates/services.html:138
+#: landing/templates/services.html:119
 msgid ""
 "Understand and mitigate the risks of your online presence. Take control of "
 "your privacy with our comprehensive profile risk assessment. We analyze your "
@@ -302,11 +320,11 @@ msgid ""
 "exposure."
 msgstr ""
 
-#: landing/templates/training.html:21
+#: landing/templates/training copy.html:23 landing/templates/training.html:81
 msgid "TRAININGS"
 msgstr ""
 
-#: landing/templates/training.html:22
+#: landing/templates/training copy.html:24 landing/templates/training.html:82
 msgid "subtitulos_training"
 msgstr ""
 "Invest in your cybersecurity expertise with our expert-led training "
@@ -315,7 +333,11 @@ msgstr ""
 "end upskilling of your workforce, empowering them with the knowledge and "
 "skills to effectively mitigate cyber risks."
 
-#: landing/templates/training.html:51
+#: landing/templates/training copy.html:46 landing/templates/training.html:128
+msgid "OSINT"
+msgstr ""
+
+#: landing/templates/training copy.html:51 landing/templates/training.html:104
 msgid ""
 "Master intelligence and cyberintelligence analysis with our training "
 "programs. Learn and apply practical frameworks like the Diamond Model, MITRE "
@@ -324,11 +346,11 @@ msgid ""
 "for informed decision-making and generate actionable insights."
 msgstr ""
 
-#: landing/templates/training.html:63
+#: landing/templates/training copy.html:60 landing/templates/training.html:112
 msgid "Social – engineering"
 msgstr ""
 
-#: landing/templates/training.html:68
+#: landing/templates/training copy.html:64 landing/templates/training.html:131
 msgid ""
 "Gain practical skills in OSINT with our hands-on training programs. Learn to "
 "effectively utilize online resources to collect, analyze, and interpret open-"
@@ -336,14 +358,26 @@ msgid ""
 "investigative purposes and informed decision-making."
 msgstr ""
 
-#: landing/templates/training.html:80
+#: landing/templates/training copy.html:76 landing/templates/training.html:101
 msgid "Intelligence & Cyberintelligence Analysis Technics"
 msgstr ""
 
-#: landing/templates/training.html:83
+#: landing/templates/training copy.html:81 landing/templates/training.html:115
 msgid ""
 "Develop your understanding of social engineering. Learn how these "
 "techniques, including deception and manipulation, are used to compromise "
 "security. This course covers the psychology behind attacks, common tools and "
 "techniques, and provides practical strategies for prevention and mitigation."
+msgstr ""
+
+#: landing/templates/training.html:143
+msgid "Cybersecurity Awareness"
+msgstr ""
+
+#: landing/templates/training.html:146
+msgid ""
+"Empower your employees with the knowledge to combat cyber threats. Our "
+"cybersecurity awareness training programs educate your workforce on "
+"identifying and mitigating risks, including phishing, malware, and social "
+"engineering, to strengthen your organization's security posture."
 msgstr ""

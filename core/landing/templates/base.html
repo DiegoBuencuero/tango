@@ -39,7 +39,23 @@
   
   </head>
   <style>
+    @font-face {
+      font-family: 'Helvetica Neue LT Std Md';
+      src: url('/static/fonts/helvetica/HELVETICANEUELTSTDMD.OTF') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+    }
 
+    #contact-button {
+      font-family: 'Helvetica Neue LT Std Md';
+      background: linear-gradient(150deg, rgba(61, 89, 233, 0.9), rgba(11, 28, 58, 0.9)) !important; 
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+      border-radius: 50px;
+      font-size:0.8rem;
+    }
 
   </style>
   <body>
@@ -54,10 +70,10 @@
         </button>
         <div class="collapse navbar-collapse mt-3 mb-3" id="ftco-nav">
           <ul class="navbar-nav m-auto">
-            <li class="nav-item me-5" id="service-navlink"><a href="{% url 'services' %}" class="nav-link text-light">{% translate "Threat Intelligence Services" %}</a></li>
-            <li class="nav-item me-5" id="managed-navlink"><a href="{% url 'managed'  %}" class="nav-link text-light">{% translate "Managed cybersecurity" %}</a></li>
-            <li class="nav-item " id="training-navlink"><a href="{% url 'training' %}" class="nav-link text-light">{% translate "Training" %}</a></li>
-            <li class="nav-item" id="about-navlink"><a href="{% url 'about' %}" class="nav-link text-light">{% translate "About us" %}</a></li> 
+            <li class="nav-item me-5" id="service-navlink"><a href="{% url 'services' %}" class="nav-link text-light">{% translate "services_nav" %}</a></li>
+            <li class="nav-item me-5" id="managed-navlink"><a href="{% url 'managed'  %}" class="nav-link text-light">{% translate "managed_nav" %}</a></li>
+            <li class="nav-item " id="training-navlink"><a href="{% url 'training' %}" class="nav-link text-light">{% translate "training_nav" %}</a></li>
+            <li class="nav-item" id="about-navlink"><a href="{% url 'about' %}" class="nav-link text-light">{% translate "about_nav" %}</a></li> 
             <li class="nav-item" id="contact-navlink">
               <div class="dropdown d-inline-block nav-item">
                 <button class="btn btn-secondary dropdown-toggle border-0 bg-transparent" type="button" id="dropdownLangButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -107,16 +123,16 @@
           <form action="{% url 'contact' %}" method='post' class="p-4">
             {% csrf_token %}
             <div class="mb-3">
-              <input type="text" class="form-control" name='nombre' placeholder="{% trans 'Name' %}">
+              <input type="text" class="form-control" name='nombre' placeholder="{% translate 'Name' %}">
             </div>
             <div class="mb-3">
-              <input type="email" class="form-control" name='correo' placeholder="{% trans 'Email' %}">
+              <input type="email" class="form-control" name='correo' placeholder="{% translate 'Email' %}">
             </div>
             <div class="mb-3">
-              <input type="text" class="form-control" name='asunto' placeholder="{% trans 'Subject' %}">
+              <input type="text" class="form-control" name='asunto' placeholder="{% translate 'Subject' %}">
             </div>
             <div class="mb-3">
-              <textarea name="mensaje" cols="30" rows="5" class="form-control" placeholder="{% trans 'Message' %}"></textarea>
+              <textarea name="mensaje" cols="30" rows="5" class="form-control" placeholder="{% translate 'Message' %}"></textarea>
             </div>
             <div class="text-center mt-5">
               <button type="submit" class="btn btn-primary px-5 boton-home">{% translate "Send" %}</button>
@@ -131,6 +147,12 @@
       <img src="{% static 'images/whatsapp.png' %}" alt="WhatsApp" />
     </a>
   </div> {% endcomment %}
+  <div id="contact-button" class="btn-lg animate__animated animate__heartBeat text-white d-flex align-items-center justify-content-center">
+    <a href="#section-home3" class="">
+      <span>{% translate "Contact Us" %}</span>
+    </a>
+  </div>
+  
 
 
 <footer class="footer-fondo ftco-section">
