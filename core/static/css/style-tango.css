@@ -758,7 +758,7 @@ max-width: 900px;
 /* ================================================================================ */
 
 #section-training {
-  height: 90vh;
+  height: 100vh;
   /* background-image: 
   radial-gradient(circle farthest-side at 50% -20%, rgba(61, 89, 233, 0.5) 35%, rgba(11, 28, 58, 0.9) 70%, transparent 100%),
   linear-gradient(to bottom, #0B1C3A, #000000); */
@@ -1075,49 +1075,39 @@ max-width: 900px;
   margin-bottom: 10px;
   font-family: 'PP Mori Regular'!important;
 }
-
-
-
-
-
-
-
-
-
-
-
-
+.ultimo-text{
+  font-size: clamp(17px, 1.1vw, 17px);
+  color: #ffffff; 
+  line-height: 2.3;
+  margin-bottom: 10px;
+  font-family: 'PP Mori Regular'!important;
+}
 
 #section-about2 .container {
   position: relative;
   z-index: 2;
 }
 
-
-
 .custom-image {
-  width: 100%; /* Se ajusta al ancho del contenedor */
-  max-width: 400px; /* Máximo ancho en pantallas grandes */
-  height: auto;
-  object-fit: cover;
+  width: 100%; /* Asegura que ocupen el ancho del contenedor */
+  max-width: 400px; /* Mantiene consistencia en desktop */
+  height: 250px; /* Establece una altura uniforme */
+  object-fit: cover; /* Recorta el contenido para llenar el espacio */
+  aspect-ratio: 16/9; /* Mantiene proporción (puedes cambiar a 4/3 o 1/1) */
   border-radius: 15px;
-  display: block;
 }
 
 @media (max-width: 768px) {
   .custom-image {
     max-width: 90%; /* Reduce el tamaño en móviles */
-    margin: 0 auto; /* Centra la imagen */
+    height: 200px; /* Ajusta la altura en móviles */
   }
 }
-
-
 
 .highlight {
   font-weight: bold;
   color: #3D59E9;
 }
-
 
   /*----------------------------------------------SECCION2 HOME---------------------------------*/
   #section-home2 {
@@ -1146,7 +1136,6 @@ max-width: 900px;
     color:#ffffff;  
     text-align:left;
   }
-
 
   .figure-block-c {
     will-change: transform;
