@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-21 05:51+0000\n"
+"POT-Creation-Date: 2025-02-21 12:19+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,11 +26,11 @@ msgstr ""
 msgid "Spanish"
 msgstr ""
 
-#: landing/templates/about.html:45
+#: landing/templates/about.html:42
 msgid "ABOUT US"
 msgstr ""
 
-#: landing/templates/about.html:47
+#: landing/templates/about.html:44
 msgid ""
 "At T4NGO Security, we provide cyber threat intelligence services to "
 "multinational corporations, financial institutions, government agencies, and "
@@ -39,13 +39,13 @@ msgid ""
 "an increasingly complex digital landscape."
 msgstr ""
 
-#: landing/templates/about.html:51 landing/templates/index.html:33
+#: landing/templates/about.html:48 landing/templates/index.html:33
 #: landing/templates/managed.html:15 landing/templates/services.html:17
 #: landing/templates/training copy.html:27 landing/templates/training.html:85
 msgid "Contact us"
 msgstr ""
 
-#: landing/templates/about.html:68
+#: landing/templates/about.html:63
 msgid ""
 "In a world where cyber threats are evolving at an unprecedented pace, "
 "organizations must fully understand the environment they operate in. "
@@ -55,7 +55,7 @@ msgid ""
 "resilient digital ecosystems."
 msgstr ""
 
-#: landing/templates/about.html:85
+#: landing/templates/about.html:80
 msgid ""
 "We make cyber intelligence operational. By leveraging our extensive network "
 "and real-world experience, we deliver high-quality threat intelligence, "
@@ -65,26 +65,26 @@ msgid ""
 "and compliant in dynamic regulatory environments."
 msgstr ""
 
-#: landing/templates/about.html:95
+#: landing/templates/about.html:90
 msgid ""
 "We support organizations across LATAM and EMEA through two core services"
 msgstr ""
 
-#: landing/templates/about.html:99
+#: landing/templates/about.html:94
 msgid ""
 "Threat Intelligence & Advisory – Delivering deep analytical insights, "
 "training, and strategic guidance to help organizations proactively manage "
 "cyber threats."
 msgstr ""
 
-#: landing/templates/about.html:103
+#: landing/templates/about.html:98
 msgid ""
 "Collaboration & Intelligence Sharing – Facilitating the creation and "
 "operation of intelligence-sharing communities to strengthen collective "
 "security."
 msgstr ""
 
-#: landing/templates/about.html:117
+#: landing/templates/about.html:112
 msgid ""
 "At T4NGO Security we believe that intelligence is the key to resilience. By "
 "anticipating cyber threats and understanding evolving risks, we empower "
@@ -92,79 +92,79 @@ msgid ""
 "navigate an increasingly volatile digital world with confidence"
 msgstr ""
 
-#: landing/templates/base.html:74
+#: landing/templates/base.html:73
 msgid "services_nav"
 msgstr "Threat Intelligence Services"
 
-#: landing/templates/base.html:75
+#: landing/templates/base.html:74
 msgid "managed_nav"
 msgstr "Managed cybersecurity"
 
-#: landing/templates/base.html:76
+#: landing/templates/base.html:75
 msgid "training_nav"
 msgstr "Training"
 
-#: landing/templates/base.html:77
+#: landing/templates/base.html:76
 msgid "about_nav"
 msgstr "About us"
 
-#: landing/templates/base.html:119
+#: landing/templates/base.html:118
 msgid "Let's Work Together"
 msgstr ""
 
-#: landing/templates/base.html:127
+#: landing/templates/base.html:126
 msgid "Name"
 msgstr ""
 
-#: landing/templates/base.html:130
+#: landing/templates/base.html:129
 msgid "Email"
 msgstr ""
 
-#: landing/templates/base.html:133
+#: landing/templates/base.html:132
 msgid "Subject"
 msgstr ""
 
-#: landing/templates/base.html:136
+#: landing/templates/base.html:135
 msgid "Message"
 msgstr ""
 
-#: landing/templates/base.html:139
+#: landing/templates/base.html:138
 msgid "Send"
 msgstr ""
 
-#: landing/templates/base.html:154
+#: landing/templates/base.html:153
 msgid "Contact Us"
 msgstr ""
 
-#: landing/templates/base.html:171
+#: landing/templates/base.html:170
 msgid "Secure your future. Advanced intelligence solutions for your business."
 msgstr ""
 
-#: landing/templates/base.html:181
+#: landing/templates/base.html:180
 msgid "Enlaces"
 msgstr "Links"
 
-#: landing/templates/base.html:185
+#: landing/templates/base.html:184
 msgid "Threat Intelligence Services"
 msgstr ""
 
-#: landing/templates/base.html:186
+#: landing/templates/base.html:185
 msgid "Managed cybersecurity"
 msgstr ""
 
-#: landing/templates/base.html:187
+#: landing/templates/base.html:186
 msgid "Training"
 msgstr ""
 
-#: landing/templates/base.html:188
+#: landing/templates/base.html:187
 msgid "About us"
 msgstr ""
 
-#: landing/templates/base.html:198
+#: landing/templates/base.html:197
 msgid "Contacto"
 msgstr "Contact"
 
-#: landing/templates/base.html:219
+#: landing/templates/base.html:218
 msgid "2025 Developed by Innobrar Solutions"
 msgstr ""
 
@@ -287,8 +287,9 @@ msgid ""
 "support informed decision-making"
 msgstr ""
 
-#: landing/templates/services.html:95
-msgid "OSINT (INTELIGENCIA DE FUENTES ABIERTAS)"
+#: landing/templates/services.html:95 landing/templates/training copy.html:46
+#: landing/templates/training.html:128
+msgid "OSINT"
 msgstr ""
 
 #: landing/templates/services.html:103
@@ -332,10 +333,6 @@ msgstr ""
 "covering fields whitin cybersecurity and intelligence. We manage the end-to-"
 "end upskilling of your workforce, empowering them with the knowledge and "
 "skills to effectively mitigate cyber risks."
-
-#: landing/templates/training copy.html:46 landing/templates/training.html:128
-msgid "OSINT"
-msgstr ""
 
 #: landing/templates/training copy.html:51 landing/templates/training.html:104
 msgid ""
