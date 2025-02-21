@@ -465,10 +465,10 @@ form textarea {
 }
 
 .custom-heading {
-  flex-grow: 1; /* Hace que el contenido se distribuya uniformemente */
+  flex-grow: 1; 
   display: flex;
   flex-direction: column;
-  justify-content: start; /* Asegura que el texto arranque en la misma altura */
+  justify-content: start; 
 }
 
  /* @media (max-width: 768px) { 
@@ -516,24 +516,91 @@ form textarea {
   pointer-events: none;
 }
 
-
-
-
-/* Para que las tarjetas queden encima */
 .container-all {
   position: relative;
   z-index: 1;
 }
 
+@media (max-width: 768px) {
+  /* Asegurar que las filas estén alineadas y centradas */
+  .row {
+    justify-content: center !important;
+    text-align: center !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: stretch !important;
+  }
 
+  /* Asegurar que todas las columnas ocupen el mismo ancho */
+  .col-md-5, .col-md-10 {
+    width: 100% !important;
+    max-width: 90% !important;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+  }
+
+  /* Asegurar que las tarjetas tengan el mismo ancho y alineación */
+  .gradient-card,
+  .tarjeta-grande {
+    width: 100% !important;
+    max-width: 90% !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Ajustar el padding y márgenes para evitar desalineaciones */
+  .gradient-card h5,
+  .tarjeta-grande h5 {
+    margin-bottom: 0 !important;
+    text-align: center !important;
+  }
+
+  /* Corregir la alineación de los íconos en las tarjetas */
+  .tasks-block {
+    justify-content: center !important;
+    text-align: center !important;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+  }
+
+  .icon-custom {
+    margin-right: 0 !important;
+    margin-bottom: 10px !important;
+  }
+
+  /* Asegurar que todas las secciones tengan alineación uniforme */
+  #section-services2 h1,
+  #section-services2 h4,
+  #section-services2 h5 {
+    text-align: center !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Ajuste adicional para alinear las tarjetas entre sí */
+  .row.justify-content-center.align-items-stretch {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+
+/* 
 @media (max-width: 768px) {
   #section-service {    
-    display: flex; /* Activamos flexbox */
-    flex-direction: column; /* Asegura que los elementos se ordenen en columna */
-    justify-content: center; /* Centra verticalmente */
-    align-items: center; /* Centra horizontalmente */
-    text-align: center; /* Asegura que el texto esté alineado */
-    padding: 2rem; /* Espaciado uniforme */
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+    text-align: center; 
+    padding: 2rem; 
   }
 
   #section-service h1 {
@@ -607,7 +674,7 @@ form textarea {
     justify-content: center !important;
     text-align: center !important;
   }
-}
+} */
 
  
 /* ================================================================================ */
