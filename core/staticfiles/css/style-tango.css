@@ -34,6 +34,7 @@
 
 body {
   font-family: 'PP Mori Regular';
+  background-color: #070f1b;
 }
 
 /*---------------------------------------NAV -FOOTER -------------------------------------------*/
@@ -50,10 +51,11 @@ body {
 
 }
 .navbar {
-background: rgba(0, 0, 0, 0.6) !important; /* 🔹 Fondo semitransparente */
+background: rgba(0, 0, 0, 0) !important; /* 🔹 Fondo semitransparente */
 backdrop-filter: blur(10px) !important; /* Aplica el efecto difuminado */
 -webkit-backdrop-filter: blur(10px) !important; /* 🔹 Soporte para Safari */
 transition: background 0.3s ease-in-out !important; /* 🔹 Efecto de transición suave */
+position:fixed;
 }
 
 .dropdown .btn {
@@ -97,7 +99,7 @@ transition: background 0.3s ease-in-out !important; /* 🔹 Efecto de transició
   }
 
   .navbar {
-    background: rgba(0, 0, 0, 0.9) !important; /* 🔹 Fondo semitransparente */
+    background: rgba(0, 0, 0, 0.1) !important; /* 🔹 Fondo semitransparente */
     backdrop-filter: blur(10px) !important; /* Aplica el efecto difuminado */
     -webkit-backdrop-filter: blur(10px) !important; /* 🔹 Soporte para Safari */
     transition: background 0.3s ease-in-out !important; /* 🔹 Efecto de transición suave */
