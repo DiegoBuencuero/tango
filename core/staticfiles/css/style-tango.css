@@ -102,8 +102,8 @@ position:fixed;
   }
 
   #section-service, #section-managed, #section-training, #section-about{
-    margin-top: 15vh;
-    height: 100vh;
+    margin-top: 15vh !important;
+    height: 100vh !important;
     
 
   }
