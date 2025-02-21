@@ -913,6 +913,21 @@ form textarea {
     font-size: 1rem;
   }
 }
+@media (max-width: 768px) {
+  .row.justify-content-center.align-items-stretch {
+    flex-direction: column; /* Asegura que las tarjetas se apilen */
+    align-items: center; /* Centra las tarjetas */
+  }
+
+  .col-md-5, .col-md-10 {
+    width: 100% !important; /* Asegura que ocupen todo el ancho disponible */
+    max-width: 90%; /* Controla el ancho para que no quede pegado a los bordes */
+  }
+
+  .gradient-card, .tarjeta-grande {
+    width: 100% !important; /* Fuerza que ocupen todo el ancho */
+  }
+}
 
 /* ================================================================================ */
 /*                                 ESTILO DE ABOUT                          */
@@ -1112,18 +1127,24 @@ form textarea {
   z-index: 2;
 }
 
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Ocupa todo el ancho de la tarjeta */
+}
+
 .custom-image {
-  width: 100%; /* Asegura que ocupen el ancho del contenedor */
-  max-width: 400px; /* Mantiene consistencia en desktop */
-  height: 250px; /* Establece una altura uniforme */
-  object-fit: cover; /* Recorta el contenido para llenar el espacio */
-  aspect-ratio: 16/9; /* Mantiene proporción (puedes cambiar a 4/3 o 1/1) */
+  width: 100%; /* Hace que la imagen ocupe todo el ancho disponible */
+  height: auto; /* Mantiene la proporción */
+  max-width: none; /* Elimina restricciones de ancho máximo */
+  object-fit: cover; /* Asegura que la imagen llene su contenedor */
   border-radius: 15px;
 }
 
 @media (max-width: 768px) {
   .custom-image {
-    max-width: 90%; /* Reduce el tamaño en móviles */
+    max-width: 100%; /* Reduce el tamaño en móviles */
     height: 200px; /* Ajusta la altura en móviles */
   }
 }
