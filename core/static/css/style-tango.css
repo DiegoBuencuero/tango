@@ -520,81 +520,51 @@ form textarea {
   position: relative;
   z-index: 1;
 }
-
 @media (max-width: 768px) {
-  /* Asegurar que las filas estén correctamente alineadas */
-  .row {
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
-    align-items: center !important;
-    text-align: center !important;
-    flex-wrap: nowrap !important;
-    width: 100% !important;
-    margin: 0 auto !important;
+  /* Asegurar que el contenedor de la tarjeta esté centrado */
+  .row.justify-content-center.align-items-stretch {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
   }
 
-  /* Asegurar que todas las columnas ocupen el mismo ancho */
+  /* Hacer que las columnas que contienen tarjetas estén centradas */
   .col-md-5, .col-md-10 {
     width: 100% !important;
     max-width: 90% !important;
     display: flex;
     justify-content: center;
-    align-items: stretch;
   }
 
-  /* Asegurar que las tarjetas tengan el mismo ancho y estén centradas */
-  .gradient-card,
-  .tarjeta-grande {
+  /* Asegurar que las tarjetas estén alineadas debajo del título */
+  .gradient-card, .tarjeta-grande {
     width: 100% !important;
     max-width: 90% !important;
-    margin: 0 auto !important;
-    text-align: center !important;
+    margin: 20px auto !important;
+    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 10px !important;
+    padding: 20px;
   }
 
-  /* Ajustar márgenes para evitar desalineaciones */
-  .gradient-card h5,
-  .tarjeta-grande h5 {
-    margin-bottom: 0 !important;
-    text-align: center !important;
+  /* Ajustar el margen superior de la primera tarjeta para alinearla mejor con el título */
+  .row.justify-content-center.align-items-stretch:first-of-type {
+    margin-top: 20px !important; /* Ajustar según necesites */
   }
 
-  /* Corregir la alineación de los íconos en las tarjetas */
-  .tasks-block {
-    justify-content: center !important;
-    text-align: center !important;
-    flex-direction: column;
-    display: flex;
-    align-items: center;
+  /* Centrar el texto del título */
+  #section-services2 h1 {
+    text-align: center;
     width: 100%;
-  }
-
-  .icon-custom {
-    margin-right: 0 !important;
-    margin-bottom: 10px !important;
-  }
-
-  /* Asegurar que todas las secciones tengan alineación uniforme */
-  #section-services2 h1,
-  #section-services2 h4,
-  #section-services2 h5 {
-    text-align: center !important;
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-
-  /* Ajuste adicional para alinear las tarjetas entre sí */
-  .row.justify-content-center.align-items-stretch {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+    margin-bottom: 30px;
   }
 }
+
 
 
 /* 
@@ -1011,7 +981,7 @@ form textarea {
 
   #section-training {
     display: flex; /* Activamos flexbox */
-    flex-direction: column; /* Asegura que los elementos se ordenen en columna */
+
     justify-content: center; /* Centra verticalmente */
     align-items: center; /* Centra horizontalmente */
     text-align: center; /* Asegura que el texto esté alineado */
@@ -1041,8 +1011,7 @@ form textarea {
   }
 }
 @media (max-width: 768px) {
-  .row.justify-content-center.align-items-stretch {
-    flex-direction: column; /* Asegura que las tarjetas se apilen */
+  .row.justify-content-center {
     align-items: center; /* Centra las tarjetas */
   }
 
