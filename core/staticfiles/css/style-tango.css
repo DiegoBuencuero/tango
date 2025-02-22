@@ -244,7 +244,7 @@ form textarea {
 
 @media (max-width: 768px) {
   #section-home3 {
-      height: 75vh;
+      height: 85vh;
       padding: 10px;
       overflow: auto; 
   }
@@ -379,7 +379,7 @@ form textarea {
 
 #section-service h1 {
   font-family: 'Helvetica Neue LT Std', sans-serif; 
-  font-size: clamp(26px, 3.5vw, 70px); 
+  font-size: clamp(35px, 3.5vw, 70px); 
   color:#ffffff;  
   font-weight: 600;
   letter-spacing: -1.1px;
@@ -522,7 +522,6 @@ form textarea {
 }
 
 
-
 @media (max-width: 768px) {
   /* Asegurar que la fila de las tarjetas se centre correctamente */
   .row.justify-content-center.align-items-stretch {
@@ -569,12 +568,23 @@ form textarea {
 
   /* Asegurar que el título está alineado con las tarjetas */
   #section-services2 h1 {
-    text-align: center;
-    width: 100%;
-    max-width: 90%;
-    margin-bottom: 30px;
-    margin-left: auto;
-    margin-right: auto;
+    text-align: center !important;
+    width: 100% !important;
+    max-width: 90% !important;
+    margin-bottom: 30px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    font-size: 1.7rem !important;
+    line-height: 1.3 !important; /* Para mejorar legibilidad */
+  }
+
+  /* Ajustar subtítulo */
+  .subtitulo_threat {
+    margin-left: 15px !important;
+    margin-right: 15px !important;
+    font-size: 1.1rem !important;
+    text-align: center !important;
+
   }
 }
 
