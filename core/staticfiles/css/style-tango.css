@@ -100,7 +100,7 @@ transition: background 0.3s ease-in-out !important; /* 🔹 Efecto de transició
   }
   #section-service{
     margin-top: 35vh !important;
-    min-height: 85vh; /* Usar min-height en lugar de height para evitar cortes */
+    min-height: 100vh; /* Usar min-height en lugar de height para evitar cortes */
   }
 
   .logo-img {
@@ -587,101 +587,6 @@ form textarea {
 
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-/* 
-@media (max-width: 768px) {
-  #section-service {    
-    display: flex; 
-    flex-direction: column; 
-    justify-content: center; 
-    align-items: center;
-    text-align: center; 
-    padding: 2rem; 
-  }
-
-  #section-service h1 {
-    font-size: 2rem;
-    margin-top: 10drem;
-  }
-
-  #section-service h4 {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  #section-service h1 {
-    font-size: 2.1rem;
-  }
-  
-  #section-service h4 {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .row {
-    justify-content: center !important;
-    text-align: center !important;
-  }
-
-  .col-md-5 {
-    width: 100% !important;
-    max-width: 100% !important;
-    display: flex;
-    justify-content: center;
-  }
-
-  .gradient-card,
-  .tarjeta-grande {
-    width: 90% !important;
-    margin: 0 auto !important;
-  }
-
-  .custom-heading,
-  .heading-tasks {
-    text-align: center !important;
-  }
-
-  #section-service h1,
-  #section-service h4,
-  #section-services2 h1,
-  #section-services2 h4,
-  #section-services2 h5 {
-    text-align: center !important;
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-
-  .tasks-block {
-    justify-content: center !important;
-    text-align: center !important;
-    flex-direction: column;
-  }
-
-  .icon-custom {
-    margin-right: 0 !important;
-    margin-bottom: 10px !important;
-  }
-
-  .navbar-brand,
-  .navbar-nav {
-    width: 100% !important;
-    justify-content: center !important;
-    text-align: center !important;
-  }
-} */
 
  
 /* ================================================================================ */
