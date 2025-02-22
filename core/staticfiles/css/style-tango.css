@@ -263,6 +263,12 @@ form textarea {
     padding: 10px;
     overflow: auto; 
   }
+  #section-home3 h6{
+    font-size: 1rem !important;
+    margin-top: 20px !important;
+ 
+  }
+
 
   /* Ajustar ancho y padding de la sección del formulario */
   .fondo-formulario {
@@ -539,7 +545,6 @@ form textarea {
   position: relative;
   z-index: 1;
 }
-
 @media (max-width: 768px) {
   /* Asegurar que la fila de las tarjetas se centre correctamente */
   .row.justify-content-center.align-items-stretch {
@@ -632,6 +637,29 @@ form textarea {
     min-height: auto !important;
     height: auto !important;
   }
+
+  /* 📌 Alineación de íconos a la izquierda con margen */
+  .tasks-block {
+    display: flex;
+    flex-direction: row !important;
+    align-items: center !important;
+    text-align: left !important;
+    justify-content: flex-start !important;
+    width: 100% !important;
+    padding-left: 15px !important; /* Margen amigable */
+  }
+
+  .icon-custom {
+    font-size: 30px !important; /* Ajustar tamaño para pantallas chicas */
+    margin-right: 10px !important; /* Espacio entre ícono y texto */
+    margin-left: 5px !important; /* Margen izquierdo */
+  }
+
+  /* Ajustar tamaño del texto en pantallas chicas */
+  .heading-tasks {
+    font-size: 1rem !important; /* Ajuste para mejor legibilidad */
+    font-weight: bold !important;
+  }
 }
 
 
@@ -653,7 +681,7 @@ form textarea {
 
 #section-managed1 h1 {
   font-family: 'Helvetica Neue LT Std', sans-serif; 
-  font-size: clamp(26px, 3.5vw, 70px); 
+  font-size: clamp(35px, 3.5vw, 70px); 
   color:#ffffff;  
   font-weight: 600;
   letter-spacing: -1.1px;
@@ -665,61 +693,6 @@ form textarea {
   font-size: clamp(14px, 1.2vw, 19px); 
 }
 
-/* @media (max-width: 768px) {
-  #section-managed1 {    
-    display: flex; 
-    flex-direction: column; 
-    justify-content: center; 
-    align-items: center; 
-    text-align: center; 
-    padding: 2rem; 
-  }
-
-  #section-managed1 h1 {
-    font-size: 2rem;
-  }
-
-  #section-managed1 h4 {
-    font-size: 1rem;
-  }
-
-  #section-managed1 .container.mt-5 {
-    margin-top: 0 !important; 
-  }
-
-  #section-managed .row.justify-content-center {
-    display: flex;
-    flex-direction: column; 
-    align-items: center; 
-  }
-
-  #section-managed .col-md-5 {
-    width: 100%; 
-    max-width: 400px; 
-    display: flex;
-    justify-content: center;
-  }
-
-  #section-managed .card-fixed-height {
-    width: 100%;
-    max-width: 400px; 
-    margin-bottom: 20px; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-} */
-
-/* @media (max-width: 480px) {
-  #section-managed1  h1 {
-    font-size: 2rem;
-  }
-  
-  #section-managed1  h4 {
-    font-size: 1rem;
-  }
-} */
 
 #section-managed {
   position: relative;
@@ -849,7 +822,6 @@ form textarea {
   color: #0B1C3A;
 }
 
-
 #section-managed h5 {
   font-size: clamp(14px, 1vw, 15px);
   color:#0B1C3A;
@@ -858,6 +830,66 @@ form textarea {
   font-family: 'PP Mori Regular'!important;
 
 }
+
+
+@media (max-width: 768px) {
+
+  
+
+  /* 📌 Asegurar que los íconos estén alineados a la izquierda */
+  #section-managed .tasks-block {
+    display: flex;
+    flex-direction: row !important;
+    align-items: center !important;
+    text-align: left !important;
+    justify-content: flex-start !important;
+    width: 100% !important;
+    padding-left: 15px !important; /* Margen amigable */
+  }
+
+  /* 📌 Ajustar el tamaño del ícono en pantallas pequeñas */
+  #section-managed .icon-custom {
+    font-size: 30px !important; /* Ajuste para mejor proporción */
+    margin-right: 10px !important; /* Espacio entre ícono y texto */
+    margin-left: 5px !important; /* Margen izquierdo */
+  }
+
+  /* 📌 Ajustar el tamaño del título de la tarjeta */
+  #section-managed .titulo-tarjeta {
+    font-size: 1rem !important; /* Mejor legibilidad en pantallas chicas */
+    font-weight: bold !important;
+  }
+
+  /* 🔥 Evitar que las secciones se monten una sobre otra */
+  #section-managed1 {
+    position: relative !important;
+    z-index: 10 !important;
+    padding-bottom: 50px !important; /* Espacio extra para separar secciones */
+  }
+
+  #section-managed {
+    position: relative !important;
+    z-index: 5 !important;
+    padding-top: 50px !important; /* Espacio extra arriba */
+  }
+
+  /* 📌 Asegurar que el botón no quede escondido */
+  .text-center.mt-5 {
+    margin-bottom: 30px !important;
+  }
+
+  .boton-home {
+    position: relative !important;
+    z-index: 15 !important;
+  }
+
+  /* 🔥 Evitar solapamientos por altura mínima */
+  .ftco-section {
+    min-height: auto !important;
+    height: auto !important;
+  }
+}
+
 
 /* ================================================================================ */
 /*                                 ESTILO DE TRAINING                            */
@@ -881,7 +913,7 @@ form textarea {
 
 #section-training h1 {
   font-family: 'Helvetica Neue LT Std', sans-serif; 
-  font-size: clamp(26px, 3.5vw, 70px); 
+  font-size: clamp(35px, 3.5vw, 70px); 
   color:#ffffff;  
   font-weight: 600;
   letter-spacing: -1.1px;
@@ -958,57 +990,6 @@ form textarea {
 }
 
 
-
-
-
-/* @media (max-width: 768px) {
-
-  #section-training {
-    display: flex; 
-    flex-direction: column; 
-    justify-content: center; 
-    align-items: center; 
-    text-align: center; 
-    padding: 0rem;
-  }
-
-  #section-training h1 {
-    font-size: 2rem;
-  }
-
-  #section-training h4 {
-    font-size: 1rem;
-  }
-
-  #section-training .container.mt-5 {
-    margin-top: 0 !important; 
-  }
-}
-
-@media (max-width: 480px) {
-  #section-training h1 {
-    font-size: 2rem;
-  }
-  
-  #section-training h4 {
-    font-size: 1rem;
-  }
-}
-@media (max-width: 768px) {
-  .row.justify-content-center {
-    align-items: center; 
-  }
-
-  .col-md-5, .col-md-10 {
-    width: 100% !important; 
-    max-width: 100%; 
-  }
-
-  .gradient-card, .tarjeta-grande {
-    width: 100% !important; 
-  }
-} */
-
 /* ================================================================================ */
 /*                                 ESTILO DE ABOUT                          */
 /* ================================================================================ */
@@ -1028,51 +1009,19 @@ form textarea {
 
 #section-about h1 {
   font-family: 'Helvetica Neue LT Std', sans-serif; 
-  font-size: clamp(26px, 3.5vw, 70px); 
+  font-size: clamp(35px, 3.5vw, 70px); 
   color:#ffffff;  
   font-weight: 600;
   letter-spacing: -1.1px;
 }
 
-#section-about h4 {
+/* #section-about h4 {
   font-size: 1rem;
   font-family: 'Helvetica Neue LT Std', sans-serif; 
   color:#ffffff !important;  
   line-height: 1.6;
-}
-
-/* @media (max-width: 768px) {
-  #section-training {
-    display: flex; 
-    flex-direction: column; 
-    justify-content: center; 
-    align-items: center; 
-    text-align: center; 
-    padding: 2rem; 
-  }
-
-  #section-training h1 {
-    font-size: 2rem;
-  }
-
-  #section-training h4 {
-    font-size: 1rem;
-  }
-
-  #section-about .container.mt-5 {
-    margin-top: 0 !important;
-}
-}
-
-@media (max-width: 480px) {
-  #section-about h1 {
-    font-size: 2rem;
-  }
-  
-  #section-about h4 {
-    font-size: 1rem;
-  }
 } */
+
 
 #section-about2 {
   position: relative;
@@ -1211,28 +1160,68 @@ form textarea {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%; /* Ocupa todo el ancho de la tarjeta */
+  width: 100%; 
 }
 
 .custom-image {
-  width: 100%; /* Hace que la imagen ocupe todo el ancho disponible */
-  height: auto; /* Mantiene la proporción */
-  max-width: none; /* Elimina restricciones de ancho máximo */
-  object-fit: cover; /* Asegura que la imagen llene su contenedor */
+  width: 100%; 
+  height: auto; 
+  max-width: none;
+  object-fit: cover; 
   border-radius: 15px;
 }
-
-/* @media (max-width: 768px) {
-  .custom-image {
-    max-width: 100%; 
-    height: 200px; 
-  }
-} */
 
 .highlight {
   font-weight: bold;
   color: #3D59E9;
 }
+
+@media (max-width: 768px) {
+  /* 🔹 Agregar margen a las tarjetas para que no ocupen todo el ancho */
+  .custom-container {
+    width: 90% !important; /* Reducimos el ancho para que no se pegue a los bordes */
+    max-width: 90% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: 20px !important;
+  }
+
+  /* 🔹 Separar imágenes del borde de las tarjetas */
+  .image-container {
+    margin-bottom: 15px !important; /* Más espacio entre la imagen y el texto */
+    padding: 10px !important; /* Espacio dentro de la tarjeta */
+  }
+
+  /* 🔹 Ajustar tamaño y alineación de imágenes */
+  .custom-image {
+    width: 100% !important;
+    max-height: 250px !important;
+    object-fit: cover !important;
+    border-radius: 12px !important;
+  }
+
+  /* 🔹 Espaciado más armonioso entre imagen y texto */
+  .custom-container h5 {
+    margin-top: 15px !important;
+    line-height: 1.8 !important;
+    text-align: left !important;
+  }
+
+  /* 🔹 Separación entre secciones para evitar solapamiento */
+  #section-about, #section-about2 {
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+  }
+
+  /* 🔹 Ajustar tamaño del texto final para mejor legibilidad */
+  .ultimo-text {
+    font-size: 16px !important;
+    line-height: 2 !important;
+    text-align: center !important;
+    margin-top: 15px !important;
+  }
+}
+
 
   /*----------------------------------------------SECCION2 HOME---------------------------------*/
   #section-home2 {
