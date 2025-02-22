@@ -520,28 +520,36 @@ form textarea {
   position: relative;
   z-index: 1;
 }
+
+
+
 @media (max-width: 768px) {
-  /* Asegurar que el contenedor de la tarjeta esté centrado */
+  /* Asegurar que la fila de las tarjetas se centre correctamente */
   .row.justify-content-center.align-items-stretch {
     display: flex;
-
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
+    max-width: 100%;
     text-align: center;
+    margin: 0 auto !important;
+    padding: 0 !important;
   }
 
-  /* Hacer que las columnas que contienen tarjetas estén centradas */
+  /* Asegurar que las columnas ocupen todo el ancho */
   .col-md-5, .col-md-10 {
     width: 100% !important;
-    max-width: 90% !important;
+    max-width: 100% !important;
     display: flex;
     justify-content: center;
+    align-items: center;
+    padding: 0 !important;
   }
 
   /* Asegurar que las tarjetas estén alineadas debajo del título */
   .gradient-card, .tarjeta-grande {
-    width: 100% !important;
+    width: 90% !important;
     max-width: 90% !important;
     margin: 20px auto !important;
     text-align: center;
@@ -552,18 +560,32 @@ form textarea {
     padding: 20px;
   }
 
-  /* Ajustar el margen superior de la primera tarjeta para alinearla mejor con el título */
-  .row.justify-content-center.align-items-stretch:first-of-type {
-    margin-top: 20px !important; /* Ajustar según necesites */
+  /* Ajustar el ancho del contenedor principal */
+  .container-all, .container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
   }
 
-  /* Centrar el texto del título */
+  /* Asegurar que el título está alineado con las tarjetas */
   #section-services2 h1 {
     text-align: center;
     width: 100%;
+    max-width: 90%;
     margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
+
+
+
+
+
+
+
+
+
 
 
 
@@ -681,14 +703,14 @@ form textarea {
   font-size: clamp(14px, 1.2vw, 19px); 
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   #section-managed1 {    
-    display: flex; /* Activamos flexbox */
-    flex-direction: column; /* Asegura que los elementos se ordenen en columna */
-    justify-content: center; /* Centra verticalmente */
-    align-items: center; /* Centra horizontalmente */
-    text-align: center; /* Asegura que el texto esté alineado */
-    padding: 2rem; /* Espaciado uniforme */
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    padding: 2rem; 
   }
 
   #section-managed1 h1 {
@@ -700,34 +722,34 @@ form textarea {
   }
 
   #section-managed1 .container.mt-5 {
-    margin-top: 0 !important; /* Evita doble margen si Bootstrap ya aplica uno */
+    margin-top: 0 !important; 
   }
 
   #section-managed .row.justify-content-center {
     display: flex;
-    flex-direction: column; /* Apila las tarjetas en columna */
-    align-items: center; /* Asegura que estén centradas horizontalmente */
+    flex-direction: column; 
+    align-items: center; 
   }
 
   #section-managed .col-md-5 {
-    width: 100%; /* Ocupará todo el ancho disponible */
-    max-width: 400px; /* Máximo de 400px para no verse demasiado ancha */
+    width: 100%; 
+    max-width: 400px; 
     display: flex;
     justify-content: center;
   }
 
   #section-managed .card-fixed-height {
     width: 100%;
-    max-width: 400px; /* Asegura que no sea demasiado grande */
-    margin-bottom: 20px; /* Espaciado entre tarjetas */
+    max-width: 400px; 
+    margin-bottom: 20px; 
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
   }
-}
+} */
 
-@media (max-width: 480px) {
+/* @media (max-width: 480px) {
   #section-managed1  h1 {
     font-size: 2rem;
   }
@@ -735,7 +757,7 @@ form textarea {
   #section-managed1  h4 {
     font-size: 1rem;
   }
-}
+} */
 
 #section-managed {
   position: relative;
@@ -977,15 +999,15 @@ form textarea {
 
 
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
 
   #section-training {
-    display: flex; /* Activamos flexbox */
-
-    justify-content: center; /* Centra verticalmente */
-    align-items: center; /* Centra horizontalmente */
-    text-align: center; /* Asegura que el texto esté alineado */
-    padding: 2rem; /* Espaciado uniforme */
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    padding: 0rem;
   }
 
   #section-training h1 {
@@ -997,7 +1019,7 @@ form textarea {
   }
 
   #section-training .container.mt-5 {
-    margin-top: 0 !important; /* Evita doble margen si Bootstrap ya aplica uno */
+    margin-top: 0 !important; 
   }
 }
 
@@ -1012,18 +1034,18 @@ form textarea {
 }
 @media (max-width: 768px) {
   .row.justify-content-center {
-    align-items: center; /* Centra las tarjetas */
+    align-items: center; 
   }
 
   .col-md-5, .col-md-10 {
-    width: 100% !important; /* Asegura que ocupen todo el ancho disponible */
-    max-width: 90%; /* Controla el ancho para que no quede pegado a los bordes */
+    width: 100% !important; 
+    max-width: 100%; 
   }
 
   .gradient-card, .tarjeta-grande {
-    width: 100% !important; /* Fuerza que ocupen todo el ancho */
+    width: 100% !important; 
   }
-}
+} */
 
 /* ================================================================================ */
 /*                                 ESTILO DE ABOUT                          */
@@ -1057,14 +1079,14 @@ form textarea {
   line-height: 1.6;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   #section-training {
-    display: flex; /* Activamos flexbox */
-    flex-direction: column; /* Asegura que los elementos se ordenen en columna */
-    justify-content: center; /* Centra verticalmente */
-    align-items: center; /* Centra horizontalmente */
-    text-align: center; /* Asegura que el texto esté alineado */
-    padding: 2rem; /* Espaciado uniforme */
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    padding: 2rem; 
   }
 
   #section-training h1 {
@@ -1076,8 +1098,8 @@ form textarea {
   }
 
   #section-about .container.mt-5 {
-    margin-top: 0 !important; /* Evita doble margen si Bootstrap ya aplica uno */
-  }
+    margin-top: 0 !important;
+}
 }
 
 @media (max-width: 480px) {
@@ -1088,7 +1110,7 @@ form textarea {
   #section-about h4 {
     font-size: 1rem;
   }
-}
+} */
 
 #section-about2 {
   position: relative;
@@ -1238,12 +1260,12 @@ form textarea {
   border-radius: 15px;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .custom-image {
-    max-width: 100%; /* Reduce el tamaño en móviles */
-    height: 200px; /* Ajusta la altura en móviles */
+    max-width: 100%; 
+    height: 200px; 
   }
-}
+} */
 
 .highlight {
   font-weight: bold;
