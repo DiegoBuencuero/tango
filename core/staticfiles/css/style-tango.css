@@ -607,6 +607,8 @@ form textarea {
     margin-right: 15px !important;
     font-size: 1.1rem !important;
     text-align: center !important;
+    color: #ffffff !important;
+    line-height: 1.8 !important;;
   }
 
   /* 🔥 Evitar que las secciones se monten una sobre otra */
