@@ -94,12 +94,12 @@ transition: background 0.3s ease-in-out !important; /* 🔹 Efecto de transició
 }
 @media (max-width: 768px) {
 
-  #section-service, #section-managed1, #section-training, #section-about{
+  #section-managed1, #section-training, #section-about{
     margin-top: 25vh !important;
     min-height: 70vh; /* Usar min-height en lugar de height para evitar cortes */
   }
   #section-service{
-    margin-top: 35vh !important;
+    margin-top: 25vh !important;
     min-height: 100vh; /* Usar min-height en lugar de height para evitar cortes */
   }
 
