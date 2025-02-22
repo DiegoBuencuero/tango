@@ -241,35 +241,60 @@ form textarea {
   font-size: 0.8rem !important;
   color:#ffffff;  
 }
-
 @media (max-width: 768px) {
-  #section-home3 {
-      height: 95vh;
-      padding: 10px;
-      overflow: auto; 
+  /* Ajustar el footer */
+  footer {
+    font-size: 1rem !important; /* Agrandar la letra */
+    padding: 15px 20px !important; /* Reducir espacios internos */
+    text-align: left !important; /* Asegurar alineación */
+    margin-left: 10px !important; /* Separarlo del borde izquierdo */
   }
 
+  /* Ajustar el contenedor del footer para evitar que quede pegado */
+  .footer-contenido {
+    margin-left: 15px !important;
+    margin-right: 10px !important;
+    line-height: 1.3 !important; /* Reducir espacio entre líneas */
+  }
+
+  /* Ajustar el alto de la sección del formulario */
+  #section-home3 {
+    height: 95vh;
+    padding: 10px;
+    overflow: auto; 
+  }
+
+  /* Ajustar ancho y padding de la sección del formulario */
   .fondo-formulario {
-      width: 90%;
-      max-width: 90%;
-      padding: 0.5rem;
+    width: 90%;
+    max-width: 90%;
+    padding: 0.5rem;
   }
 }
 
 @media (max-width: 480px) {
-  .fondo-formulario {
-      width: 100%;
-      max-width: 95%;
-      padding: 0.8rem;
-      min-height: auto;
+  /* Ajustar el footer en pantallas más chicas */
+  footer {
+    font-size: 1.1rem !important; /* Agrandar un poco más la letra */
+    padding: 12px 15px !important; /* Reducir espacios internos */
+    margin-left: 12px !important; /* Asegurar que no esté pegado al borde */
   }
 
+  /* Ajustar el contenedor del formulario */
+  .fondo-formulario {
+    width: 100%;
+    max-width: 95%;
+    padding: 0.8rem;
+    min-height: auto;
+  }
+
+  /* Ajustar los tamaños de fuente */
   .fondo-formulario h1 {
-      font-size: 1.1rem !important;
+    font-size: 1.2rem !important;
   }
 
   .fondo-formulario h4 {
-      font-size: 0.8rem !important;
+    font-size: 0.9rem !important;
   }
 }
 
@@ -515,7 +540,6 @@ form textarea {
   z-index: 1;
 }
 
-
 @media (max-width: 768px) {
   /* Asegurar que la fila de las tarjetas se centre correctamente */
   .row.justify-content-center.align-items-stretch {
@@ -578,9 +602,38 @@ form textarea {
     margin-right: 15px !important;
     font-size: 1.1rem !important;
     text-align: center !important;
+  }
 
+  /* 🔥 Evitar que las secciones se monten una sobre otra */
+  #section-service {
+    position: relative !important;
+    z-index: 10 !important;
+    padding-bottom: 50px !important; /* Espacio extra para separar secciones */
+  }
+
+  #section-services2 {
+    position: relative !important;
+    z-index: 5 !important;
+    padding-top: 50px !important; /* Espacio extra arriba */
+  }
+
+  /* Asegurar que el botón sea visible y no se corte */
+  .text-center.mt-5 {
+    margin-bottom: 30px !important;
+  }
+
+  .boton-home {
+    position: relative !important;
+    z-index: 15 !important;
+  }
+
+  /* 🔥 Evitar solapamientos por altura mínima */
+  .ftco-section {
+    min-height: auto !important;
+    height: auto !important;
   }
 }
+
 
  
 /* ================================================================================ */
