@@ -99,7 +99,7 @@ transition: background 0.3s ease-in-out !important; /* 🔹 Efecto de transició
     min-height: 70vh; /* Usar min-height en lugar de height para evitar cortes */
   }
   #section-service{
-    margin-top: 25vh !important;
+    margin-top: 35vh !important;
     min-height: 85vh; /* Usar min-height en lugar de height para evitar cortes */
   }
 
@@ -471,6 +471,11 @@ form textarea {
   justify-content: start; 
 }
 
+ /* @media (max-width: 768px) { 
+  .gradient-card {
+    margin-bottom: 1.5rem !important; 
+  }
+}  */
 
 #section-services2 {
   position: relative;
@@ -517,15 +522,16 @@ form textarea {
 }
 
 @media (max-width: 768px) {
-  /* Asegurar que las filas estén alineadas y centradas */
+  /* Asegurar que las filas estén correctamente alineadas */
   .row {
-    justify-content: center !important;
-    text-align: center !important;
     display: flex !important;
-    flex-wrap: wrap !important;
+    flex-direction: column !important;
+    justify-content: center !important;
     align-items: center !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
+    text-align: center !important;
+    flex-wrap: nowrap !important;
+    width: 100% !important;
+    margin: 0 auto !important;
   }
 
   /* Asegurar que todas las columnas ocupen el mismo ancho */
@@ -534,10 +540,10 @@ form textarea {
     max-width: 90% !important;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
   }
 
-  /* Asegurar que las tarjetas tengan el mismo ancho y alineación */
+  /* Asegurar que las tarjetas tengan el mismo ancho y estén centradas */
   .gradient-card,
   .tarjeta-grande {
     width: 100% !important;
@@ -546,11 +552,12 @@ form textarea {
     text-align: center !important;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    padding: 10px !important;
   }
 
-  /* Ajustar el padding y márgenes para evitar desalineaciones */
+  /* Ajustar márgenes para evitar desalineaciones */
   .gradient-card h5,
   .tarjeta-grande h5 {
     margin-bottom: 0 !important;
@@ -560,8 +567,34 @@ form textarea {
   /* Corregir la alineación de los íconos en las tarjetas */
   .tasks-block {
     justify-content: center !important;
-    text
+    text-align: center !important;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
 
+  .icon-custom {
+    margin-right: 0 !important;
+    margin-bottom: 10px !important;
+  }
+
+  /* Asegurar que todas las secciones tengan alineación uniforme */
+  #section-services2 h1,
+  #section-services2 h4,
+  #section-services2 h5 {
+    text-align: center !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Ajuste adicional para alinear las tarjetas entre sí */
+  .row.justify-content-center.align-items-stretch {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+}
 
 
 /* 
