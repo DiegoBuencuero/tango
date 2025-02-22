@@ -244,7 +244,7 @@ form textarea {
 
 @media (max-width: 768px) {
   #section-home3 {
-      height: 85vh;
+      height: 95vh;
       padding: 10px;
       overflow: auto; 
   }
