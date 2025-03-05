@@ -23,6 +23,14 @@
   color: #ffffff; /* Asegura que el texto siga siendo blanco */
 }
 </style>
+{% if messages %}
+  <div id="message-box">
+    {% for message in messages %}
+      <div class="alert alert-{{ message.tags }} text-white text-center py-2 px-4 rounded">
+        {{ message }}
+      </div>
+    {% endfor %}
+  </div>
 <section id="section-home" class="ftco-section ftco-no-pt ftco-no-pb">
   <div class="container mt-5">
     <div class="row justify-content-center mt-5  mb-5 pb-2">
@@ -84,6 +92,10 @@
       container.style.transform = 'rotateX(0deg) rotateY(0deg)';
     });
   });
+
+    setTimeout(function() {
+      document.getElementById("message-box").style.display = "none";
+    }, 5000);  // Ocultar el mensaje después de 5 segundos
 
 
 </script>

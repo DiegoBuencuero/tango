@@ -57,6 +57,8 @@
       font-size:0.8rem;
     }
 
+  
+
   </style>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark " id="ftco-navbar"> 
@@ -118,7 +120,7 @@
           {% if messages %}
           <div id="message-box">
             {% for message in messages %}
-              <div class="alert {{ message.tags }} text-white text-center py-2 px-4 rounded">
+              <div class="alert alert-{{ message.tags }} text-white text-center py-2 px-4 rounded">
                 {{ message }}
               </div>
             {% endfor %}
@@ -235,6 +237,7 @@
   <script src="{% static 'js/jquery.timepicker.min.js' %}"></script>
   <script src="{% static 'js/scrollax.min.js' %}"></script>
   <script src="{% static 'js/main.js' %}"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
       document.addEventListener("DOMContentLoaded", function () {
         const navbar = document.getElementById("ftco-navbar");
@@ -242,15 +245,9 @@
 
       });
 
-      document.addEventListener("DOMContentLoaded", function() {
-        let messageBox = document.getElementById("message-box");
-        if (messageBox) {
-          setTimeout(function() {
-            messageBox.style.display = "none";
-          }, 5000); // Oculta el mensaje después de 5 segundos
-        }
-      });
-    </script>
+
+      </script>
+      
   {% block scrips %}
  
   {% endblock %}

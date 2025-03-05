@@ -3,13 +3,40 @@
 {% load i18n %}
 {% block content %}
 <style>
+  #message-box {
+    background-color: #f0f0f0 !important; /* Fondo gris */
+    color: #071225 !important; /* Texto azul oscuro */
+    padding: 5px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+    width: 60%;
+    margin: 10px auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
 
+  /* Forzar que todos los mensajes usen el mismo estilo */
+  #message-box .alert {
+    background-color: transparent !important;
+    color: inherit !important;
+    border: none !important;
+    font-size: 20px;
+  }
 </style>
 
 <section id="section-service" class="ftco-section ftco-no-pt ftco-no-pb">
   <div class="container ftco-animate">
     <div class="row justify-content-center mt-5">
       <div class="col-md-11 text-center align-items-center">
+        {% if messages %}
+        <div id="message-box">
+          {% for message in messages %}
+            <div class="alert alert-{{ message.tags }} text-white text-center py-2 px-4 rounded">
+              {{ message }}
+            </div>
+          {% endfor %}
+        </div>
+        {% endif %}
         <h1 class="mb-4">{% translate "THREAT INTELLIGENCE SERVICES" %}</h1>
         <h4 class="mb-4 subtitulo_threat">{% translate "subtitulo_threat" %}</h4>
         <div class="text-center mt-5">
@@ -135,6 +162,11 @@
     $('#service-navlink').addClass('active');
 
     });
+
+
+    setTimeout(function() {
+      document.getElementById("message-box").style.display = "none";
+    }, 5000);  // Ocultar el mensaje después de 5 segundos
 
 
 </script>

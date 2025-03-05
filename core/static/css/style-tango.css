@@ -92,15 +92,19 @@ transition: background 0.3s ease-in-out !important; /* 🔹 Efecto de transició
   width: 100%;
   height: auto; 
 }
+#section-managed1, #section-training, #section-about, #section-service {
+  margin-top: 10vh !important;
+  min-height: 80vh; 
+}
 @media (max-width: 768px) {
 
   #section-managed1, #section-training, #section-about{
-    margin-top: 25vh !important;
-    min-height: 70vh; /* Usar min-height en lugar de height para evitar cortes */
+    margin-top: 0vh !important;
+    min-height: 60vh; /* Usar min-height en lugar de height para evitar cortes */
   }
   #section-service{
-    margin-top: 35vh !important;
-    min-height: 100vh; /* Usar min-height en lugar de height para evitar cortes */
+    margin-top: 15vh !important;
+    min-height: 60vh; /* Usar min-height en lugar de height para evitar cortes */
   }
 
   .logo-img {
@@ -124,6 +128,7 @@ transition: background 0.3s ease-in-out !important; /* 🔹 Efecto de transició
     text-align: center; 
     padding: 0; 
   }
+
 }
   .navbar-toggler {
     color:#ffffff;
@@ -164,6 +169,8 @@ transition: background 0.3s ease-in-out !important; /* 🔹 Efecto de transició
   font-family: 'Helvetica Neue LT Std', sans-serif; 
   font-size: 0.8rem !important;
   font-weight: 400 !important;
+  margin: 0;
+  padding: 0;
   
 }
 
@@ -173,7 +180,10 @@ transition: background 0.3s ease-in-out !important; /* 🔹 Efecto de transició
   font-weight: 600 !important;
   color:#ffffff;
 }
-
+.footer-fondo{
+  margin:0;
+  padding: 0;
+}
  /* ================================================================================ */
 /*                                 CONTACTO                                          */
 /* ================================================================================ */
@@ -247,7 +257,7 @@ form textarea {
     font-size: 1rem !important; /* Agrandar la letra */
     padding: 15px 20px !important; /* Reducir espacios internos */
     text-align: left !important; /* Asegurar alineación */
-    margin-left: 10px !important; /* Separarlo del borde izquierdo */
+
   }
 
   /* Ajustar el contenedor del footer para evitar que quede pegado */
@@ -268,7 +278,11 @@ form textarea {
     margin-top: 20px !important;
  
   }
-
+  @media (max-width: 767px) {
+    #contact-button {
+      display: none !important;
+    }
+  }
 
   /* Ajustar ancho y padding de la sección del formulario */
   .fondo-formulario {
@@ -279,11 +293,9 @@ form textarea {
 }
 
 @media (max-width: 480px) {
-  /* Ajustar el footer en pantallas más chicas */
+
   footer {
     font-size: 1.1rem !important; /* Agrandar un poco más la letra */
-    padding: 12px 15px !important; /* Reducir espacios internos */
-    margin-left: 12px !important; /* Asegurar que no esté pegado al borde */
   }
 
   /* Ajustar el contenedor del formulario */
@@ -393,7 +405,7 @@ form textarea {
 /*                                 ESTILO DE SERVICIOS                              */
 /* ================================================================================ */
 #section-service {
-  height: 100vh;
+
   background-image: 
   radial-gradient(circle 150px at 50% -20%, rgba(61, 89, 233, 0.5) 30%, rgba(11, 28, 58, 0.9) 60%, transparent 90%),
   linear-gradient(to bottom, #0B1C3A, #000000);
@@ -557,6 +569,7 @@ form textarea {
     text-align: center;
     margin: 0 auto !important;
     padding: 0 !important;
+    min-height: 60vh !important;
   }
 
   /* Asegurar que las columnas ocupen todo el ancho */
@@ -671,7 +684,7 @@ form textarea {
 /*                                 ESTILO DE MANAGED                             */
 /* ================================================================================ */
  #section-managed1{  
-  height: 85vh;
+
   background-image: 
   radial-gradient(circle 150px at 50% -20%, rgba(61, 89, 233, 0.5) 30%, rgba(11, 28, 58, 0.9) 60%, transparent 90%),
   linear-gradient(to bottom, #0B1C3A, #000000);  
@@ -899,7 +912,6 @@ form textarea {
 /* ================================================================================ */
 
 #section-training {
-  height: 100vh;
   /* background-image: 
   radial-gradient(circle farthest-side at 50% -20%, rgba(61, 89, 233, 0.5) 35%, rgba(11, 28, 58, 0.9) 70%, transparent 100%),
   linear-gradient(to bottom, #0B1C3A, #000000); */
@@ -998,7 +1010,6 @@ form textarea {
 /* ================================================================================ */
 
 #section-about {
-  height: 90vh;
   background-image: 
   radial-gradient(circle 150px at 50% -20%, rgba(61, 89, 233, 0.5) 30%, rgba(11, 28, 58, 0.9) 60%, transparent 90%),
   linear-gradient(to bottom, #0B1C3A, #000000);  
