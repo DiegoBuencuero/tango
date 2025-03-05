@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.core.mail import send_mail
+from django.contrib import messages
 
 # Create your views here.
 
@@ -20,31 +21,32 @@ def training(request):
 
 def contact(request):
     if request.method == 'POST':
-        # Obtener los datos del formulario
-        nombre = request.POST.get('nombre', '')
-        correo = request.POST.get('correo', '')
-        asunto = request.POST.get('asunto', '')  # Aquí corregimos el nombre del campo
-        mensaje = request.POST.get('mensaje', '')
+        # Get form data
+        name = request.POST.get('name', '')
+        email = request.POST.get('email', '')
+        subject = request.POST.get('subject', '')
+        message = request.POST.get('message', '')
 
-        # Construir el texto del mensaje
-        texto = f'{nombre} ({correo}) enviou a seguinte mensagem: {mensaje}'
+        # Build the email content
+        email_content = f'{name} ({email}) sent the following message: {message}'
 
-        # Dirección de correo a donde enviar el mensaje
-        correo_destino = 'dratainakoster@gmail.com'
+        # Destination email address
+        recipient_email = 'tango_services@outlook.ie'
 
-        # Envía el correo electrónico
-        send_mail(
-            asunto,
-            texto,
-            correo,
-            [correo_destino],
-            fail_silently=False,        )
+        try:
+            # Send email
+            send_mail(subject, email_content, email, [recipient_email], fail_silently=False)
 
-        return redirect('thanks')  # Redirige a la página de agradecimiento
+            # Add success message
+            messages.success(request, "Message sent successfully! We will contact you soon.")
+        except Exception:
+            messages.error(request, "Error sending the email. Please try again.")
 
-    else:
-        # Si no es una solicitud POST, simplemente renderiza el formulario
-        return render(request, 'contact.html', {})
+        return redirect('contact')  # Redirect to reload the form and show the message
+
+    return render(request, 'index.html')
+
+
     
 def thanks(request):
     return render(request, "thanks.html", {})
