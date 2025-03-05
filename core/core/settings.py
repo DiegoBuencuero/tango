@@ -143,7 +143,7 @@ STATICFILES_DIRS = [
 # EMAIL_HOST_PASSWORD = 'zffwwnwmhxdwkyqf'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.office365.com'  # Servidor SMTP para Outlook
+EMAIL_HOST = ''  # Servidor SMTP para Outlook
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False  # No uses TLS y SSL juntos
