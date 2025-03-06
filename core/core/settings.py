@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-#jag_xb$ot&--r=)08giq5iu!j5++gs#w-i!(dt$bho3i*ajkz
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 't4ngo.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', 't4ngo.pythonanywhere.com', 'www.tangosecurity.net', 'tangosecurity.net ']
 
 
 # Application definition
